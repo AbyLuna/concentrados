@@ -47,4 +47,3 @@ class Caja extends Model
     }
 
 }
-<

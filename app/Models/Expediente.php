@@ -58,9 +58,6 @@ class Expediente extends Model
 		return $this-> hasOne('App\Models\Contrato');
 	}
 
-
-
-
 	//relacion uno a muchos (inversas) M- exp en una caja
 	public function caja(){
 		
