@@ -21,19 +21,19 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Numcontrato:</strong>
+                            <strong>Número de contrato:</strong>
                             {{ $contrato->numContrato }}
                         </div>
                         <div class="form-group">
-                            <strong>Descripcion:</strong>
+                            <strong>Descripción:</strong>
                             {{ $contrato->descripcion }}
                         </div>
                         <div class="form-group">
-                            <strong>Numtomosexp:</strong>
+                            <strong>Número de tomos del expediente:</strong>
                             {{ $contrato->numTomosExp }}
                         </div>
                         <div class="form-group">
-                            <strong>Bitacora:</strong>
+                            <strong>Bitácora:</strong>
                             {{ $contrato->bitacora }}
                         </div>
                         <div class="form-group">

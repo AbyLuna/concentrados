@@ -21,39 +21,39 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Numserie:</strong>
+                            <strong>Número de serie:</strong>
                             {{ $expediente->numSerie }}
                         </div>
                         <div class="form-group">
-                            <strong>Fechaapertura:</strong>
+                            <strong>Fecha apertura:</strong>
                             {{ $expediente->fechaApertura }}
                         </div>
                         <div class="form-group">
-                            <strong>Fechacierre:</strong>
+                            <strong>Fecha cierre:</strong>
                             {{ $expediente->fechaCierre }}
                         </div>
                         <div class="form-group">
-                            <strong>Valordocumental Id:</strong>
+                            <strong>Valor documental Id:</strong>
                             {{ $expediente->valorDocumental_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Valorinformacion Id:</strong>
+                            <strong>Valor informacion Id:</strong>
                             {{ $expediente->valorInformacion_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Vigconcentracion Id:</strong>
+                            <strong>Vigencia concentracion Id:</strong>
                             {{ $expediente->vigConcentracion_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Vigtramite Id:</strong>
+                            <strong>Vigencia tramite Id:</strong>
                             {{ $expediente->vigTramite_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Totalvigencia:</strong>
+                            <strong>Total vigencia:</strong>
                             {{ $expediente->totalVigencia }}
                         </div>
                         <div class="form-group">
-                            <strong>Destinofinal Id:</strong>
+                            <strong>Destino final Id:</strong>
                             {{ $expediente->destinoFinal_id }}
                         </div>
                         <div class="form-group">
@@ -61,7 +61,7 @@
                             {{ $expediente->signatura }}
                         </div>
                         <div class="form-group">
-                            <strong>Location Id:</strong>
+                            <strong>Ubicación Id:</strong>
                             {{ $expediente->location_id }}
                         </div>
                         <div class="form-group">

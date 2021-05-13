@@ -36,17 +36,17 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Numserie</th>
-										<th>Fechaapertura</th>
-										<th>Fechacierre</th>
-										<th>Valordocumental Id</th>
-										<th>Valorinformacion Id</th>
-										<th>Vigconcentracion Id</th>
-										<th>Vigtramite Id</th>
+										<th>Número de serie</th>
+										<th>Fecha de apertura</th>
+										<th>Fecha de cierre</th>
+										<th>Valor documental Id</th>
+										<th>Valor informacion Id</th>
+										<th>Vigencia de concentracion Id</th>
+										<th>Vigencia de tramite Id</th>
 										<th>Totalvigencia</th>
-										<th>Destinofinal Id</th>
+										<th>Destino final Id</th>
 										<th>Signatura</th>
-										<th>Location Id</th>
+										<th>Ubicación Id</th>
 										<th>Observaciones</th>
 
                                         <th></th>

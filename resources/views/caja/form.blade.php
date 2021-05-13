@@ -2,23 +2,23 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('numActa') }}
-            {{ Form::text('numActa', $caja->numActa, ['class' => 'form-control' . ($errors->has('numActa') ? ' is-invalid' : ''), 'placeholder' => 'Numacta']) }}
+            {{ Form::label('Número de acta') }}
+            {{ Form::text('numActa', $caja->numActa, ['class' => 'form-control' . ($errors->has('numActa') ? ' is-invalid' : ''), 'placeholder' => 'Número de acta']) }}
             {!! $errors->first('numActa', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('numCaja') }}
-            {{ Form::text('numCaja', $caja->numCaja, ['class' => 'form-control' . ($errors->has('numCaja') ? ' is-invalid' : ''), 'placeholder' => 'Numcaja']) }}
+            {{ Form::label('Número de caja') }}
+            {{ Form::text('numCaja', $caja->numCaja, ['class' => 'form-control' . ($errors->has('numCaja') ? ' is-invalid' : ''), 'placeholder' => 'Número de caja']) }}
             {!! $errors->first('numCaja', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('numTomosCaja') }}
-            {{ Form::text('numTomosCaja', $caja->numTomosCaja, ['class' => 'form-control' . ($errors->has('numTomosCaja') ? ' is-invalid' : ''), 'placeholder' => 'Numtomoscaja']) }}
+            {{ Form::label('Número de tomos en la caja') }}
+            {{ Form::text('numTomosCaja', $caja->numTomosCaja, ['class' => 'form-control' . ($errors->has('numTomosCaja') ? ' is-invalid' : ''), 'placeholder' => 'Número de tomos en la caja']) }}
             {!! $errors->first('numTomosCaja', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('areaPert') }}
-            {{ Form::text('areaPert', $caja->areaPert, ['class' => 'form-control' . ($errors->has('areaPert') ? ' is-invalid' : ''), 'placeholder' => 'Areapert']) }}
+            {{ Form::label('Área perteneciente') }}
+            {{ Form::text('areaPert', $caja->areaPert, ['class' => 'form-control' . ($errors->has('areaPert') ? ' is-invalid' : ''), 'placeholder' => 'Área a la que peretenece ']) }}
             {!! $errors->first('areaPert', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">

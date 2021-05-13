@@ -36,10 +36,10 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Numcontrato</th>
+										<th>Número de contrato</th>
 										<th>Descripcion</th>
-										<th>Numtomosexp</th>
-										<th>Bitacora</th>
+										<th>Número de tomos del expediente</th>
+										<th>Bitácora</th>
 										<th>Expediente Id</th>
 
                                         <th></th>
