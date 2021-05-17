@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="card">
-                <a class="btn btn-outline-secondary" href="#">
+                 <a class="nav-link" href="{{ route('reporte') }}">{{ __('Reporte') }}
                     <img src="/img/rep.png" width="280" height="auto" />
                 </a>
                 <div class="card-body">
