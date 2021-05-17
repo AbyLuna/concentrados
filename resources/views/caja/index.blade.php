@@ -36,9 +36,9 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Numacta</th>
-										<th>Numcaja</th>
-										<th>Numtomoscaja</th>
+										<th>Número de acta</th>
+										<th>Número de  caja</th>
+										<th>Número de tomos en la caja</th>
 										<th>Areapert</th>
 										<th>Contrato Id</th>
 

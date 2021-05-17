@@ -21,19 +21,19 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Numacta:</strong>
+                            <strong>Número de acta:</strong>
                             {{ $caja->numActa }}
                         </div>
                         <div class="form-group">
-                            <strong>Numcaja:</strong>
+                            <strong>Número de caja:</strong>
                             {{ $caja->numCaja }}
                         </div>
                         <div class="form-group">
-                            <strong>Numtomoscaja:</strong>
+                            <strong>Número de tomos en la caja:</strong>
                             {{ $caja->numTomosCaja }}
                         </div>
                         <div class="form-group">
-                            <strong>Areapert:</strong>
+                            <strong>Área a la que pertenece:</strong>
                             {{ $caja->areaPert }}
                         </div>
                         <div class="form-group">
