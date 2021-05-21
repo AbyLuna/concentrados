@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>Formulario reporte</title>
 </head>
-
 <body>
     <div class="container">
         <div class="container">
