@@ -19,6 +19,8 @@ class Expedientes extends Migration
                 $table->string('numSerie');
                 $table->date('fechaApertura');
                 $table->date('fechaCierre');
+                $table->string('signatura');
+                $table->integer('totalVigencia');
     
                 $table->unsignedBigInteger('valorDocumental_id');
                 $table->foreign('valorDocumental_id')
@@ -44,25 +46,25 @@ class Expedientes extends Migration
                 $table->unsignedBigInteger('vigTramite_id');
                 $table->foreign('vigTramite_id')
                 ->references('id')
-                ->on('vigTramites')
+                ->on('vigTramite')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
-                $table->integer('totalVigencia');
+               
     
                 $table->unsignedBigInteger('destinoFinal_id');
                 $table->foreign('destinoFinal_id')
                 ->references('id')
-                ->on('destinoFinal_id')
+                ->on('destinoFinal')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
-                $table->string('signatura');
+               
                 
                 $table->unsignedBigInteger('location_id')->unique() ;
                 $table->foreign('location_id')
                 ->references('id')
-                ->on('locations')
+                ->on('location')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
