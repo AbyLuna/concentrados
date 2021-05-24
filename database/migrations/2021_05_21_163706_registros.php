@@ -15,6 +15,7 @@ class Registros extends Migration
     {
         Schema::create('registros', function (Blueprint $table) {
             $table->id();
+            $table->string('nombreArch');
             $table->string('ubicacionArch');
             $table->string('telefono');
             $table->string('correo');

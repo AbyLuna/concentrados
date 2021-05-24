@@ -21,6 +21,10 @@
                     <div class="card-body">
                         
                         <div class="form-group">
+                            <strong>Nombrearch:</strong>
+                            {{ $registro->nombreArch }}
+                        </div>
+                        <div class="form-group">
                             <strong>Ubicacionarch:</strong>
                             {{ $registro->ubicacionArch }}
                         </div>
