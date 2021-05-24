@@ -27,11 +27,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 });*/
 
 
-Route::resource('contratos',App\Http\controllers\ContratoController::class);
+Route::resource('contratos', App\Http\Controllers\ContratoController::class);
 
-Route::resource('expedientes',App\Http\controllers\ExpedienteController::class);
+Route::resource('expedientes', App\Http\Controllers\ExpedienteController::class);
 
-Route::resource('cajas',App\Http\controllers\CajaController::class);
+Route::resource('cajas',App\Http\Controllers\CajaController::class);
 
 Route::get('/reporte', function(){
     return view('reporte');
