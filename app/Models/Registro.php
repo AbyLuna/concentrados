@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
  * Class Registro
  *
  * @property $id
+ * @property $nombreArch
  * @property $ubicacionArch
  * @property $telefono
  * @property $correo
@@ -22,6 +23,7 @@ class Registro extends Model
 {
     
     static $rules = [
+		'nombreArch' => 'required',
 		'ubicacionArch' => 'required',
 		'telefono' => 'required',
 		'correo' => 'required',
@@ -35,7 +37,7 @@ class Registro extends Model
      *
      * @var array
      */
-    protected $fillable = ['ubicacionArch','telefono','correo','respNombre'];
+    protected $fillable = ['nombreArch','ubicacionArch','telefono','correo','respNombre'];
 
 
 

@@ -36,10 +36,11 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Ubicacionarch</th>
-										<th>Telefono</th>
-										<th>Correo</th>
-										<th>Respnombre</th>
+										<th>Nombre del archivo</th>
+										<th>Dirección del archivo</th>
+										<th>Telefono del contacto de archivo</th>
+										<th>Correo del contacto de archivo</th>
+										<th>Nombre del responsable del archivo</th>
 
                                         <th></th>
                                     </tr>
@@ -49,6 +50,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
+											<td>{{ $registro->nombreArch }}</td>
 											<td>{{ $registro->ubicacionArch }}</td>
 											<td>{{ $registro->telefono }}</td>
 											<td>{{ $registro->correo }}</td>
@@ -58,6 +60,7 @@
                                                 <form action="{{ route('registros.destroy',$registro->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('registros.show',$registro->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('registros.edit',$registro->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('registros.edit',$registro->id) }}"><i class="fa fa-fw fa-edit"></i> Imprimir</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
