@@ -13,7 +13,7 @@ class Contratos extends Migration
      */
     public function up()
     {
-        Schema::create('contratos', function (Blueprint $table) {
+         Schema::create('contratos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('numContrato');
             $table->string('descripcion');
@@ -29,7 +29,7 @@ class Contratos extends Migration
             ->onUpdate('cascade');
             
             $table->timestamps();
-        });
+        });  
     }
 
     /**

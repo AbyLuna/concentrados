@@ -1,4 +1,4 @@
-<?php
+<<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -14,7 +14,10 @@ class Expedientes extends Migration
     
     public function up()
         {
+            
+            
             Schema::create('expedientes', function (Blueprint $table) {
+                $table->engine = 'InnoDB';
                 $table->bigIncrements('id');
                 $table->string('numSerie');
                 $table->date('fechaApertura');
@@ -71,7 +74,7 @@ class Expedientes extends Migration
                 $table->string('observaciones');
     
                 $table->timestamps();
-            });
+            }); 
        }
     
 

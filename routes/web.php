@@ -33,9 +33,10 @@ Route::resource('expedientes',App\Http\controllers\ExpedienteController::class);
 
 Route::resource('cajas',App\Http\controllers\CajaController::class);
 
-Route::resource('registros',App\Http\controllers\RegistroController::class);
-
 Route::get('/reporte', function(){
     return view('reporte');
 })->name('reporte');
 
+/*Route::get('/', function()
+    return redirect('url');
+});*/

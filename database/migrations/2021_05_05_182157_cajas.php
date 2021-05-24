@@ -28,7 +28,7 @@ class Cajas extends Migration
             ->onDelete('set null');
             
             $table->timestamps();
-        });
+        }); 
     }
 
     /**
