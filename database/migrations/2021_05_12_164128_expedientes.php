@@ -23,28 +23,28 @@ class Expedientes extends Migration
                 $table->unsignedBigInteger('valorDocumental_id');
                 $table->foreign('valorDocumental_id')
                 ->references('id')
-                ->on('valorDocumental')
+                ->on('ValorDocumental')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
                 $table->unsignedBigInteger('valorInformacion_id');
                 $table->foreign('valorInformacion_id')
                 ->references('id')
-                ->on('valorInformacion')
+                ->on('ValorInformacion')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
                 $table->unsignedBigInteger('vigConcentracion_id');
                 $table->foreign('vigConcentracion_id')
                 ->references('id')
-                ->on('vigConcentracion')
+                ->on('VigConcentracion')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
                 
                 $table->unsignedBigInteger('vigTramite_id');
                 $table->foreign('vigTramite_id')
                 ->references('id')
-                ->on('vigTramites')
+                ->on('VigTramites')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
@@ -53,13 +53,13 @@ class Expedientes extends Migration
                 $table->unsignedBigInteger('destinoFinal_id');
                 $table->foreign('destinoFinal_id')
                 ->references('id')
-                ->on('destinoFinal_id')
+                ->on('destinoFinal')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
                 $table->string('signatura');
                 
-                $table->unsignedBigInteger('location_id')->unique() ;
+                /* $table->unsignedBigInteger('location_id')->unique() ;
                 $table->foreign('location_id')
                 ->references('id')
                 ->on('locations')
@@ -68,7 +68,7 @@ class Expedientes extends Migration
     
                 $table->string('observaciones');
     
-                $table->timestamps();
+                $table->timestamps(); */
             });
        }
     
