@@ -27,6 +27,6 @@ class VigConcentracion extends Migration
      */
     public function down()
     {
-        //
+         Schema::dropIfExists('VigConcentracion');
     }
 }

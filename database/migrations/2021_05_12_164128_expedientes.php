@@ -85,6 +85,6 @@ class Expedientes extends Migration
      */
     public function down()
     {
-        //
+         Schema::dropIfExists('expedientes');
     }
 }

@@ -27,6 +27,6 @@ class VigTramites extends Migration
      */
     public function down()
     {
-        //
+         Schema::dropIfExists('VigTramites');
     }
 }

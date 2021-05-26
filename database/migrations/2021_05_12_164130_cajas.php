@@ -38,6 +38,6 @@ class Cajas extends Migration
      */
     public function down()
     {
-        //
+         Schema::dropIfExists('cajas');
     }
 }

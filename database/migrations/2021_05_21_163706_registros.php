@@ -30,6 +30,6 @@ class Registros extends Migration
      */
     public function down()
     {
-        //
+         Schema::dropIfExists('registros');
     }
 }

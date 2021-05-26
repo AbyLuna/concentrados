@@ -27,6 +27,6 @@ class DestinoFinal extends Migration
      */
     public function down()
     {
-        //
+         Schema::dropIfExists('destinoFinal');
     }
 }

@@ -27,6 +27,6 @@ class ValorInformacion extends Migration
      */
     public function down()
     {
-        //
+         Schema::dropIfExists('ValorInformacion');
     }
 }

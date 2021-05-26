@@ -27,6 +27,6 @@ class ValorDocumental extends Migration
      */
     public function down()
     {
-        //
+         Schema::dropIfExists('ValorDocumental');
     }
 }

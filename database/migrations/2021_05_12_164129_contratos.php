@@ -39,6 +39,6 @@ class Contratos extends Migration
      */
     public function down()
     {
-        //
+         Schema::dropIfExists('contratos');
     }
 }
