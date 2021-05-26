@@ -23,9 +23,12 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/home') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <img src="/img/cabecera.png" > 
+                <a class="btn btn-outline-secondary" href="{{ url('/home') }}">
+                    <img src="/img/salida.png" width="35" height="auto" />
                 </a>
+            </div>
+        </nav>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -34,12 +37,11 @@
                     <!-- Left Side Of Navbar -->
                     @if (Auth::check()) 
                     <ul class="navbar-nav mr-auto">
-                    <a class="nav-link" href="{{ route('cajas.index') }}">{{ __('Cajas') }}</a>
+                    <!-- <a class="nav-link" href="{{ route('cajas.index') }}">{{ __('Cajas') }}</a>
                     <a class="nav-link" href="{{ route('expedientes.index') }}">{{ __('Expedientes') }}</a>
                     <a class="nav-link" href="{{ route('contratos.index') }}">{{ __('Contratos') }}</a>
                     <a class="nav-link" href="{{ route('reporte') }}">{{ __('Reporte') }}</a>
-                    <a class="nav-link" href="{{ route('registros.index') }}">{{ __('Registro') }}</a>
-
+                    <a class="nav-link" href="{{ route('registros.index') }}">{{ __('Registro') }}</a> -->
                     </ul>
                   @endif 
 
