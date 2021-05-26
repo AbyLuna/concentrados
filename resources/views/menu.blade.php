@@ -3,18 +3,11 @@
 @section('content')
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-white fondo-nav sticky-top">
-            <div class="container">
-                <img src="/img/cabecera.png"> 
-                <a class="btn btn-outline-secondary" href="#">
-                    <img src="/img/log.png" width="25" height="auto" />
-                </a>
-            </div>
-        </nav>
+       
         <div class="card-group">
             <div class="card">
                
-                <a class="btn btn-outline-secondary" href="{{ route('cajas.index') }}">
+                <a class="btn btn-outline-secondary" href="{{ route('registros.index') }}">
                     <img src="/img/reportes.png" width="280" height="auto" />
                 </a>
                 <div class="card-body">
@@ -36,7 +29,7 @@
                 </div>
             </div>
             <div class="card">
-            <a class="btn btn-outline-secondary" href="{{ route('expedientes.index') }}">
+            <a class="btn btn-outline-secondary" href="{{ route('contratos.index') }}">
                     <img src="/img/rep.png" width="255" height="auto" />
                 </a>
                 <div class="card-body">
@@ -46,17 +39,7 @@
                     </center>
                 </div>
             </div>
-            <div class="card">
-                 <a class="nav-link" href="{{ route('reporte') }}">{{ __('Reporte') }}
-                    <img src="/img/rep.png" width="280" height="auto" />
-                </a>
-                <div class="card-body">
-                    <center>
-                        <h5>Reportes</h5>
-                        <p class="card-text">Reportes de ...</p>
-                    </center>
-                </div>
-            </div>
+
         </div>
       </div>
       </div>
