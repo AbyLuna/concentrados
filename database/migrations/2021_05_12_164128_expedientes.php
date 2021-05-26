@@ -49,7 +49,7 @@ class Expedientes extends Migration
                 $table->unsignedBigInteger('vigTramite_id');
                 $table->foreign('vigTramite_id')
                 ->references('id')
-                ->on('vigTramite')
+                ->on('vigTramites')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
@@ -63,13 +63,14 @@ class Expedientes extends Migration
                 ->onUpdate('cascade');
     
                
-                
+                /*
                 $table->unsignedBigInteger('location_id')->unique() ;
                 $table->foreign('location_id')
                 ->references('id')
                 ->on('location')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
+                */
     
                 $table->string('observaciones');
     
