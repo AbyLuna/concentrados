@@ -14,15 +14,15 @@ class Contratos extends Migration
     public function up()
     {
          Schema::create('contratos', function (Blueprint $table) {
-            $table->Increments('id');
+            $table->bigIncrements('id');
             $table->string('numContrato');
             $table->string('descripcion');
             $table->string('numTomosExp');
             $table->integer('bitacora');
 
-            $table->unsignedBigInteger('expediente_id')->unique();
+            $table->unsignedBigInteger('expedientes_id')->unique();
 
-            $table->foreign('expediente_id')
+            $table->foreign('expedientes_id')
             ->references('id')
             ->on('expedientes')
             ->onDelete('cascade')

@@ -18,38 +18,38 @@ class Expedientes extends Migration
             
             Schema::create('expedientes', function (Blueprint $table) {
                
-                $table->Increments('id');
+                $table->bigIncrements('id');
                 $table->string('numSerie');
                 $table->date('fechaApertura');
                 $table->date('fechaCierre');
                 $table->string('signatura');
                 $table->integer('totalVigencia');
     
-                $table->unsignedBigInteger('valorDocumental_id');
-                $table->foreign('valorDocumental_id')
+                $table->unsignedBigInteger('ValorDocumental_id');
+                $table->foreign('ValorDocumental_id')
                 ->references('id')
-                ->on('valorDocumental')
+                ->on('ValorDocumental')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
-                $table->unsignedBigInteger('valorInformacion_id');
-                $table->foreign('valorInformacion_id')
+                $table->unsignedBigInteger('ValorInformacion_id');
+                $table->foreign('ValorInformacion_id')
                 ->references('id')
-                ->on('valorInformacion')
+                ->on('ValorInformacion')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
-                $table->unsignedBigInteger('vigConcentracion_id');
-                $table->foreign('vigConcentracion_id')
+                $table->unsignedBigInteger('VigConcentracion_id');
+                $table->foreign('VigConcentracion_id')
                 ->references('id')
-                ->on('vigConcentracion')
+                ->on('VigConcentracion')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
                 
                 $table->unsignedBigInteger('vigTramite_id');
                 $table->foreign('vigTramite_id')
                 ->references('id')
-                ->on('vigTramites')
+                ->on('VigTramites')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
