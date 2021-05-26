@@ -14,7 +14,7 @@ class Cajas extends Migration
     public function up()
     {
         Schema::create('cajas', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->string('numActa');
             $table->string('numCaja');
             $table->string('numTomosCaja');

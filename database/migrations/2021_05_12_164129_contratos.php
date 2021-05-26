@@ -14,7 +14,7 @@ class Contratos extends Migration
     public function up()
     {
          Schema::create('contratos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->string('numContrato');
             $table->string('descripcion');
             $table->string('numTomosExp');

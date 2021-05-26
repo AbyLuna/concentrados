@@ -14,7 +14,7 @@ class VigTramites extends Migration
     public function up()
     {
         Schema::create('VigTramites', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->string('descripcion');
             $table->timestamps();
         });
