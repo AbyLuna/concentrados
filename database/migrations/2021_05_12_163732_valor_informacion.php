@@ -14,7 +14,7 @@ class ValorInformacion extends Migration
     public function up()
     {
         Schema::create('ValorInformacion', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->string('descripcion');
             $table->timestamps();
         });
