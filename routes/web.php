@@ -39,3 +39,6 @@ Route::get('/reporte', function(){
     return view('reporte');
 })->name('reporte');
 
+Route::get('/portada ', function(){
+    return view('portada');
+})->name('portada');
