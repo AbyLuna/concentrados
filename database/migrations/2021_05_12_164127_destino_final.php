@@ -14,7 +14,7 @@ class DestinoFinal extends Migration
     public function up()
     {
         Schema::create('destinoFinal', function (Blueprint $table) {
-            $table->Increments('id');
+            $table->bigIncrements('id');
             $table->string('descripcion');
             $table->timestamps();
         });
