@@ -35,9 +35,11 @@ Route::resource('cajas',App\Http\Controllers\CajaController::class);
 
 Route::resource('registros',App\Http\Controllers\RegistroController::class);
 
-Route::get('/reporte', function(){
+Route::get('/reporte',[App\Http\Controllers\ExcelController::class, 'reporte'])->name('Reporte');
+
+/*Route::get('/reporte', function(){
     return view('reporte');
-})->name('reporte');
+})->name('reporte'); */
 
 Route::get('/portada ', function(){
     return view('portada');
