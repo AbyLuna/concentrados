@@ -4,9 +4,9 @@
     <div class="container">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-white fondo-nav sticky-top">
-                <img src="/img/cabecera.png" width="auto" height="auto">
-                <a class="btn btn-outline-secondary ml-auto " href="#">
-                    <img src="/img/caja.png" width="35" height="auto" />Registro de caja</a>
+               <!-- <img src="/img/cabecera.png" width="auto" height="auto"> -->
+                <a class="btn btn-danger ml-auto " href="/registros">
+                    Cancelar Registro</a>
             </nav>
             <h2 class="row justify-content-center p-2">Vale de Prestamo de documentación en archivo de Concentración
             </h2>
