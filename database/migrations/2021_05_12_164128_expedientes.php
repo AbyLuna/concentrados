@@ -66,9 +66,11 @@ class Expedientes extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
-                $table->string('observaciones');
+                $table->string('observaciones');*/
     
-                $table->timestamps(); */
+                $table->timestamps(); 
+                $table->engine = 'InnoDB';
+                
             });
        }
     

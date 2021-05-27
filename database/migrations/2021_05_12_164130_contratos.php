@@ -29,6 +29,7 @@ class Contratos extends Migration
             ->onUpdate('cascade');
             
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 
