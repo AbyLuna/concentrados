@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Excel;
+use App\Models\Registro;
+
+
+
+
 
 class ExcelController extends Controller
 {
@@ -13,7 +18,10 @@ class ExcelController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function reporte(Request $request){
-       return view('reporte');
+    public function reporte($id){
+       
+    	 $registro = Registro::find($id);
+    	 
+       return view('reporte',compact('registro'));
     }
 }

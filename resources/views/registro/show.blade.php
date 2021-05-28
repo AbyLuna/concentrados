@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $registro->name ?? 'Show Registro' }}
+    
 @endsection
 
 @section('content')

@@ -33,9 +33,9 @@ Route::resource('expedientes',App\Http\Controllers\ExpedienteController::class);
 
 Route::resource('cajas',App\Http\Controllers\CajaController::class);
 
-Route::resource('registros',App\Http\Controllers\RegistroController::class);
+Route::resource('/registros',App\Http\Controllers\RegistroController::class);
 
-Route::get('/reporte',[App\Http\Controllers\ExcelController::class, 'reporte'])->name('Reporte');
+Route::get('/reporte/{registro}',[App\Http\Controllers\ExcelController::class, 'reporte'])->name('Reporte');
 
 /*Route::get('/reporte', function(){
     return view('reporte');

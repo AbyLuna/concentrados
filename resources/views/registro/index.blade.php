@@ -60,7 +60,8 @@ Registro
                                  <form action="{{ route('registros.destroy',$registro->id) }}" method="POST">
                                                 <a class="btn btn-sm btn-primary " href="{{ route('registros.show',$registro->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
                                                 <a class="btn btn-sm btn-success" href="{{ route('registros.edit',$registro->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
-                                                <a class="btn btn-sm btn-success" href="{{ route('Reporte') }}"><i class="fa fa-fw fa-edit"></i>Imprimir</a>
+                                                <a class="btn btn-sm btn-success" href="/reporte/{{$registro->id}}">Imprimir</a>
+                                                
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" onclick="return confirm('¿Estas Seguro Que Deseas Eliminar?')" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
