@@ -30,14 +30,22 @@ class ExcelController extends Controller
    
     }
 
-    public function imprimirReporte($id){
+ 
+
+
+
+
+
+
+
+   public function imprimirReporte($id){
       $registro = Registro::find($id);
     
-       $pdf = \PDF::loadView('reporte',compact('registro'));
+       $pdf = \PDF::loadView('reporte',compact('registro'))->setOptions([ 'defaultFont' => 'arial']);;
       
       return $pdf->stream('prestamo.pdf'); 
 
-    }
+    }  
 
 
 
