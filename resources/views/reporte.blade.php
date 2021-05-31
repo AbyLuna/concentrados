@@ -1,22 +1,21 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <title>impresion de Prestamo</title>
 
+
+ <!-- Styles -->
+ <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Reporte de Prestamo</title>
 </head>
-<style type="text/css">
-body {
-    font-family: " sans-serif";
-}
-
-</style>
 <body>
+     
+        
     
-    
-       <div class="container">
+       <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-dark bg-white fondo-nav sticky-top">
              <!-- <img src="/img/cabecera.png" width="auto" height="auto"> -->
              <a class="btn btn-danger ml-auto " href="/registros">
@@ -57,7 +56,11 @@ body {
 
         <h5><strong>Datos del Jefe del área quien solicita el Expediente</strong></h5>
         <div class="container-fluid">
+         
+
           <h5 class="text-center"> {{ $registro->respNombre }}</h5>
+       
+
           <br>
 
 
@@ -87,6 +90,7 @@ body {
 
 
      </div>
+
 
 
 
@@ -120,7 +124,7 @@ body {
     </tr>
 
 </tbody>
-</table>
+</table> 
 
 
 <fieldset class="card bg-light">
@@ -166,12 +170,7 @@ body {
 
 
 
-<div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text">OBSERVACIONES</span>
-  </div>
-  <textarea class="form-control" aria-label="With textarea"></textarea>
-</div>
+
 <br>
 
 <div class="row">
@@ -179,12 +178,12 @@ body {
     <div class="col text-center">
         <label for="nprestamo">Nombre del que recibe y firma</label>
        <br><br><br>
-        <p>____________________________________________________</p>
+        <p>______________________________</p>
     </div>
     <div class="col text-center">
         <label for="nprestamo">Nombre del que entrega y firma</label>
         <br><br><br>
-        <p>____________________________________________________</p>
+        <p>______________________________</p>
     </div>
     
 </div>
@@ -198,8 +197,8 @@ body {
 
 </div>
 
-</body>
-<script src="{{ asset('js/app.js') }}" defer></script>
 
+</body>
+ <script src="{{ asset('js/app.js') }}" defer></script>
 
 </html>
