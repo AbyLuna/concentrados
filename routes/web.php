@@ -35,6 +35,9 @@ Route::resource('cajas',App\Http\Controllers\CajaController::class);
 
 Route::resource('registros',App\Http\Controllers\RegistroController::class);
 
+Route::resource('locations',App\Http\Controllers\LocationController::class);
+
+
 Route::get('/reporte', function(){
     return view('reporte');
 })->name('reporte');
@@ -42,3 +45,4 @@ Route::get('/reporte', function(){
 Route::get('/portada ', function(){
     return view('portada');
 })->name('portada');
+

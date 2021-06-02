@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Registro;
+use App\Models\Location;
 use Illuminate\Http\Request;
 
 /**
- * Class RegistroController
+ * Class LocationController
  * @package App\Http\Controllers
  */
-class RegistroController extends Controller
+class LocationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +18,10 @@ class RegistroController extends Controller
      */
     public function index()
     {
-        $registros = Registro::paginate();
+        $locations = Location::paginate();
 
-        return view('registro.index', compact('registros'))
-            ->with('i', (request()->input('page', 1) - 1) * $registros->perPage());
+        return view('location.index', compact('locations'))
+            ->with('i', (request()->input('page', 1) - 1) * $locations->perPage());
     }
 
     /**
@@ -31,8 +31,8 @@ class RegistroController extends Controller
      */
     public function create()
     {
-        $registro = new Registro();
-        return view('registro.create', compact('registro'));
+        $location = new Location();
+        return view('location.create', compact('location'));
     }
 
     /**
@@ -43,12 +43,12 @@ class RegistroController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Registro::$rules);
+        request()->validate(Location::$rules);
 
-        $registro = Registro::create($request->all());
+        $location = Location::create($request->all());
 
-        return redirect()->route('registros.index')
-            ->with('success', 'Registro created successfully.');
+        return redirect()->route('locations.index')
+            ->with('success', 'Location created successfully.');
     }
 
     /**
@@ -59,9 +59,9 @@ class RegistroController extends Controller
      */
     public function show($id)
     {
-        $registro = Registro::find($id);
+        $location = Location::find($id);
 
-        return view('registro.show', compact('registro'));
+        return view('location.show', compact('location'));
     }
 
     /**
@@ -72,26 +72,26 @@ class RegistroController extends Controller
      */
     public function edit($id)
     {
-        $registro = Registro::find($id);
+        $location = Location::find($id);
 
-        return view('registro.edit', compact('registro'));
+        return view('location.edit', compact('location'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  Registro $registro
+     * @param  Location $location
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Registro $registro)
+    public function update(Request $request, Location $location)
     {
-        request()->validate(Registro::$rules);
+        request()->validate(Location::$rules);
 
-        $registro->update($request->all());
+        $location->update($request->all());
 
-        return redirect()->route('registros.index')
-            ->with('success', 'Registro updated successfully');
+        return redirect()->route('locations.index')
+            ->with('success', 'Location updated successfully');
     }
 
     /**
@@ -101,15 +101,9 @@ class RegistroController extends Controller
      */
     public function destroy($id)
     {
-        $registro = Registro::find($id)->delete();
+        $location = Location::find($id)->delete();
 
-        return redirect()->route('registros.index')
-            ->with('success', 'Registro deleted successfully');
+        return redirect()->route('locations.index')
+            ->with('success', 'Location deleted successfully');
     }
-    
-    
- 
-     
-
-
 }
