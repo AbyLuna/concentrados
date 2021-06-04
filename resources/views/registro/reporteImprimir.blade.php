@@ -23,13 +23,13 @@
     
 
 
-        <img class="align-items-md-center img-fluid" src="{{ asset('/img/cabecera.png') }}">
+        <img class="img-fluid" src="{{ asset('/img/cabecera.png') }}">
     
        <div class="container">
           
         
 
-        <form  method="get" action="{{ route('imprimirReporte')}}">
+        
             
 
          <h4 class="page-header text-center"><strong> Vale de Prestamo de documentación en archivo de Concentración
@@ -37,7 +37,7 @@
        
 
          <div class="row justify-content-end ">
-            <input type="text"  value="data1" name="data1">
+            <input type="text">
         </div>
 
         <br>
@@ -49,7 +49,7 @@
                         
 
             <div class=" col-xs-9 card">
-                <input type="text" value="{{ $registro->respNombre }} ">
+                <input type="" value="data-name"> >
                
                 <label  >No. Oficio de Solicitud: 23212</label>
                 <label  >Fecha de elaboración: {{ date('Y-m-d') }}</label><br>
@@ -77,7 +77,7 @@
 
             <div  class="row">
                 <p class="col-sm-3 text-right" >PUESTO:</p> 
-                <input type="text" class="col-sm-8">
+                <input type="text" class="col-sm-8" name="{{ 'data-puesto' }}">
 
 
             </div>
@@ -85,13 +85,13 @@
             <div class="row">
 
              <p class="col-sm-3 float-left text-right" >AREA DE ADCRIPTION:</p>
-             <input type="text" class="col-sm-8">
+             <input type="text" class="col-sm-8" value="data-ad">
 
          </div>
          <div class="row">
 
              <p class="col-sm-3 text-right"> TELEFONO /EXTENCION:</p>
-             <input type="text" class="col-sm-8">
+             <input type="text" class="col-sm-8" value="data-ext">
 
          </div>
 
@@ -201,14 +201,6 @@
 
         
        
-        <nav class="navbar navbar-expand-lg navbar-dark bg-white fondo-nav sticky-top">
-            <button type="submit" class="btn btn-success">imrpirmir</button>
-
-             
-             <a class="btn btn-danger ml-auto " href="/registros">Cancelar Registro</a>
-         </nav>
-
-</form>
 
 </div>
 

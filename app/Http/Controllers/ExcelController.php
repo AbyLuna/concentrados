@@ -24,7 +24,7 @@ class ExcelController extends Controller
     	 $registro = Registro::find($id);
       
     	 
-       return view('reporte',compact('registro'));
+       return view('registro.reporte',compact('registro'));
 
       
        
@@ -40,22 +40,26 @@ class ExcelController extends Controller
 
 
    public function imprimirReporte(Request $request){
-      $var = $this->repote();
+  
       
 
-      return $request;
-      //$registro = Registro::find($id);
+  
+   return view('registro.reporteImprimir',compact('request'));
+
+    //$registro = Registro::find($id);
 
         //$request = get();
-       //$pdf = PDF::loadView('reporte', compact('request'));
+       //$pdf = PDF::loadView('registro.reporteImprimir', compact('request'));
 
 
       
       //return $pdf->stream('prestamo.pdf'); 
 
+
+
     }  
 
-    //->setOptions([ 'defaultFont' => 'arial'])
+    
 
 
 
