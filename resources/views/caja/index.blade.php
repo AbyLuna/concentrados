@@ -59,7 +59,7 @@
                                                 <form action="{{ route('cajas.destroy',$caja->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('cajas.show',$caja->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('cajas.edit',$caja->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('expedientes.index') }}"><i class="fa fa-fw fa-edit"></i> Agregar archivo</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('contratos.index') }}"><i class="fa fa-fw fa-edit"></i> Agregar contrato</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>

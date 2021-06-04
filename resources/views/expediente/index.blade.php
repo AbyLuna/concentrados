@@ -36,7 +36,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Número de serie</th>
+										<th>Nombre de la serie</th>
 										<th>Fecha de apertura</th>
 										<th>Fecha de cierre</th>
 										<th>Valor documental Id</th>
