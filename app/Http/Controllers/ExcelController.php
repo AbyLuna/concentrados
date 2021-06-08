@@ -40,12 +40,16 @@ class ExcelController extends Controller
 
 
    public function imprimirReporte(Request $request){
-  
+
+
+     
       
+    return view('registro.reporteImprimir',compact('request'));
 
-  
-   return view('registro.reporteImprimir',compact('request'));
+    
 
+
+    
     //$registro = Registro::find($id);
 
         //$request = get();

@@ -36,8 +36,8 @@
          </strong></h4>
        
 
-         <div class="row justify-content-end ">
-            <input type="text">
+         <div class="row text-right ">
+            <kbd class="text-left">{{ $request->numero }}</kbd>
         </div>
 
         <br>
@@ -49,7 +49,7 @@
                         
 
             <div class=" col-xs-9 card">
-                <input type="" value="data-name"> >
+                <h5>{{ $request->data-name }}</h5>
                
                 <label  >No. Oficio de Solicitud: 23212</label>
                 <label  >Fecha de elaboración: {{ date('Y-m-d') }}</label><br>
@@ -77,7 +77,7 @@
 
             <div  class="row">
                 <p class="col-sm-3 text-right" >PUESTO:</p> 
-                <input type="text" class="col-sm-8" name="{{ 'data-puesto' }}">
+                <input type="" class="col-sm-8" name="{{ 'data-puesto' }}">
 
 
             </div>

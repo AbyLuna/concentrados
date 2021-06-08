@@ -7,35 +7,32 @@
 <body>
     
     
-       <form class="container" action="{{ route('imprimirReporte','request') }}" method="get">
-            
+       <form class="container" action="{{ route('imprimirReporte') }}" method="post">
+            @csrf
          
         
 
-         <h4 class="row justify-content-center "><strong> Vale de Prestamo de documentación en archivo de Concentración
-         </strong></h4>
-
-         <div class="row justify-content-end ">
-            <input type="text" placeholder="No. de préstamo">
-        </div>
-
+         <h2 class="text-center"> Vale de Prestamo de documentación en archivo de Concentración</h2>
+         <div class="text-right">
+         <label>NUMERO DE SOLICITUD: 
+            <input readonly="" name="numero" class="form-control text-center" value="1234"></label>
+      </div>
         <br>
-        <fieldset class="row ">
+        <fieldset class="row justify-content-end">
 
             <div class="col-3">
-                <h5 class="text-right"><strong>Datos del solicitante:</strong></h5>
+                <h5 class="text-left my-3"><strong>Datos del solicitante:</strong></h5>
             </div>
 
 
             <div class="col-8 card-header">
-                <h5 name='data-name'>{{ $registro->respNombre }}</h5>
                 
-                <label class ="col-5" >No. Oficio de Solicitud: 2</label>
-                <label class="col-5">Fecha de elaboración: {{ date('Y-m-d') }}</label>
+                
+                <label class ="col-5 form-control" >No. Oficio de Solicitud: 2</label>
+                <label  class="col-5 form-control">Fecha de elaboración: {{ date('Y-m-d') }}</label>
                 <br>
-                <label for="rat" class="col-3">Nombre del RAT:</label>
-                <input type="text" class ="col-6 " name="data[rat]"
-                placeholder="Nombre del RAT">
+                <label  class="col-3">Nombre del RAT:</label>
+                <input type="text" class ="col-6 form-control" name="data-rat">
             </div>
 
         </fieldset>
@@ -44,8 +41,10 @@
 
 
         <h5><strong>Datos del Jefe del área quien solicita el Expediente</strong></h5>
+        
+        <input readonly="" name="data-name" class="text-center form-control" value="{{ $registro->respNombre }}">
         <div class="container-fluid">
-          <input type="text" name="data4" ">
+        
           <br>
 
 
@@ -53,7 +52,7 @@
 
             <div  class="row">
                 <p class="col-3 text-right" >PUESTO:</p> 
-                <input type="text" class="col-8" name="data-puesto">
+                <input type="text" class="col-8 form-control" name="data-puesto">
 
 
             </div>
@@ -61,13 +60,13 @@
             <div class="row">
 
              <p class="col-3 float-left text-right" >AREA DE ADCRIPTION:</p>
-             <input type="text" class="col-8" name="data-ad">
+             <input type="text" class="col-8 form-control" name="data-adcription">
 
          </div>
          <div class="row">
 
              <p class="col-3 text-right"> TELEFONO /EXTENCION:</p>
-             <input type="text" class="col-8" name="data-ext">
+             <input type="text" class="col-8 form-control" name="data-ext">
 
          </div>
 
@@ -95,14 +94,14 @@
     <tbody>
       <tr>
         <td>Seccion:</td>
-        <td> <input type="textarea" name=""> </td>
+        <td> <input class="form-control col-sm-5" name="data-clave" > </td>
         
-        <td> <input type="text" class="col-12" name=""></td>
+        <td> <input class="form-control"  class="col-12" name="clave-nombre"></td>
     </tr>
     <tr>
         <td>Serie:</td>
-        <td> <input type="text" name=""> </td>
-        <td><input type="text" class="col-12" ></td>
+        <td> <input class="form-control col-sm-5" name="data-serie"> </td>
+        <td><input type="text" class="col-12 form-control" name="serie-nombre" ></td>
     </tr>
 
 </tbody>
@@ -115,16 +114,16 @@
         concentración)
     </h6>
     <div class="form-group">
-        <label for="nprestamo">Estado físico</label>
-        <input type="text" class="form-control" id="nprestamo" name="data[nprestamo]"
+        <label for="nprestamo">Estado físico:</label>
+        <input type="text" class="form-control"  name="data-fisico"
         placeholder="Estado físico">
     </div>
     <div class="form-inline  p-1">
         <label class="col-md-auto" for="nprestamo">No. Fojas</label>
-        <input type="text" class="form-control" id="nprestamo" name="data[nprestamo]"
+        <input type="text" class="form-control"  name="data-hojas"
         placeholder="No. hojas">
         <label class="col-md-auto ml-4" for="estFisico"> Calidad Documental</label>
-        <select id="estFisico" class="form-control">
+        <select name="estado" class="form-control">
             <option></option>
             <option>Buena</option>
             <option>Media</option>
@@ -135,12 +134,12 @@
             <input type="date" name="fecha">
         </div>
         <div class="form-group p-1">
-            <label class="col-md-auto " for="nprestamo">Plazo del prestamo</label>
-            <input type="text" class="form-control" id="nprestamo" name="data[nprestamo]">
+            <label class="col-md-auto " >Plazo del prestamo</label>
+            <input type="text" class="form-control" name="data-plazo">
         </div>
         <div class="form-group p-2-4">
-            <label class="col-md-auto ml-4" for="nprestamo">Prórroga</label>
-            <input type="text" class="form-control" id="nprestamo" name="data[nprestamo]"
+            <label class="col-md-auto ml-4">Prórroga</label>
+            <input type="text" class="form-control" name="data-prorroga" 
             placeholder="Prórroga">
         </div>
 
@@ -156,7 +155,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text">OBSERVACIONES</span>
   </div>
-  <textarea class="form-control" aria-label="With textarea"></textarea>
+  <textarea name="data-observaciones" class="form-control" aria-label="With textarea"></textarea>
 </div>
 <br>
 
