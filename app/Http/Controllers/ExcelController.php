@@ -43,8 +43,8 @@ class ExcelController extends Controller
 
 
      
-      
-    return view('registro.reporteImprimir',compact('request'));
+     // return $request;
+    //return view('registro.reporteImprimir',compact('request'));
 
     
 
@@ -53,7 +53,8 @@ class ExcelController extends Controller
     //$registro = Registro::find($id);
 
         //$request = get();
-       //$pdf = PDF::loadView('registro.reporteImprimir', compact('request'));
+       $pdf = PDF::loadView('registro.reporteImprimir', compact('request'));
+       return $pdf->stream('prestamo.pdf');
 
 
       

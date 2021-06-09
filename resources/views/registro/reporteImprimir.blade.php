@@ -16,6 +16,8 @@
     <style type="text/css">
       
       @page { margin:10px; }
+      @html { margin: 10px; }
+
     </style>
 
 
@@ -25,7 +27,7 @@
 
         <img class="img-fluid" src="{{ asset('/img/cabecera.png') }}">
     
-       <div class="container">
+       <div class="container-fluid">
           
         
 
@@ -36,8 +38,8 @@
          </strong></h4>
        
 
-         <div class="row text-right ">
-            <kbd class="text-left">{{ $request->numero }}</kbd>
+         <div class="text-right ">
+            Numero De Solicitud: {{ $request->numero }}
         </div>
 
         <br>
@@ -49,13 +51,12 @@
                         
 
             <div class=" col-xs-9 card">
-                <h5>{{ $request->data-name }}</h5>
+                <h5>{{ $request->name }}</h5>
                
-                <label  >No. Oficio de Solicitud: 23212</label>
+                <label  >No. Oficio de Solicitud: {{ $request->numero }}</label>
                 <label  >Fecha de elaboración: {{ date('Y-m-d') }}</label><br>
                 <label >Nombre del RAT:</label>
-                <input type="text" name="data2"
-                value="data2">
+                <input type="text" value={{ $request->rat }}>
             </div>
 
         </div>
@@ -65,7 +66,7 @@
 
         <h5><strong>Datos del Jefe del área quien solicita el Expediente</strong></h5>
         <div class="container-fluid">
-         
+          <input type="text" readonly="" class="text-center form-control" value="{{ $request->name }}">
 
           <h5 class="text-center"> </h5>
        
@@ -77,7 +78,7 @@
 
             <div  class="row">
                 <p class="col-sm-3 text-right" >PUESTO:</p> 
-                <input type="" class="col-sm-8" name="{{ 'data-puesto' }}">
+                <input type="text" class="col-sm-8" value ="{{ $request->puesto }}">
 
 
             </div>
@@ -85,13 +86,13 @@
             <div class="row">
 
              <p class="col-sm-3 float-left text-right" >AREA DE ADCRIPTION:</p>
-             <input type="text" class="col-sm-8" value="data-ad">
+             <input type="text" class="col-sm-8" value="{{ $request->adcription }}">
 
          </div>
          <div class="row">
 
              <p class="col-sm-3 text-right"> TELEFONO /EXTENCION:</p>
-             <input type="text" class="col-sm-8" value="data-ext">
+             <input type="text" class="col-sm-8" value="{{ $request->ext }}">
 
          </div>
 
@@ -122,15 +123,15 @@
     <tbody>
       <tr>
         <td>Seccion:</td>
-       <td><input type="text" name=""></td>
+       <td><p>{{ $request->clave }}</p></td>
         
-        <td><input type="text"  name=""></td>
+        <td><p>{{ $request->claveNombre }}</p></td>
     </tr>
     <tr>
         <td>Serie:</td>
-        <td> <input type="text" name=""></td>
+        <td><p>{{ $request->serie }}</p></td>
 
-        <td><input  type="text" ></td>
+        <td><p>{{ $request->serieNombre }}</p></td>
     </tr>
 
 </tbody>
@@ -141,35 +142,28 @@
     <h6 class="content mt-4"><strong> Estado fisico del Expediente</strong></h6>
     <h6 class="content p-1 alert-info text-center">(Estos datos son llenados exclusivamente por el encargado del archivo de concentración)
     </h6>
-    <div class="form-group">
-        <label for="nprestamo">Estado físico</label>
-        <input type="text" class="form-control" id="nprestamo" name="data[nprestamo]"
-        placeholder="Estado físico">
-    </div>
+  
     <div class="form-inline  p-1">
-        <label class="col" for="nprestamo">No. Fojas</label>
-        <input type="text" class="form-control" id="nprestamo" name="data[nprestamo]"
-        placeholder="No. hojas">
-        <label class="col ml-4" for="estFisico"> Calidad Documental</label>
-        <select id="estFisico" class="form-control">
-            <option></option>
-            <option>Buena</option>
-            <option>Media</option>
-            <option>Mala</option>
-        </select>
-        <div class="form-group ">
-            <label class="col-md-auto ml-4" for='apertura'>Fecha de elaboración</label>
-            <input type="date" name="fecha">
+        <div >
+         <label class="col-md-9 form-control">Estado físico: {{ $request->fisico }}</label>
+        <label class="col-md-6 form-control" >No. Fojas: {{ $request->hojas }}</label>
+        </div>
+        
+        <div>
+        <label class="col ml-9 form-control" > Calidad Documental:  {{ $request->estado }}</label>
+        
+        
+            <label class="col-md-6 form-control">Fecha de elaboración:  <mark>{{ $request->fecha }}</mark></label>
+    
         </div>
         <br>
         <div class="form-group ">
-            <label class="col-md-auto " for="nprestamo">Plazo del prestamo</label>
-            <input type="text" class="form-control" id="nprestamo" name="data[nprestamo]">
+            <label class="col-md-9 form-control" >Plazo del prestamo:   {{ $request->plazo }}</label>
+            
         </div>
         <div class="form-group ">
-            <label class="col-md-auto ml-4" for="nprestamo">Prórroga</label>
-            <input type="text" class="form-control" id="nprestamo" name="data[nprestamo]"
-            placeholder="Prórroga">
+            <label class="col-md-9 form-control">Prórroga:  {{ $request->prorroga }}</label>
+            
         </div>
 
     </div>
@@ -183,21 +177,21 @@
 
 <br>
 
-<div class="row">
+<div class="flex-row">
 
     <div class="col-sm-6 text-center">
-        <label class="text-center">Nombre del que recibe y firma</label>
-       <br><br><br>
-        <p class="text-center">______________________________</p>
+        <label class="text-center">Nombre del que recibe y firma<br><br><br><br>______________________________</label>
+       
+    
+
     </div>
     <div class="col-sm-6 text-center">
-        <label class="text-center">Nombre del que entrega y firma</label>
-        <br><br><br>
-        <p class="text-center">______________________________</p>
-    </div>
+        <label class="text-center">Nombre del que entrega y firma<br><br><br><br>______________________________</label>
+        
+        </div>
     
 </div>
-<br>
+
 
         
        

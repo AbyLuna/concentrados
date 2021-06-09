@@ -32,7 +32,7 @@
                 <label  class="col-5 form-control">Fecha de elaboración: {{ date('Y-m-d') }}</label>
                 <br>
                 <label  class="col-3">Nombre del RAT:</label>
-                <input type="text" class ="col-6 form-control" name="data-rat">
+                <input type="text" class ="col-6 form-control" name="rat">
             </div>
 
         </fieldset>
@@ -42,7 +42,7 @@
 
         <h5><strong>Datos del Jefe del área quien solicita el Expediente</strong></h5>
         
-        <input readonly="" name="data-name" class="text-center form-control" value="{{ $registro->respNombre }}">
+        <input readonly="" name="name" class="text-center form-control" value="{{ $registro->respNombre }}">
         <div class="container-fluid">
         
           <br>
@@ -52,7 +52,7 @@
 
             <div  class="row">
                 <p class="col-3 text-right" >PUESTO:</p> 
-                <input type="text" class="col-8 form-control" name="data-puesto">
+                <input type="text" class="col-8 form-control" name="puesto">
 
 
             </div>
@@ -60,13 +60,13 @@
             <div class="row">
 
              <p class="col-3 float-left text-right" >AREA DE ADCRIPTION:</p>
-             <input type="text" class="col-8 form-control" name="data-adcription">
+             <input type="text" class="col-8 form-control" name="adcription">
 
          </div>
          <div class="row">
 
              <p class="col-3 text-right"> TELEFONO /EXTENCION:</p>
-             <input type="text" class="col-8 form-control" name="data-ext">
+             <input type="text" class="col-8 form-control" name="ext">
 
          </div>
 
@@ -94,14 +94,14 @@
     <tbody>
       <tr>
         <td>Seccion:</td>
-        <td> <input class="form-control col-sm-5" name="data-clave" > </td>
+        <td> <input class="form-control col-sm-5" name="clave" > </td>
         
-        <td> <input class="form-control"  class="col-12" name="clave-nombre"></td>
+        <td> <input class="form-control"  class="col-12" name="claveNombre"></td>
     </tr>
     <tr>
         <td>Serie:</td>
-        <td> <input class="form-control col-sm-5" name="data-serie"> </td>
-        <td><input type="text" class="col-12 form-control" name="serie-nombre" ></td>
+        <td> <input class="form-control col-sm-5" name="serie"> </td>
+        <td><input type="text" class="col-12 form-control" name="serieNombre" ></td>
     </tr>
 
 </tbody>
@@ -114,13 +114,13 @@
         concentración)
     </h6>
     <div class="form-group">
-        <label for="nprestamo">Estado físico:</label>
-        <input type="text" class="form-control"  name="data-fisico"
+        <label >Estado físico:</label>
+        <input type="text" class="form-control"  name="fisico"
         placeholder="Estado físico">
     </div>
     <div class="form-inline  p-1">
         <label class="col-md-auto" for="nprestamo">No. Fojas</label>
-        <input type="text" class="form-control"  name="data-hojas"
+        <input type="text" class="form-control"  name="hojas"
         placeholder="No. hojas">
         <label class="col-md-auto ml-4" for="estFisico"> Calidad Documental</label>
         <select name="estado" class="form-control">
@@ -135,11 +135,11 @@
         </div>
         <div class="form-group p-1">
             <label class="col-md-auto " >Plazo del prestamo</label>
-            <input type="text" class="form-control" name="data-plazo">
+            <input type="text" class="form-control" name="plazo">
         </div>
         <div class="form-group p-2-4">
             <label class="col-md-auto ml-4">Prórroga</label>
-            <input type="text" class="form-control" name="data-prorroga" 
+            <input type="text" class="form-control" name="prorroga" 
             placeholder="Prórroga">
         </div>
 
@@ -155,7 +155,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text">OBSERVACIONES</span>
   </div>
-  <textarea name="data-observaciones" class="form-control" aria-label="With textarea"></textarea>
+  <textarea name="observaciones" class="form-control" aria-label="With textarea"></textarea>
 </div>
 <br>
 
