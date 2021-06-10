@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class VigConcentracion extends Migration
+class Locations extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class VigConcentracion extends Migration
      */
     public function up()
     {
-        Schema::create('vigConcentracion', function (Blueprint $table) {
+        Schema::create('locations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('descripcion');
+            $table->string('pasillo');
+            $table->string('anaquel');
+            $table->string('imagen');
+        
             $table->timestamps();
-        });
+        });   
     }
 
     /**

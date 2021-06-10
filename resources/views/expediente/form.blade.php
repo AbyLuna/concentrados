@@ -2,8 +2,8 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('Número de serie') }}
-            {{ Form::text('numSerie', $expediente->numSerie, ['class' => 'form-control' . ($errors->has('numSerie') ? ' is-invalid' : ''), 'placeholder' => 'Número de serie']) }}
+            {{ Form::label('Nombre de la serie') }}
+            {{ Form::text('numSerie', $expediente->numSerie, ['class' => 'form-control' . ($errors->has('numSerie') ? ' is-invalid' : ''), 'placeholder' => 'Nombre de la serie']) }}
             {!! $errors->first('numSerie', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">

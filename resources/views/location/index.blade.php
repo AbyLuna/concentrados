@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Caja
+    Location
 @endsection
 
 @section('content')
@@ -13,11 +13,11 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Caja') }}
+                                {{ __('Location') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('cajas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('locations.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -35,31 +35,27 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-										<th>Número de acta</th>
-										<th>Número de  caja</th>
-										<th>Número de tomos en la caja</th>
-										<th>Área a la que pertenece</th>
-										<th>Contrato Id</th>
+                                        
+										<th>Pasillo</th>
+										<th>Anaquel</th>
+										<th>Imagen</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($cajas as $caja)
+                                    @foreach ($locations as $location)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $caja->numActa }}</td>
-											<td>{{ $caja->numCaja }}</td>
-											<td>{{ $caja->numTomosCaja }}</td>
-											<td>{{ $caja->areaPert }}</td>
-											<td>{{ $caja->contrato_id }}</td>
+											<td>{{ $location->pasillo }}</td>
+											<td>{{ $location->anaquel }}</td>
+											<td>{{ $location->imagen }}</td>
 
                                             <td>
-                                                <form action="{{ route('cajas.destroy',$caja->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('cajas.show',$caja->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('cajas.edit',$caja->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('contratos.index') }}"><i class="fa fa-fw fa-edit"></i> Agregar contrato</a>
+                                                <form action="{{ route('locations.destroy',$location->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('locations.show',$location->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('locations.edit',$location->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
@@ -72,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $cajas->links() !!}
+                {!! $locations->links() !!}
             </div>
         </div>
     </div>

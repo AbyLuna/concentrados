@@ -20,14 +20,24 @@ class Cajas extends Migration
             $table->string('numTomosCaja');
             $table->string('areaPert');
 
+          //  $table->unsignedBigInteger('contrato_id');
+          //  $table->foreign('contrato_id')
+          //  ->references('id')
+         //  ->on('contratos')
+          //  ->onDelete('cascade')
+           // ->onUpdate('cascade');
+
+
+
             $table->unsignedBigInteger('contrato_id')->nullable();
 
-            $table->foreign('contrato_id')
+             $table->foreign('contrato_id')
             ->references('id')
-            ->on('contratos')
-            ->onDelete('set null');
+             ->on('contratos')
+             ->onDelete('set null');
             
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

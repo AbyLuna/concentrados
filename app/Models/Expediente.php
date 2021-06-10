@@ -65,6 +65,11 @@ class Expediente extends Model
 		 
 	}
 
+	public function location(){
+		
+		return $this-> hasOne('App\Models\Location');
+	}
+
 
 
 

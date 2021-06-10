@@ -13,7 +13,7 @@ class ValorDocumental extends Migration
      */
     public function up()
     {
-        Schema::create('ValorDocumental', function (Blueprint $table) {
+        Schema::create('valorDocumental', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('descripcion');
             $table->timestamps();
