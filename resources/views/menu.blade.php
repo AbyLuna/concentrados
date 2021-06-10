@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="card">
-                <a class="btn btn-outline-secondary" href="{{ route('portada') }}">
+                <a class="btn btn-outline-secondary" href="/portada">
                     <img src="/img/rep.png" width="180" height="auto" />
                 </a>
                 <div class="card-body">
@@ -48,6 +48,19 @@
                     </center>
                 </div>
             </div>
+            <div class="card">
+                <a class="btn btn-outline-secondary" href="{{ route('locations.index') }}">
+                    <img src="/img/ana2.png" width="180" height="auto" />
+                </a>
+                <div class="card-body">
+                    <center>
+                        <h5>Ubicación del archivo </h5>
+                        <p>Modulo de registro e impresion de vale de prestamo.</p>
+                    </center>
+                </div>
+            </div>
+
+
         </div>
     </div>
     <div class="card-footer">
