@@ -18,6 +18,13 @@ class Locations extends Migration
             $table->string('pasillo');
             $table->string('anaquel');
             $table->string('imagen');
+
+            $table->unsignedBigInteger('location_id');
+                 $table->foreign('location_id')
+                 ->references('id')
+                 ->on('locations')
+                 ->onDelete('cascade')
+                 ->onUpdate('cascade');
         
             $table->timestamps();
         });   
