@@ -13,7 +13,7 @@ class VigConcentracion extends Migration
      */
     public function up()
     {
-        Schema::create('vigConcentracion', function (Blueprint $table) {
+        Schema::create('VigConcentracion', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('descripcion');
             $table->timestamps();
