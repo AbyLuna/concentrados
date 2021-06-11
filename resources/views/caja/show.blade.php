@@ -11,30 +11,38 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Vista de caja</span>
+                            <span class="card-title">Show Caja</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('cajas.index') }}"> Regresar</a>
+                            <a class="btn btn-primary" href="{{ route('cajas.index') }}"> Back</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Acta/No. de caja:</strong>
+                            <strong>Numacta:</strong>
                             {{ $caja->numActa }}
                         </div>
                         <div class="form-group">
-                            <strong>No. de caja:</strong>
+                            <strong>Numcaja:</strong>
                             {{ $caja->numCaja }}
                         </div>
                         <div class="form-group">
-                            <strong>No. de tomos de la caja:</strong>
+                            <strong>Numtomoscaja:</strong>
                             {{ $caja->numTomosCaja }}
                         </div>
                         <div class="form-group">
-                            <strong>Área a la que pertenece:</strong>
+                            <strong>Areapert:</strong>
                             {{ $caja->areaPert }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Pasillo:</strong>
+                            {{ $caja->pasillo }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Anaquel:</strong>
+                            {{ $caja->anaquel }}
                         </div>
 
                     </div>

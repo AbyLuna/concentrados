@@ -19,7 +19,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property $totalVigencia
  * @property $destinoFinal_id
  * @property $signatura
- * @property $location_id
  * @property $observaciones
  * @property $contrato_id
  * @property $created_at
@@ -27,7 +26,6 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property Contrato $contrato
  * @property Destinofinal $destinofinal
- * @property Location $location
  * @property Valordocumental $valordocumental
  * @property Valorinformacion $valorinformacion
  * @property Vigconcentracion $vigconcentracion
@@ -50,7 +48,6 @@ class Expediente extends Model
 		'totalVigencia' => 'required',
 		'destinoFinal_id' => 'required',
 		'signatura' => 'required',
-		'location_id' => 'required',
 		'observaciones' => 'required',
 		'contrato_id' => 'required',
     ];
@@ -62,7 +59,7 @@ class Expediente extends Model
      *
      * @var array
      */
-    protected $fillable = ['numSerie','descripcion','fechaApertura','fechaCierre','valorDocumental_id','valorInformacion_id','vigConcentracion_id','vigTramite_id','totalVigencia','destinoFinal_id','signatura','location_id','observaciones','contrato_id'];
+    protected $fillable = ['numSerie','descripcion','fechaApertura','fechaCierre','valorDocumental_id','valorInformacion_id','vigConcentracion_id','vigTramite_id','totalVigencia','destinoFinal_id','signatura','observaciones','contrato_id'];
 
 
     /**
@@ -79,14 +76,6 @@ class Expediente extends Model
     public function destinofinal()
     {
         return $this->hasOne('App\Models\Destinofinal', 'id', 'destinoFinal_id');
-    }
-    
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     */
-    public function location()
-    {
-        return $this->hasOne('App\Models\Location', 'id', 'location_id');
     }
     
     /**

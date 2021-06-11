@@ -19,6 +19,8 @@ class Cajas extends Migration
             $table->string('numCaja');
             $table->string('numTomosCaja');
             $table->string('areaPert');
+            $table->string('pasillo');
+            $table->string('anaquel');
     
             $table->timestamps();
             $table->engine = 'InnoDB';
