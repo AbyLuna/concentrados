@@ -40,9 +40,9 @@ class Contrato extends Model
     protected $fillable = ['numContrato','descripcion','numTomosExp','bitacora','expediente_id'];
 
    //relacion uno a uno ( 1:exp- No.Contrato)
-    public function expediente(){
+   // public function expediente(){
 		
-     return $this->hasOne('App\Models\Expediente');
+    // return $this->hasOne('App\Models\Expediente');
    
 }
 

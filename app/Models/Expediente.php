@@ -53,22 +53,22 @@ class Expediente extends Model
      */
     protected $fillable = ['numSerie','fechaApertura','fechaCierre','valorDocumental_id','valorInformacion_id','vigConcentracion_id','vigTramite_id','totalVigencia','destinoFinal_id','signatura','location_id','observaciones'];
 
-    public function contrato(){
+   // public function contrato(){
 		
-		return $this-> hasOne('App\Models\Contrato');
+	//	return $this-> hasOne('App\Models\Contrato');
 	}
 
 	//relacion uno a muchos (inversas) M- exp en una caja
-	public function caja(){
+	//public function caja(){
 		
-		return $this->belongTo('App\Models\Caja');
+		//return $this->belongTo('App\Models\Caja');
 		 
-	}
+	//}
 
-	public function location(){
+	//public function location(){
 		
-		return $this-> hasOne('App\Models\Location');
-	}
+	//	return $this-> hasOne('App\Models\Location');
+	//}
 
 
 

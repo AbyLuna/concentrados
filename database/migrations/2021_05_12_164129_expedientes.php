@@ -67,6 +67,13 @@ class Expedientes extends Migration
                 ->onUpdate('cascade');
     
                 $table->string('observaciones');
+
+                 $table->unsignedBigInteger('contrato_id');
+                 $table->foreign('contrato_id')
+                 ->references('id')
+                 ->on('contratos')
+                 ->onDelete('cascade')
+                 ->onUpdate('cascade');
     
                 $table->timestamps(); 
                 $table->engine = 'InnoDB';

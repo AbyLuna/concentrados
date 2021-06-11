@@ -41,9 +41,9 @@ class Caja extends Model
 
     //uno a muchos (1 caja- M expedientes)
 
-    public function expedientes(){
+  //  public function expedientes(){
 		
-      return $this->hasMany('App\Models\Expediente');
-    }
+     // return $this->hasMany('App\Models\Expediente');
+   // }
 
 }
