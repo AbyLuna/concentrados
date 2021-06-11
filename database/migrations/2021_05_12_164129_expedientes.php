@@ -59,13 +59,13 @@ class Expedientes extends Migration
     
                 $table->string('signatura');
                 
-                $table->unsignedBigInteger('location_id')->unique() ;
+                $table->unsignedBigInteger('location_id');
                 $table->foreign('location_id')
                 ->references('id')
                 ->on('locations')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-    
+
                 $table->string('observaciones');
 
                  $table->unsignedBigInteger('contrato_id');
@@ -74,7 +74,8 @@ class Expedientes extends Migration
                  ->on('contratos')
                  ->onDelete('cascade')
                  ->onUpdate('cascade');
-    
+
+                
                 $table->timestamps(); 
                 $table->engine = 'InnoDB';
                 
