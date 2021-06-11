@@ -12,10 +12,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property $numCaja
  * @property $numTomosCaja
  * @property $areaPert
- * @property $contrato_id
  * @property $created_at
  * @property $updated_at
  *
+ * @property Contrato[] $contratos
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
@@ -36,14 +36,16 @@ class Caja extends Model
      *
      * @var array
      */
-    protected $fillable = ['numActa','numCaja','numTomosCaja','areaPert','contrato_id'];
-     
+    protected $fillable = ['numActa','numCaja','numTomosCaja','areaPert'];
 
-    //uno a muchos (1 caja- M expedientes)
 
-  //  public function expedientes(){
-		
-     // return $this->hasMany('App\Models\Expediente');
-   // }
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function contratos()
+    {
+        return $this->hasMany('App\Models\Contrato', 'caja_id', 'id');
+    }
+    
 
 }

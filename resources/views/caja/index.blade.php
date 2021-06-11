@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('cajas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear Caja') }}
                                 </a>
                               </div>
                         </div>
@@ -35,11 +35,12 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-										<th>Número de acta</th>
-										<th>Número de  caja</th>
-										<th>Número de tomos en la caja</th>
+                                        
+										<th>No. Acta/caja</th>
+										<th>No. de caja</th>
+										<th>No. de tomos de la caja</th>
 										<th>Área a la que pertenece</th>
-										<th>Contrato Id</th>
+                                        <th>Acciones</th>
 
                                         <th></th>
                                     </tr>
@@ -53,16 +54,15 @@
 											<td>{{ $caja->numCaja }}</td>
 											<td>{{ $caja->numTomosCaja }}</td>
 											<td>{{ $caja->areaPert }}</td>
-											<td>{{ $caja->contrato_id }}</td>
 
                                             <td>
                                                 <form action="{{ route('cajas.destroy',$caja->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('cajas.show',$caja->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('cajas.edit',$caja->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('contratos.index') }}"><i class="fa fa-fw fa-edit"></i> Agregar contrato</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('cajas.show',$caja->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('cajas.edit',$caja->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                    <a class="btn btn-sm btn-success" href="#"><i class="fa fa-fw fa-edit"></i> Agregar archivo</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

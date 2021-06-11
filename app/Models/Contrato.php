@@ -12,10 +12,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property $descripcion
  * @property $numTomosExp
  * @property $bitacora
- * @property $expediente_id
+ * @property $caja_id
  * @property $created_at
  * @property $updated_at
  *
+ * @property Caja $caja
+ * @property Expediente[] $expedientes
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
@@ -27,7 +29,6 @@ class Contrato extends Model
 		'descripcion' => 'required',
 		'numTomosExp' => 'required',
 		'bitacora' => 'required',
-		'expediente_id' => 'required',
     ];
 
     protected $perPage = 20;
@@ -37,13 +38,24 @@ class Contrato extends Model
      *
      * @var array
      */
-    protected $fillable = ['numContrato','descripcion','numTomosExp','bitacora','expediente_id'];
+    protected $fillable = ['numContrato','descripcion','numTomosExp','bitacora','caja_id'];
 
-   //relacion uno a uno ( 1:exp- No.Contrato)
-   // public function expediente(){
-		
-    // return $this->hasOne('App\Models\Expediente');
-   
-}
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function caja()
+    {
+        return $this->hasOne('App\Models\Caja', 'id', 'caja_id');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function expedientes()
+    {
+        return $this->hasMany('App\Models\Expediente', 'contrato_id', 'id');
+    }
+    
 
 }

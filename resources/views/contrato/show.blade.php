@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $contrato->name ?? 'Show Contrato' }}
+    {{ $contrato->name ?? 'Ver Contrato' }}
 @endsection
 
 @section('content')
@@ -11,17 +11,17 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Contrato</span>
+                            <span class="card-title">Ver Contrato</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('contratos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('contratos.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Número de contrato:</strong>
+                            <strong>No. de Contrato:</strong>
                             {{ $contrato->numContrato }}
                         </div>
                         <div class="form-group">
@@ -29,7 +29,7 @@
                             {{ $contrato->descripcion }}
                         </div>
                         <div class="form-group">
-                            <strong>Número de tomos del expediente:</strong>
+                            <strong>No. de tomos del expediente:</strong>
                             {{ $contrato->numTomosExp }}
                         </div>
                         <div class="form-group">
@@ -37,8 +37,8 @@
                             {{ $contrato->bitacora }}
                         </div>
                         <div class="form-group">
-                            <strong>Expediente Id:</strong>
-                            {{ $contrato->expediente_id }}
+                            <strong>Caja Id:</strong>
+                            {{ $contrato->caja_id }}
                         </div>
 
                     </div>

@@ -17,6 +17,7 @@ class Expedientes extends Migration
             Schema::create('expedientes', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('numSerie');
+                $table->string('descripcion');
                 $table->date('fechaApertura');
                 $table->date('fechaCierre');
     

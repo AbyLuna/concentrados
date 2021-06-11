@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property $id
  * @property $numSerie
+ * @property $descripcion
  * @property $fechaApertura
  * @property $fechaCierre
  * @property $valorDocumental_id
@@ -20,9 +21,17 @@ use Illuminate\Database\Eloquent\Model;
  * @property $signatura
  * @property $location_id
  * @property $observaciones
+ * @property $contrato_id
  * @property $created_at
  * @property $updated_at
  *
+ * @property Contrato $contrato
+ * @property Destinofinal $destinofinal
+ * @property Location $location
+ * @property Valordocumental $valordocumental
+ * @property Valorinformacion $valorinformacion
+ * @property Vigconcentracion $vigconcentracion
+ * @property Vigtramite $vigtramite
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
@@ -31,6 +40,7 @@ class Expediente extends Model
     
     static $rules = [
 		'numSerie' => 'required',
+		'descripcion' => 'required',
 		'fechaApertura' => 'required',
 		'fechaCierre' => 'required',
 		'valorDocumental_id' => 'required',
@@ -42,6 +52,7 @@ class Expediente extends Model
 		'signatura' => 'required',
 		'location_id' => 'required',
 		'observaciones' => 'required',
+		'contrato_id' => 'required',
     ];
 
     protected $perPage = 20;
@@ -51,27 +62,64 @@ class Expediente extends Model
      *
      * @var array
      */
-    protected $fillable = ['numSerie','fechaApertura','fechaCierre','valorDocumental_id','valorInformacion_id','vigConcentracion_id','vigTramite_id','totalVigencia','destinoFinal_id','signatura','location_id','observaciones'];
-
-   // public function contrato(){
-		
-	//	return $this-> hasOne('App\Models\Contrato');
-	}
-
-	//relacion uno a muchos (inversas) M- exp en una caja
-	//public function caja(){
-		
-		//return $this->belongTo('App\Models\Caja');
-		 
-	//}
-
-	//public function location(){
-		
-	//	return $this-> hasOne('App\Models\Location');
-	//}
+    protected $fillable = ['numSerie','descripcion','fechaApertura','fechaCierre','valorDocumental_id','valorInformacion_id','vigConcentracion_id','vigTramite_id','totalVigencia','destinoFinal_id','signatura','location_id','observaciones','contrato_id'];
 
 
-
-
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function contrato()
+    {
+        return $this->hasOne('App\Models\Contrato', 'id', 'contrato_id');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function destinofinal()
+    {
+        return $this->hasOne('App\Models\Destinofinal', 'id', 'destinoFinal_id');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function location()
+    {
+        return $this->hasOne('App\Models\Location', 'id', 'location_id');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function valordocumental()
+    {
+        return $this->hasOne('App\Models\Valordocumental', 'id', 'valorDocumental_id');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function valorinformacion()
+    {
+        return $this->hasOne('App\Models\Valorinformacion', 'id', 'valorInformacion_id');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function vigconcentracion()
+    {
+        return $this->hasOne('App\Models\Vigconcentracion', 'id', 'vigConcentracion_id');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function vigtramite()
+    {
+        return $this->hasOne('App\Models\Vigtramite', 'id', 'vigTramite_id');
+    }
+    
 
 }
