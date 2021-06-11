@@ -33,14 +33,21 @@ Route::resource('expedientes',App\Http\Controllers\ExpedienteController::class);
 
 Route::resource('cajas',App\Http\Controllers\CajaController::class);
 
-Route::resource('registros',App\Http\Controllers\RegistroController::class);
+Route::resource('/registros',App\Http\Controllers\RegistroController::class);
 
+<<<<<<< HEAD
 Route::resource('locations',App\Http\Controllers\LocationController::class);
 
 
 Route::get('/reporte', function(){
+=======
+Route::get('/reporte/{registro}',[App\Http\Controllers\ExcelController::class, 'reporte'])->name('Reporte');
+Route::post('/reporte/imprimir/',[App\Http\Controllers\ExcelController::class, 'imprimirReporte'])->name('imprimirReporte');
+
+/*Route::get('/reporte', function(){
+>>>>>>> 909294827726335e7a8930633b012e2ccc2971a9
     return view('reporte');
-})->name('reporte');
+})->name('reporte'); */
 
 Route::get('/portada', function(){
     return view('portada');

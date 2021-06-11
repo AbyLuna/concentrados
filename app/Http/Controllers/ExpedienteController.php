@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Expediente;
 use Illuminate\Http\Request;
 
+
 /**
  * Class ExpedienteController
  * @package App\Http\Controllers
