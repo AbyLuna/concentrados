@@ -42,7 +42,7 @@
                     <a class="nav-link" href="{{ route('contratos.index') }}">{{ __('Contratos') }}</a>
                     
                     <a class="nav-link" href="{{ route('registros.index') }}">{{ __('Registro') }}</a> -->
-                    <a class="nav-link" href="{{ route('locations.index') }}">{{ __('UbicacionF') }}</a> -->
+                        
                     </ul>
                   @endif 
 
