@@ -42,7 +42,10 @@
                     <a class="nav-link" href="{{ route('contratos.index') }}">{{ __('Contratos') }}</a>
                     
                     <a class="nav-link" href="{{ route('registros.index') }}">{{ __('Registro') }}</a> -->
+<<<<<<< HEAD
                         
+=======
+>>>>>>> 5cc81785463740791f35201d468c324cb1ca512e
                     </ul>
                   @endif 
 

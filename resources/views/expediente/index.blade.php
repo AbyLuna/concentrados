@@ -47,7 +47,6 @@
 										<th>Totalvigencia</th>
 										<th>Destinofinal Id</th>
 										<th>Signatura</th>
-										<th>Location Id</th>
 										<th>Observaciones</th>
 										<th>Contrato Id</th>
 
@@ -70,7 +69,6 @@
 											<td>{{ $expediente->totalVigencia }}</td>
 											<td>{{ $expediente->destinoFinal_id }}</td>
 											<td>{{ $expediente->signatura }}</td>
-											<td>{{ $expediente->location_id }}</td>
 											<td>{{ $expediente->observaciones }}</td>
 											<td>{{ $expediente->contrato_id }}</td>
 

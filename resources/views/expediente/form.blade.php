@@ -57,11 +57,6 @@
             {!! $errors->first('signatura', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('location_id') }}
-            {{ Form::text('location_id', $expediente->location_id, ['class' => 'form-control' . ($errors->has('location_id') ? ' is-invalid' : ''), 'placeholder' => 'Location Id']) }}
-            {!! $errors->first('location_id', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
             {{ Form::label('observaciones') }}
             {{ Form::text('observaciones', $expediente->observaciones, ['class' => 'form-control' . ($errors->has('observaciones') ? ' is-invalid' : ''), 'placeholder' => 'Observaciones']) }}
             {!! $errors->first('observaciones', '<div class="invalid-feedback">:message</p>') !!}

@@ -58,14 +58,14 @@ class Expedientes extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
-                $table->string('signatura');
+                $table->string('signatura'); 
                 
-                $table->unsignedBigInteger('location_id');
-                $table->foreign('location_id')
-                ->references('id')
-                ->on('locations')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+                // $table->unsignedBigInteger('location_id');
+                // $table->foreign('location_id')
+                // ->references('id')
+                // ->on('locations')
+                // ->onDelete('cascade')
+                // ->onUpdate('cascade');
 
                 $table->string('observaciones');
 
