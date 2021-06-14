@@ -48,11 +48,6 @@
                     </center>
                 </div>
             </div>
-<<<<<<< HEAD
-         
-
-=======
->>>>>>> 5cc81785463740791f35201d468c324cb1ca512e
         </div>
     </div>
     <div class="card-footer">
