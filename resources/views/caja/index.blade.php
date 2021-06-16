@@ -35,11 +35,13 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-										<th>Número de acta</th>
-										<th>Número de  caja</th>
-										<th>Número de tomos en la caja</th>
-										<th>Área a la que pertenece</th>
-										<th>Contrato Id</th>
+                                        
+										<th>Numacta</th>
+										<th>Numcaja</th>
+										<th>Numtomoscaja</th>
+										<th>Areapert</th>
+										<th>Pasillo</th>
+										<th>Anaquel</th>
 
                                         <th></th>
                                     </tr>
@@ -53,13 +55,13 @@
 											<td>{{ $caja->numCaja }}</td>
 											<td>{{ $caja->numTomosCaja }}</td>
 											<td>{{ $caja->areaPert }}</td>
-											<td>{{ $caja->contrato_id }}</td>
+											<td>{{ $caja->pasillo }}</td>
+											<td>{{ $caja->anaquel }}</td>
 
                                             <td>
                                                 <form action="{{ route('cajas.destroy',$caja->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('cajas.show',$caja->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('cajas.edit',$caja->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('contratos.index') }}"><i class="fa fa-fw fa-edit"></i> Agregar contrato</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>

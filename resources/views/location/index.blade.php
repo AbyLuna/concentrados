@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Location') }}
+                                {{ __('Ubicación física del expediente') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('locations.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Create Ubicación') }}
                                 </a>
                               </div>
                         </div>
@@ -36,9 +36,9 @@
                                     <tr>
                                         <th>No</th>
                                         
+										<th>No. de la caja</th>
 										<th>Pasillo</th>
 										<th>Anaquel</th>
-										<th>Imagen</th>
 
                                         <th></th>
                                     </tr>
@@ -48,17 +48,17 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
+											<td>{{ $location->numCaja }}</td>
 											<td>{{ $location->pasillo }}</td>
 											<td>{{ $location->anaquel }}</td>
-											<td>{{ $location->imagen }}</td>
 
                                             <td>
                                                 <form action="{{ route('locations.destroy',$location->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('locations.show',$location->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('locations.edit',$location->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('locations.show',$location->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('locations.edit',$location->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Elimenar</button>
                                                 </form>
                                             </td>
                                         </tr>

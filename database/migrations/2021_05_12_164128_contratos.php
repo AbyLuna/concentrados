@@ -20,14 +20,13 @@ class Contratos extends Migration
             $table->string('numTomosExp');
             $table->integer('bitacora');
 
-            $table->unsignedBigInteger('expediente_id')->unique();
-
-            $table->foreign('expediente_id')
+            $table->unsignedBigInteger('caja_id')->nullable();
+            $table->foreign('caja_id')
             ->references('id')
-            ->on('expedientes')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-            
+            ->on('cajas')
+            ->onDelete('set null');
+
+           
             $table->timestamps();
             $table->engine = 'InnoDB';
         });

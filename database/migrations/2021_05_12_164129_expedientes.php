@@ -17,6 +17,7 @@ class Expedientes extends Migration
             Schema::create('expedientes', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('numSerie');
+                $table->string('descripcion');
                 $table->date('fechaApertura');
                 $table->date('fechaCierre');
     
@@ -57,17 +58,25 @@ class Expedientes extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
     
-                $table->string('signatura');
+                $table->string('signatura'); 
                 
-                $table->unsignedBigInteger('location_id')->unique() ;
-                $table->foreign('location_id')
-                ->references('id')
-                ->on('locations')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
-    
+                // $table->unsignedBigInteger('location_id');
+                // $table->foreign('location_id')
+                // ->references('id')
+                // ->on('locations')
+                // ->onDelete('cascade')
+                // ->onUpdate('cascade');
+
                 $table->string('observaciones');
-    
+
+                 $table->unsignedBigInteger('contrato_id');
+                 $table->foreign('contrato_id')
+                 ->references('id')
+                 ->on('contratos')
+                 ->onDelete('cascade')
+                 ->onUpdate('cascade');
+
+                
                 $table->timestamps(); 
                 $table->engine = 'InnoDB';
                 

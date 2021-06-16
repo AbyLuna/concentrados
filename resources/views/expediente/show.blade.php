@@ -21,39 +21,43 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Número de serie:</strong>
+                            <strong>Numserie:</strong>
                             {{ $expediente->numSerie }}
                         </div>
                         <div class="form-group">
-                            <strong>Fecha apertura:</strong>
+                            <strong>Descripcion:</strong>
+                            {{ $expediente->descripcion }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Fechaapertura:</strong>
                             {{ $expediente->fechaApertura }}
                         </div>
                         <div class="form-group">
-                            <strong>Fecha cierre:</strong>
+                            <strong>Fechacierre:</strong>
                             {{ $expediente->fechaCierre }}
                         </div>
                         <div class="form-group">
-                            <strong>Valor documental Id:</strong>
+                            <strong>Valordocumental Id:</strong>
                             {{ $expediente->valorDocumental_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Valor informacion Id:</strong>
+                            <strong>Valorinformacion Id:</strong>
                             {{ $expediente->valorInformacion_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Vigencia concentracion Id:</strong>
+                            <strong>Vigconcentracion Id:</strong>
                             {{ $expediente->vigConcentracion_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Vigencia tramite Id:</strong>
+                            <strong>Vigtramite Id:</strong>
                             {{ $expediente->vigTramite_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Total vigencia:</strong>
+                            <strong>Totalvigencia:</strong>
                             {{ $expediente->totalVigencia }}
                         </div>
                         <div class="form-group">
-                            <strong>Destino final Id:</strong>
+                            <strong>Destinofinal Id:</strong>
                             {{ $expediente->destinoFinal_id }}
                         </div>
                         <div class="form-group">
@@ -61,12 +65,12 @@
                             {{ $expediente->signatura }}
                         </div>
                         <div class="form-group">
-                            <strong>Ubicación Id:</strong>
-                            {{ $expediente->location_id }}
-                        </div>
-                        <div class="form-group">
                             <strong>Observaciones:</strong>
                             {{ $expediente->observaciones }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Contrato Id:</strong>
+                            {{ $expediente->contrato_id }}
                         </div>
 
                     </div>

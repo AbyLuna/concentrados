@@ -10,11 +10,11 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    
+    
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -40,9 +40,8 @@
                     <!-- <a class="nav-link" href="{{ route('cajas.index') }}">{{ __('Cajas') }}</a>
                     <a class="nav-link" href="{{ route('expedientes.index') }}">{{ __('Expedientes') }}</a>
                     <a class="nav-link" href="{{ route('contratos.index') }}">{{ __('Contratos') }}</a>
-                    <a class="nav-link" href="{{ route('reporte') }}">{{ __('Reporte') }}</a>
+                    
                     <a class="nav-link" href="{{ route('registros.index') }}">{{ __('Registro') }}</a> -->
-                    <a class="nav-link" href="{{ route('locations.index') }}">{{ __('UbicacionF') }}</a> -->
                     </ul>
                   @endif 
 
@@ -90,4 +89,5 @@
         </main>
     </div>
 </body>
+<script src="{{ asset('js/app.js') }}" defer></script>
 </html>
