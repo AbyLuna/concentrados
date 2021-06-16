@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Expediente;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 
 /**
@@ -32,9 +34,13 @@ class ExpedienteController extends Controller
      */
     public function create()
     {
+        
+        $valorDocumental = DB::table('valorDocumental')->get();
+      //return $valorDocumental;
         $expediente = new Expediente();
-        return view('expediente.create', compact('expediente'));
+        return view('expediente.create', compact(['expediente', 'valorDocumental']));
     }
+
 
     /**
      * Store a newly created resource in storage.

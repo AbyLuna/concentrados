@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('cajas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crea una Caja') }}
                                 </a>
                               </div>
                         </div>
@@ -36,10 +36,10 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Numacta</th>
-										<th>Numcaja</th>
-										<th>Numtomoscaja</th>
-										<th>Areapert</th>
+										<th>Acta/No. acta</th>
+										<th>No. caja</th>
+										<th>No. total de tomos en la caja</th>
+										<th>Serie de los contratos en caja</th>
 										<th>Pasillo</th>
 										<th>Anaquel</th>
 
@@ -54,7 +54,7 @@
 											<td>{{ $caja->numActa }}</td>
 											<td>{{ $caja->numCaja }}</td>
 											<td>{{ $caja->numTomosCaja }}</td>
-											<td>{{ $caja->areaPert }}</td>
+											<td>{{ $caja->numContratos }}</td>
 											<td>{{ $caja->pasillo }}</td>
 											<td>{{ $caja->anaquel }}</td>
 

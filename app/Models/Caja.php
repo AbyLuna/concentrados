@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property $numActa
  * @property $numCaja
  * @property $numTomosCaja
- * @property $areaPert
+ * @property $numContratos
  * @property $pasillo
  * @property $anaquel
  * @property $created_at
@@ -28,7 +28,7 @@ class Caja extends Model
 		'numActa' => 'required',
 		'numCaja' => 'required',
 		'numTomosCaja' => 'required',
-		'areaPert' => 'required',
+		'numContratos' => 'required',
 		'pasillo' => 'required',
 		'anaquel' => 'required',
     ];
@@ -40,7 +40,7 @@ class Caja extends Model
      *
      * @var array
      */
-    protected $fillable = ['numActa','numCaja','numTomosCaja','areaPert','pasillo','anaquel'];
+    protected $fillable = ['numActa','numCaja','numTomosCaja','numContratos','pasillo','anaquel'];
 
 
     /**

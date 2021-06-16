@@ -14,27 +14,27 @@
                             <span class="card-title">Show Caja</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('cajas.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('cajas.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Numacta:</strong>
+                            <strong>Acta/No.caja:</strong>
                             {{ $caja->numActa }}
                         </div>
                         <div class="form-group">
-                            <strong>Numcaja:</strong>
+                            <strong>No. caja:</strong>
                             {{ $caja->numCaja }}
                         </div>
                         <div class="form-group">
-                            <strong>Numtomoscaja:</strong>
+                            <strong>No. total de tomos dentro de la caja:</strong>
                             {{ $caja->numTomosCaja }}
                         </div>
                         <div class="form-group">
-                            <strong>Areapert:</strong>
-                            {{ $caja->areaPert }}
+                            <strong>Serie de los contratos en caja:</strong>
+                            {{ $caja->numContratos }}
                         </div>
                         <div class="form-group">
                             <strong>Pasillo:</strong>
