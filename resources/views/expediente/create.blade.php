@@ -38,7 +38,7 @@ Create Expediente
                                     <div class="form-group">
                                         {{ Form::label('valorDocumental_id') }}
                                         <select name='valorDocumental_id' id="valorDocumental_id" class="from-control">
-                                            @foreach ($valorDocumental as $key => $value)
+                                            @foreach ($valorDocumental as $valor)
                                             <option value="{{ $key }}"
                                                 {{$suggestions_datas[0]->valorDocumental_id == $key ? "selected" : "" }}>
                                                 {{ $value }}</option>

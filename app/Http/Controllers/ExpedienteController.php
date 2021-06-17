@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
-
 /**
  * Class ExpedienteController
  * @package App\Http\Controllers
@@ -34,11 +33,11 @@ class ExpedienteController extends Controller
      */
     public function create()
     {
-        
-        $valorDocumental = DB::table('valorDocumental')->get();
-      //return $valorDocumental;
-        $expediente = new Expediente();
-        return view('expediente.create', compact(['expediente', 'valorDocumental']));
+         ///$valorDocumental = valorDocumental::select('id','descripcion')->get();  
+       $valorDocumental = DB::table('valorDocumental')->get('descripcion');
+      return $valorDocumental;
+       //$expediente = new Expediente();
+    //return view('expediente.create', compact(['expediente', 'valorDocumental']));
     }
 
 
