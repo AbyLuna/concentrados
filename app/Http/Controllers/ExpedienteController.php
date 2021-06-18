@@ -36,9 +36,9 @@ class ExpedienteController extends Controller
     {
         
         $valorDocumental = DB::table('valorDocumental')->get();
-      //return $valorDocumental;
-        $expediente = new Expediente();
-        return view('expediente.create', compact(['expediente', 'valorDocumental']));
+      return $valorDocumental;
+        // $expediente = new Expediente();
+        // return view('expediente.create', compact(['expediente', 'valorDocumental']));
     }
 
 

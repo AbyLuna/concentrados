@@ -12,14 +12,19 @@
             {!! $errors->first('numCaja', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
+            {{ Form::label('numContratos') }}
+            {{ Form::text('numContratos', $caja->numContratos, ['class' => 'form-control' . ($errors->has('numContratos') ? ' is-invalid' : ''), 'placeholder' => 'Numcontratos']) }}
+            {!! $errors->first('numContratos', '<div class="invalid-feedback">:message</p>') !!}
+        </div>
+        <div class="form-group">
             {{ Form::label('numTomosCaja') }}
             {{ Form::text('numTomosCaja', $caja->numTomosCaja, ['class' => 'form-control' . ($errors->has('numTomosCaja') ? ' is-invalid' : ''), 'placeholder' => 'Numtomoscaja']) }}
             {!! $errors->first('numTomosCaja', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('numContratos') }}
-            {{ Form::text('numContratos', $caja->numContratos, ['class' => 'form-control' . ($errors->has('numContratos') ? ' is-invalid' : ''), 'placeholder' => 'Numcontratos']) }}
-            {!! $errors->first('numContratos', '<div class="invalid-feedback">:message</p>') !!}
+            {{ Form::label('numBitacora') }}
+            {{ Form::text('numBitacora', $caja->numBitacora, ['class' => 'form-control' . ($errors->has('numBitacora') ? ' is-invalid' : ''), 'placeholder' => 'Numbitacora']) }}
+            {!! $errors->first('numBitacora', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('pasillo') }}

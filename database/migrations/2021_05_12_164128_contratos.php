@@ -16,9 +16,11 @@ class Contratos extends Migration
         Schema::create('contratos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('numContrato');
+            $table->string('area');
             $table->string('descripcion');
             $table->string('numTomosExp');
             $table->integer('bitacora');
+
 
             $table->unsignedBigInteger('caja_id')->nullable();
             $table->foreign('caja_id')

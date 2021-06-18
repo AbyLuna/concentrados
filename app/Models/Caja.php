@@ -10,8 +10,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property $id
  * @property $numActa
  * @property $numCaja
- * @property $numTomosCaja
  * @property $numContratos
+ * @property $numTomosCaja
+ * @property $numBitacora
  * @property $pasillo
  * @property $anaquel
  * @property $created_at
@@ -27,8 +28,9 @@ class Caja extends Model
     static $rules = [
 		'numActa' => 'required',
 		'numCaja' => 'required',
-		'numTomosCaja' => 'required',
 		'numContratos' => 'required',
+		'numTomosCaja' => 'required',
+		'numBitacora' => 'required',
 		'pasillo' => 'required',
 		'anaquel' => 'required',
     ];
@@ -40,7 +42,7 @@ class Caja extends Model
      *
      * @var array
      */
-    protected $fillable = ['numActa','numCaja','numTomosCaja','numContratos','pasillo','anaquel'];
+    protected $fillable = ['numActa','numCaja','numContratos','numTomosCaja','numBitacora','pasillo','anaquel'];
 
 
     /**
