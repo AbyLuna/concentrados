@@ -16,13 +16,36 @@ class ContratoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    /* public function index($id){
+
+
+       
+
+        //return $id;
+
+        //$contratos=contratos::where('caja_id','==','id')
+         //$contratos = \DB::table('contratos')->get();  
+        //return $contratos;
+
         $contratos = Contrato::paginate();
+        //return $contratos;
+        return view('contrato.index', compact('contratos'));
+            //->with('i', (request()->input('page', 1) - 1) * $contratos->perPage());
+    } */
+
+
+ public function index()
+    {
+         
+        
+        $contratos = Contrato::paginate();
+       
 
         return view('contrato.index', compact('contratos'))
             ->with('i', (request()->input('page', 1) - 1) * $contratos->perPage());
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -57,8 +80,9 @@ class ContratoController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id){
+
+    
         $contrato = Contrato::find($id);
 
         return view('contrato.show', compact('contrato'));
@@ -105,5 +129,19 @@ class ContratoController extends Controller
 
         return redirect()->route('contratos.index')
             ->with('success', 'Contrato deleted successfully');
+    }
+
+    public function cajacontrato($caja){
+
+        //$contratos = Contrato::where('caja_id','=','caja');
+        $contratos = \DB::table('contratos')->where('caja_id','=',$caja)->get(); 
+        return view('contrato.index', compact('contratos'));
+
+        //$contratos = DB::table('professions')->select('id')->where('title', '=', 'Desarrollador back-end')->first();
+
+       // return $contratos;
+
+        
+
     }
 }

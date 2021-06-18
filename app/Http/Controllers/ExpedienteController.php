@@ -34,10 +34,10 @@ class ExpedienteController extends Controller
     public function create()
     {
          
-         $valorinformacion = DB::table('valorinformacion')->get(['id','descripcion']);  
+         $valorinformacion = DB::table('ValorInformacion')->get(['id','descripcion']);  
        $valorDocumental = DB::table('ValorDocumental')->get(['id','descripcion']);
-       $vigTramites = DB::table('vigTramites')->get(['id','descripcion']);
-       $vigconcentracion = DB::table('vigconcentracion')->get(['id','descripcion']);
+       $vigTramites = DB::table('VigTramites')->get(['id','descripcion']);
+       $vigconcentracion = DB::table('VigConcentracion')->get(['id','descripcion']);
        $destinoFinal = DB::table('destinoFinal')->get(['id','descripcion']);
        $contrato =DB::table('contratos')->get(['id','numContrato']);
    
