@@ -33,11 +33,18 @@ class ExpedienteController extends Controller
      */
     public function create()
     {
-         ///$valorDocumental = valorDocumental::select('id','descripcion')->get();  
-       $valorDocumental = DB::table('valorDocumental')->get('descripcion');
-      return $valorDocumental;
-       //$expediente = new Expediente();
-    //return view('expediente.create', compact(['expediente', 'valorDocumental']));
+         
+         $valorinformacion = DB::table('valorinformacion')->get(['id','descripcion']);  
+       $valorDocumental = DB::table('ValorDocumental')->get(['id','descripcion']);
+       $vigTramites = DB::table('vigTramites')->get(['id','descripcion']);
+       $vigconcentracion = DB::table('vigconcentracion')->get(['id','descripcion']);
+       $destinoFinal = DB::table('destinoFinal')->get(['id','descripcion']);
+       $contrato =DB::table('contratos')->get(['id','numContrato']);
+   
+   //return $valorinformacion;
+       $expediente = new Expediente();
+
+    return view('expediente.create', compact(['expediente', 'valorDocumental','valorinformacion','vigTramites','vigconcentracion','destinoFinal','contrato']));
     }
 
 
@@ -49,7 +56,9 @@ class ExpedienteController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Expediente::$rules);
+        //return $request;
+
+      //  request()->validate(Expediente::$import_request_variables(types)    );
 
         $expediente = Expediente::create($request->all());
 
