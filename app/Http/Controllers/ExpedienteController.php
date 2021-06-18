@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
-
 /**
  * Class ExpedienteController
  * @package App\Http\Controllers
@@ -34,11 +33,21 @@ class ExpedienteController extends Controller
      */
     public function create()
     {
-        
-        $valorDocumental = DB::table('valorDocumental')->get();
-      return $valorDocumental;
-        // $expediente = new Expediente();
-        // return view('expediente.create', compact(['expediente', 'valorDocumental']));
+
+
+         
+         $valorinformacion = DB::table('ValorInformacion')->get(['id','descripcion']);  
+       $valorDocumental = DB::table('ValorDocumental')->get(['id','descripcion']);
+       $vigTramites = DB::table('VigTramites')->get(['id','descripcion']);
+       $vigconcentracion = DB::table('VigConcentracion')->get(['id','descripcion']);
+       $destinoFinal = DB::table('destinoFinal')->get(['id','descripcion']);
+       $contrato =DB::table('contratos')->get(['id','numContrato']);
+   
+   //return $valorinformacion;
+       $expediente = new Expediente();
+
+    return view('expediente.create', compact(['expediente', 'valorDocumental','valorinformacion','vigTramites','vigconcentracion','destinoFinal','contrato']));
+
     }
 
 
@@ -50,7 +59,9 @@ class ExpedienteController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Expediente::$rules);
+        //return $request;
+
+      //  request()->validate(Expediente::$import_request_variables(types)    );
 
         $expediente = Expediente::create($request->all());
 
