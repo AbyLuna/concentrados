@@ -33,32 +33,7 @@ Caja
                         <div class="table-responsive">
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
-                                    <tr>
-                                        <th>No</th>
-                                        
-										<th>Numacta</th>
-										<th>Numcaja</th>
-										<th>Numcontratos</th>
-										<th>Numtomoscaja</th>
-										<th>Numbitacora</th>
-										<th>Pasillo</th>
-										<th>Anaquel</th>
-
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($cajas as $caja)
-                                        <tr>
-                                            <td>{{ ++$i }}</td>
-                                            
-											<td>{{ $caja->numActa }}</td>
-											<td>{{ $caja->numCaja }}</td>
-											<td>{{ $caja->numContratos }}</td>
-											<td>{{ $caja->numTomosCaja }}</td>
-											<td>{{ $caja->numBitacora }}</td>
-											<td>{{ $caja->pasillo }}</td>
-											<td>{{ $caja->anaquel }}</td>
+                                   
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-hover">

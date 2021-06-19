@@ -49,7 +49,7 @@ Contrato
                                 <tbody>
                                     @foreach ($contratos as $contrato)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            
                                             
 											<td>{{ $contrato->numContrato }}</td>
 											<td>{{ $contrato->area }}</td>
@@ -74,7 +74,6 @@ Contrato
                         </div>
                     </div>
                 </div>
-                {!! $contratos->links() !!}
             </div>
         </div>
     </div>
