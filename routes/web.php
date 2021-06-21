@@ -27,7 +27,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 });*/
 
 
-Route::resource('/contratos', App\Http\Controllers\ContratoController::class);
+Route::resource('/contratos', 'App\Http\Controllers\ContratoController',['except' =>  'create']);
+
+Route::get('/contrato/create/{caja}',[App\Http\Controllers\ContratoController::class, 'create'])->name('contratos.create');
+
 
 Route::get('/contratos/caja/{caja}',[App\Http\Controllers\ContratoController::class, 'cajacontrato'])->name('cajacontrato');
 

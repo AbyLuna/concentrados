@@ -52,10 +52,12 @@ class ContratoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($caja)
     {
+        
+
         $contrato = new Contrato();
-        return view('contrato.create', compact('contrato'));
+        return view('contrato.create', compact(['contrato','caja']));
     }
 
     /**
@@ -64,16 +66,19 @@ class ContratoController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request )
     {
-        request()->validate(Contrato::$rules);
+       $id = $request->caja_id;
+
+
+       request()->validate(Contrato::$rules);
 
         $contrato = Contrato::create($request->all());
 
-        return redirect()->route('contratos.index')
-            ->with('success', 'Contrato created successfully.');
+         return redirect()->route('cajacontrato',$id)->with('success', 'Se creo el Contrato Corretamente');
+        //return redirect()->route('contratos.index')
+          //  ->with('success', 'Contrato created successfully.');
     }
-
     /**
      * Display the specified resource.
      *
@@ -135,7 +140,7 @@ class ContratoController extends Controller
 
         //$contratos = Contrato::where('caja_id','=','caja');
         $contratos = \DB::table('contratos')->where('caja_id','=',$caja)->get(); 
-        return view('contrato.index', compact('contratos'));
+        return view('contrato.index', compact(['contratos','caja']));
 
         //$contratos = DB::table('professions')->select('id')->where('title', '=', 'Desarrollador back-end')->first();
 

@@ -17,9 +17,13 @@ Contrato
 </span>
 
 <div class="float-right">
-<a href="{{ route('contratos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+<a href="{{ route('contratos.create', $caja ) }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
   {{ __('Crear Contrato') }}
 </a>
+
+
+
+
 </div>
 </div>
 </div>
