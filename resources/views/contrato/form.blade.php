@@ -26,12 +26,12 @@
             {{ Form::text('bitacora', $contrato->bitacora, ['class' => 'form-control' . ($errors->has('bitacora') ? ' is-invalid' : ''), 'placeholder' => 'Bitacora']) }}
             {!! $errors->first('bitacora', '<div class="invalid-feedback">:message</p>') !!}
         </div>
-        <div class="form-group">
-            {{ Form::label('caja_id') }}
-            {{ Form::text('caja_id', $contrato->caja_id, ['class' => 'form-control' . ($errors->has('caja_id') ? ' is-invalid' : ''), 'placeholder' => 'Caja Id']) }}
-            {!! $errors->first('caja_id', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
+       <div>
+  <label>Id de la caja</label>
 
+ <input readonly="" name="caja_id" class="text-center form-control" value="{{ $caja }}">
+</div>
+      
     </div>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Submit</button>
