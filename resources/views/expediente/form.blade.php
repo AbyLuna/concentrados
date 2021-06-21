@@ -25,7 +25,8 @@
             {{ Form::label('valorDocumental_id') }}
             {{ Form::text('valorDocumental_id', $expediente->valorDocumental_id, ['class' => 'form-control' . ($errors->has('valorDocumental_id') ? ' is-invalid' : ''), 'placeholder' => 'Valordocumental Id']) }}
             {!! $errors->first('valorDocumental_id', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
+
+
         <div class="form-group">
             {{ Form::label('valorInformacion_id') }}
             {{ Form::text('valorInformacion_id', $expediente->valorInformacion_id, ['class' => 'form-control' . ($errors->has('valorInformacion_id') ? ' is-invalid' : ''), 'placeholder' => 'Valorinformacion Id']) }}

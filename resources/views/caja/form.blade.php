@@ -17,9 +17,9 @@
             {!! $errors->first('numTomosCaja', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('areaPert') }}
-            {{ Form::text('areaPert', $caja->areaPert, ['class' => 'form-control' . ($errors->has('areaPert') ? ' is-invalid' : ''), 'placeholder' => 'Areapert']) }}
-            {!! $errors->first('areaPert', '<div class="invalid-feedback">:message</p>') !!}
+            {{ Form::label('numBitacora') }}
+            {{ Form::text('numBitacora', $caja->numBitacora, ['class' => 'form-control' . ($errors->has('numBitacora') ? ' is-invalid' : ''), 'placeholder' => 'Numbitacora']) }}
+            {!! $errors->first('numBitacora', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('pasillo') }}

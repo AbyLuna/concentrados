@@ -33,8 +33,8 @@
                             {{ $caja->numTomosCaja }}
                         </div>
                         <div class="form-group">
-                            <strong>Areapert:</strong>
-                            {{ $caja->areaPert }}
+                            <strong>Numbitacora:</strong>
+                            {{ $caja->numBitacora }}
                         </div>
                         <div class="form-group">
                             <strong>Pasillo:</strong>

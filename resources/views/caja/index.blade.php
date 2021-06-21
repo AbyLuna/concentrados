@@ -39,7 +39,7 @@
 										<th>Numacta</th>
 										<th>Numcaja</th>
 										<th>Numtomoscaja</th>
-										<th>Areapert</th>
+										<th>Numbitacora</th>
 										<th>Pasillo</th>
 										<th>Anaquel</th>
 
@@ -54,14 +54,16 @@
 											<td>{{ $caja->numActa }}</td>
 											<td>{{ $caja->numCaja }}</td>
 											<td>{{ $caja->numTomosCaja }}</td>
-											<td>{{ $caja->areaPert }}</td>
+											<td>{{ $caja->numBitacora }}</td>
 											<td>{{ $caja->pasillo }}</td>
 											<td>{{ $caja->anaquel }}</td>
 
                                             <td>
-                                                <form action="{{ route('cajas.destroy',$caja->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('cajas.show',$caja->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('cajas.edit',$caja->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+
+                                            <form action="{{ route('cajas.destroy',$caja->id) }}" method="POST">
+                                            <a class="btn btn-sm btn-primary " href="{{ route('cajas.show',$caja->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                            <a href="{{ route('cajacontrato', $caja->id) }}" class="btn btn-sm btn-info">Ver contratos</a>
+                                            <a class="btn btn-sm btn-success" href="{{ route('cajas.edit',$caja->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>

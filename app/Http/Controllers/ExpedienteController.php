@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Expediente;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 /**
@@ -32,9 +33,23 @@ class ExpedienteController extends Controller
      */
     public function create()
     {
-        $expediente = new Expediente();
-        return view('expediente.create', compact('expediente'));
+
+
+         
+         $valorinformacion = DB::table('ValorInformacion')->get(['id','descripcion']);  
+       $valorDocumental = DB::table('ValorDocumental')->get(['id','descripcion']);
+       $vigTramites = DB::table('VigTramites')->get(['id','descripcion']);
+       $vigconcentracion = DB::table('VigConcentracion')->get(['id','descripcion']);
+       $destinoFinal = DB::table('destinoFinal')->get(['id','descripcion']);
+       $contrato =DB::table('contratos')->get(['id','numContrato']);
+   
+   //return $valorinformacion;
+       $expediente = new Expediente();
+
+    return view('expediente.create', compact(['expediente', 'valorDocumental','valorinformacion','vigTramites','vigconcentracion','destinoFinal','contrato']));
+
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -44,7 +59,9 @@ class ExpedienteController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Expediente::$rules);
+        //return $request;
+
+      //  request()->validate(Expediente::$import_request_variables(types)    );
 
         $expediente = Expediente::create($request->all());
 

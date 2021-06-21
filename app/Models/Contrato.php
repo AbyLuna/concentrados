@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property $id
  * @property $numContrato
+ * @property $area
  * @property $descripcion
  * @property $numTomosExp
  * @property $bitacora
@@ -26,6 +27,7 @@ class Contrato extends Model
     
     static $rules = [
 		'numContrato' => 'required',
+		'area' => 'required',
 		'descripcion' => 'required',
 		'numTomosExp' => 'required',
 		'bitacora' => 'required',
@@ -38,7 +40,7 @@ class Contrato extends Model
      *
      * @var array
      */
-    protected $fillable = ['numContrato','descripcion','numTomosExp','bitacora','caja_id'];
+    protected $fillable = ['numContrato','area','descripcion','numTomosExp','bitacora','caja_id'];
 
 
     /**

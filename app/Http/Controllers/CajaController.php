@@ -107,3 +107,4 @@ class CajaController extends Controller
             ->with('success', 'Caja deleted successfully');
     }
 }
+

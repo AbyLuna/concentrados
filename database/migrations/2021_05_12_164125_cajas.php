@@ -18,7 +18,7 @@ class Cajas extends Migration
             $table->string('numActa');
             $table->string('numCaja');
             $table->string('numTomosCaja');
-            $table->string('areaPert');
+            $table->string('numBitacora');
             $table->string('pasillo');
             $table->string('anaquel');
     

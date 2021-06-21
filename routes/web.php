@@ -27,7 +27,16 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 });*/
 
 
-Route::resource('contratos',App\Http\Controllers\ContratoController::class);
+Route::resource('/contratos', App\Http\Controllers\ContratoController::class);
+
+Route::get('/contratos/caja/{caja}',[App\Http\Controllers\ContratoController::class, 'cajacontrato'])->name('cajacontrato');
+
+// Route::resource('/crud','App\Http\Controllers\AutosController', ['except' =>  'show']);
+
+
+
+
+
 
 Route::resource('expedientes',App\Http\Controllers\ExpedienteController::class);
 
@@ -53,3 +62,6 @@ Route::get('/portada', function(){
     return view('portada');
 })->name('portada');
 
+Route::get('/buscador', function(){
+    return view('buscador');
+})->name('buscador');
