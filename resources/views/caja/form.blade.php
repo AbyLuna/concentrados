@@ -12,11 +12,6 @@
             {!! $errors->first('numCaja', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('numContratos') }}
-            {{ Form::text('numContratos', $caja->numContratos, ['class' => 'form-control' . ($errors->has('numContratos') ? ' is-invalid' : ''), 'placeholder' => 'Numcontratos']) }}
-            {!! $errors->first('numContratos', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
             {{ Form::label('numTomosCaja') }}
             {{ Form::text('numTomosCaja', $caja->numTomosCaja, ['class' => 'form-control' . ($errors->has('numTomosCaja') ? ' is-invalid' : ''), 'placeholder' => 'Numtomoscaja']) }}
             {!! $errors->first('numTomosCaja', '<div class="invalid-feedback">:message</p>') !!}

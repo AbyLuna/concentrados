@@ -20,9 +20,6 @@ class CajaController extends Controller
     {
         $cajas = Caja::paginate();
 
-      
-    
-
         return view('caja.index', compact('cajas'))
             ->with('i', (request()->input('page', 1) - 1) * $cajas->perPage());
     }
@@ -110,3 +107,4 @@ class CajaController extends Controller
             ->with('success', 'Caja deleted successfully');
     }
 }
+

@@ -17,7 +17,6 @@ class Cajas extends Migration
             $table->bigIncrements('id');
             $table->string('numActa');
             $table->string('numCaja');
-            $table->string('numContratos');
             $table->string('numTomosCaja');
             $table->string('numBitacora');
             $table->string('pasillo');

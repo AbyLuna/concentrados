@@ -62,3 +62,6 @@ Route::get('/portada', function(){
     return view('portada');
 })->name('portada');
 
+Route::get('/buscador', function(){
+    return view('buscador');
+})->name('buscador');

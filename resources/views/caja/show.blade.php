@@ -29,10 +29,6 @@
                             {{ $caja->numCaja }}
                         </div>
                         <div class="form-group">
-                            <strong>Numcontratos:</strong>
-                            {{ $caja->numContratos }}
-                        </div>
-                        <div class="form-group">
                             <strong>Numtomoscaja:</strong>
                             {{ $caja->numTomosCaja }}
                         </div>
