@@ -10,9 +10,10 @@
     </div>
     <br><br><br>
     <form method=get action="#">
-        <img src="/img/lupa.jpg" width="77" height="auto" </a>
         <input type="text" style="width:777" value="#">
-        <input class="btn btn-secondary"  type=submit name=btnG value="Búsqueda">
+        <a class="btn btn-outline-ligth" href="/buscador">
+                   
+        <input class="btn btn-secondary" type=submit name=btnG value="Búsqueda"></a>
         </td>
         </tr>
     </form>
