@@ -34,15 +34,15 @@ class ContratoController extends Controller
     } */
 
 
- public function index()
+ public function index($contrato)
     {
          
-        
+        Return $contrato;
         $contratos = Contrato::paginate();
        
 
-        return view('contrato.index', compact('contratos'))
-            ->with('i', (request()->input('page', 1) - 1) * $contratos->perPage());
+       // return view('contrato.index', compact('contratos'))
+         //   ->with('i', (request()->input('page', 1) - 1) * $contratos->perPage());
     }
 
 

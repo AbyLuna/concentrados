@@ -34,14 +34,19 @@ Route::get('/contrato/create/{caja}',[App\Http\Controllers\ContratoController::c
 
 Route::get('/contratos/caja/{caja}',[App\Http\Controllers\ContratoController::class, 'cajacontrato'])->name('cajacontrato');
 
-// Route::resource('/crud','App\Http\Controllers\AutosController', ['except' =>  'show']);
 
 
 
 
+/// Rutas de expediente 
 
 
-Route::resource('expedientes',App\Http\Controllers\ExpedienteController::class);
+Route::resource('expedientes',App\Http\Controllers\ExpedienteController::class,['except'=>'index']);
+Route::get('expedientes/contrato/{contrato}',[App\Http\Controllers\ExpedienteController::class, 'index'])->name('expedientes.index');
+
+
+
+
 
 Route::resource('cajas',App\Http\Controllers\CajaController::class);
 
@@ -49,8 +54,7 @@ Route::resource('/registros',App\Http\Controllers\RegistroController::class);
 
 
 
-
-
+ // Rutas de impresion de reporte
 
 Route::get('/reporte/{registro}',[App\Http\Controllers\ExcelController::class, 'reporte'])->name('Reporte');
 Route::post('/reporte/imprimir/',[App\Http\Controllers\ExcelController::class, 'imprimirReporte'])->name('imprimirReporte');

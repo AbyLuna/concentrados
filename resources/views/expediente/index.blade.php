@@ -54,9 +54,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($expedientes as $expediente)
+                                   
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            
                                             
 											<td>{{ $expediente->numSerie }}</td>
 											<td>{{ $expediente->descripcion }}</td>
@@ -82,13 +82,13 @@
                                                 </form>
                                             </td>
                                         </tr>
-                                    @endforeach
+                                  
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-                {!! $expedientes->links() !!}
+           
             </div>
         </div>
     </div>
