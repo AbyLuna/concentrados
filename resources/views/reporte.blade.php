@@ -37,7 +37,7 @@
                         <input class="form-control" type="text" placeholder="Área de Adcripción">
                     </div>
                     <div class="form-group p-2">
-                        <label for="nprestamo">Teléfono y/o Ext.:</label>
+                        <label for="nprestamo">Teléfono y/o extencion.:</label>
                         <input class="form-control" type="text" placeholder="Teléfono y/o Ext.">
                     </div>
                 </fieldset>
