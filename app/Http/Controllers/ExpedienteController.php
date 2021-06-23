@@ -29,7 +29,8 @@ class ExpedienteController extends Controller
             return view('expediente.index', compact('expediente'));
 
         }else {
-            return redirect()->route('expedientes.create');
+            //return $contrato;
+            return redirect()->route('expedientes.create',compact('contrato'));
         }
        
        
@@ -49,17 +50,17 @@ class ExpedienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($contrato)
     {
-
-
+        
+       // return $contrato;
          
          $valorinformacion = DB::table('ValorInformacion')->get(['id','descripcion']);  
        $valorDocumental = DB::table('ValorDocumental')->get(['id','descripcion']);
        $vigTramites = DB::table('VigTramites')->get(['id','descripcion']);
        $vigconcentracion = DB::table('VigConcentracion')->get(['id','descripcion']);
        $destinoFinal = DB::table('destinoFinal')->get(['id','descripcion']);
-       $contrato =DB::table('contratos')->get(['id','numContrato']);
+       
    
    //return $valorinformacion;
        $expediente = new Expediente();
@@ -78,12 +79,14 @@ class ExpedienteController extends Controller
     public function store(Request $request)
     {
         //return $request;
-
+        $contrato = $request->contrato_id;
       //  request()->validate(Expediente::$import_request_variables(types)    );
 
-        $expediente = Expediente::create($request->all());
+       $expediente = Expediente::create($request->all());
+       // $contrato = $request->caja_id;
+      //  dd  ('contrato');
 
-        return redirect()->route('expedientes.index')
+       return redirect()->route('expedientes.index',compact('contrato') )
             ->with('success', 'Expediente created successfully.');
     }
 

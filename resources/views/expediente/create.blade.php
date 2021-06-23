@@ -114,14 +114,10 @@ Create Expediente
 
                                 <div class="form-group">
 
-                                    <p> Seleccione el numero de contrato:</p>
-                                    <select name='contrato_id' id="contrato_id" class="from-control">
+                                   
+                                    <input type="hidden" value="{{ $contrato }}"  name="contrato_id">
 
-                                        @foreach ($contrato as $valor )
-                                        <option value=" {{$valor->id}} ">{{$valor->numContrato}}</option>
-
-                                        @endforeach
-                                    </select>
+                                    
                                 </div>
 
                             </div>

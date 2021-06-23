@@ -16,11 +16,7 @@
                                 {{ __('Expediente') }}
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('expedientes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
-                                </a>
-                              </div>
+                            
                         </div>
                     </div>
                     @if ($message = Session::get('success'))

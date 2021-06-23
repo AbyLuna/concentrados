@@ -41,8 +41,9 @@ Route::get('/contratos/caja/{caja}',[App\Http\Controllers\ContratoController::cl
 /// Rutas de expediente 
 
 
-Route::resource('expedientes',App\Http\Controllers\ExpedienteController::class,['except'=>'index']);
+Route::resource('expedientes',App\Http\Controllers\ExpedienteController::class,['except'=>'index','except'=>'create']);
 Route::get('expedientes/contrato/{contrato}',[App\Http\Controllers\ExpedienteController::class, 'index'])->name('expedientes.index');
+Route::get('expedientes/create/{contrato}',[App\Http\Controllers\ExpedienteController::class, 'create'])->name('expedientes.create');
 
 
 
