@@ -34,20 +34,14 @@ class ContratoController extends Controller
     } */
 
 
- public function index(Request $request)
+ public function index($contrato)
     {
-        
-        $search=$request->get('texto');
+         
+        Return $contrato;
         $contratos = Contrato::paginate();
 
-        // if('tesxto'){
-        //     $contratos = Contrato::where('numero', 'LIKE',"%$search")  
-        //     ->orwhere('propetsrio', 'LIKE', "%$search")
-        //     ->orderby
-        // }  
-    
-        return view('buscador', compact('contratos'))
-            ->with('i', (request()->input('page', 1) - 1) * $contratos->perPage());
+       // return view('contrato.index', compact('contratos'))
+         //   ->with('i', (request()->input('page', 1) - 1) * $contratos->perPage());
     }
 
 

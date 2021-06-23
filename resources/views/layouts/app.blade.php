@@ -38,7 +38,7 @@
                     @if (Auth::check()) 
                     <ul class="navbar-nav mr-auto">
                     <!-- <a class="nav-link" href="{{ route('cajas.index') }}">{{ __('Cajas') }}</a>
-                    <a class="nav-link" href="{{ route('expedientes.index') }}">{{ __('Expedientes') }}</a>
+                    
                     <a class="nav-link" href="{{ route('contratos.index') }}">{{ __('Contratos') }}</a>
                     
                     <a class="nav-link" href="{{ route('registros.index') }}">{{ __('Registro') }}</a> -->
