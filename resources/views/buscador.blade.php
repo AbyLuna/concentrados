@@ -9,11 +9,10 @@
         <h2> <strong> Secretaría de Infraestructura y Obras Públicas </strong></h2>
     </div>
     <br><br><br>
-    <form method=get action="#">
-        <input type="text" style="width:777" value="#">
-        <a class="btn btn-outline-ligth" href="/buscador">
-                   
-        <input class="btn btn-secondary" type=submit name=btnG value="Búsqueda"></a>
+    <form method=get action="{{ route('contratos.index') }}" value={{ '$texto' }}>
+        <input  type=text name=texto>
+        <input class= "btn btn-md btn-succes" type="submit">
+
         </td>
         </tr>
     </form>
