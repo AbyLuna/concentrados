@@ -45,7 +45,7 @@ Cajas
                                     <th>
                                         <div class="card">
                                             <a class="btn btn-outline-secondary" href="/buscador">
-                                                <img src="/img/busc.png" width="55" height="auto" />
+                                                <img src="/img/carp.png" width="25" height="auto" />
                                             </a>
                                     </th>
                     </div>
