@@ -23,10 +23,24 @@ class ExpedienteController extends Controller
 
         
         //$expedientes = Expediente::findorfail;
-        $expediente = Expediente::where('contrato_id', $contrato)->firstOrFail();
+        $expediente = Expediente::where('contrato_id', $contrato)->first();
+
+        if($expediente){
+            return view('expediente.index', compact('expediente'));
+
+        }else {
+            return redirect()->route('expedientes.create');
+        }
+       
+       
+        //  return view(expediente.create);
+            
+
+
+
    //return $expedientes;
 
-       return view('expediente.index', compact('expediente'));
+     
          //   ->with('i', (request()->input('page', 1) - 1) * $expedientes->perPage());
     }
 
