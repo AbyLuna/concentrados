@@ -39,9 +39,14 @@ class ContratoController extends Controller
         
         $search=$request->get('texto');
         //return $search;
-         $contratos = \DB::table('contratos')->where('numContrato','=',$search)->get(); 
+        $contratos = Contrato::where('numContrato','LIKE',"%$search%")->
+        orwhere('descripcion','LIKE',"%$search%")->get();
+        
+
+
+        // $contratos = \DB::table('contratos')->where('numContrato','=',$search)->get(); 
          //return view('contrato.index', compact(['contratos','caja']));
-         return $contratos;
+        return view('contrato.buscador',compact('contratos'));
         // Return $contrato;
         // $contratos = Contrato::paginate();
 
