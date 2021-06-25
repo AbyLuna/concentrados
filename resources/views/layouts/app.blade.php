@@ -11,11 +11,6 @@
 
     <!-- Scripts -->
     
-
-    <!-- Fonts -->
-    
-    
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -25,9 +20,18 @@
             <div class="container">
                 <img src="/img/cabecera.png" > 
                 <a class="btn btn-outline-secondary" href="{{ url('/home') }}">
-                    <img src="/img/salida.png" width="35" height="auto" />
+                    <img src="/img/menu1.png" width="35" height="auto" />
                 </a>
             </div>
+             @if (Auth::check()) 
+                    <ul class="navbar-nav mr-auto">
+                    <a class="nav-link" href="{{ route('cajas.index') }}">{{ __('Cajas') }}</a>
+                    
+                    <a class="nav-link" href="{{ route('contratos.index') }}">{{ __('Contratos') }}</a>
+                    
+                    <a class="nav-link" href="{{ route('registros.index') }}">{{ __('Registro') }}</a> -->
+                    </ul>
+                  @endif 
         </nav>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -35,7 +39,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    @if (Auth::check()) 
+                    {{-- @if (Auth::check()) 
                     <ul class="navbar-nav mr-auto">
                     <!-- <a class="nav-link" href="{{ route('cajas.index') }}">{{ __('Cajas') }}</a>
                     
@@ -43,7 +47,7 @@
                     
                     <a class="nav-link" href="{{ route('registros.index') }}">{{ __('Registro') }}</a> -->
                     </ul>
-                  @endif 
+                  @endif  --}}
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
