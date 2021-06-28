@@ -43,10 +43,11 @@ Cajas
                                     <th>Anaquel</th>
                                     <th>Acciones</th>
                                     <th>
-                                        <div class="card">
-                                            <a class="btn btn-outline-secondary" href="/buscador">
+                                        <div class="card">  
+                                            <a class="btn btn-outline-secondary"  href="/buscador" >
                                                 <img src="/img/carp.png" width="25" height="auto" />
                                             </a>
+                                        </div>
                                     </th>
                     </div>
                     </tr>

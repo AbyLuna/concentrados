@@ -49,7 +49,7 @@ Create Expediente
                             <div class="form-group">
 
 
-                                <p>Seleciona el Valor Informacion:</p>
+                                <p>Seleciona el Valor Información:</p>
                                 <select name='valorInformacion_id' id="valorInformacion_id" class="from-control">
 
                                     @foreach ($valorinformacion as $valor )
@@ -58,7 +58,6 @@ Create Expediente
                                     @endforeach
                                 </select>
                             </div>
-
 
                             <div class="form-group">
 
