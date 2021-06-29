@@ -21,12 +21,30 @@ class ExpedienteController extends Controller
     public function index( $contrato)
     {
 
-        
+         $expediente = Expediente::where('contrato_id', $contrato)->first();
+
+
         //$expedientes = Expediente::findorfail;
-        $expediente = Expediente::where('contrato_id', $contrato)->first();
+        
 
         if($expediente){
-            return view('expediente.index', compact('expediente'));
+            return $expediente;
+        $valorDocumental_id = DB::table('ValorDocumental')->where('id',$expediente->valorDocumental_id)->get();
+         //return $valorDocumental_id->descripci;
+        //$expediente->valorDocumental_id= get('descripcion');
+        //return $valorDocumental_id;
+
+
+        //return $expediente->valorDocumental_id;
+        
+
+        $valorinformacion = DB::table('ValorInformacion')->get(['id','descripcion']);  
+       $valorDocumental = DB::table('ValorDocumental')->get(['id','descripcion']);
+       $vigTramites = DB::table('VigTramites')->get(['id','descripcion']);
+       $vigconcentracion = DB::table('VigConcentracion')->get(['id','descripcion']);
+       $destinoFinal = DB::table('destinoFinal')->get(['id','descripcion']);
+
+             return view('expediente.index',compact(['expediente','valorDocumental_id']));
 
         }else {
             //return $contrato;
@@ -34,15 +52,7 @@ class ExpedienteController extends Controller
         }
        
        
-        //  return view(expediente.create);
-            
-
-
-
-   //return $expedientes;
-
-     
-         //   ->with('i', (request()->input('page', 1) - 1) * $expedientes->perPage());
+        
     }
 
     /**

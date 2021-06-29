@@ -80,4 +80,7 @@
             </div>
         </div>
     </div>
+@foreach ($valorDocumental_id as $valor)
+    {{ $valor->descripcion }}
+    @endforeach
 @endsection
