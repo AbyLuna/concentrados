@@ -13,7 +13,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Caja</span>
+                       <strong> <h4 class="card-title">Crear caja</h5></strong>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('cajas.store') }}"  role="form" enctype="multipart/form-data">

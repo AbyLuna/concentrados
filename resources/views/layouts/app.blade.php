@@ -15,21 +15,24 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div class="container-fluid" id="app">
+        
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+            <div class="container-fluid">
                 <img src="/img/cabecera.png" > 
-                <a class="btn btn-outline-secondary" href="{{ url('/home') }}">
-                    <img src="/img/menu1.png" width="35" height="auto" />
-                </a>
             </div>
              @if (Auth::check()) 
                     <ul class="navbar-nav mr-auto">
-                    <a class="nav-link" href="{{ route('cajas.index') }}">{{ __('Cajas') }}</a>
-                    
-                    <a class="nav-link" href="{{ route('contratos.index') }}">{{ __('Contratos') }}</a>
-                    
-                    <a class="nav-link" href="{{ route('registros.index') }}">{{ __('Registro') }}</a> -->
+                    {{-- <a class="nav-link" href="{{ route('cajas.index') }}">{{ __('Cajas') }}</a> --}}
+                    <a class="nav-link" href="{{ url('/home') }}"> {{ __('Menú') }}
+                        <img src="/img/menu7.png" width="25" height="auto" />
+                    </a>
+                    <a class="nav-link" href="{{ route('buscador') }}">{{ __('Buscador') }}
+                        <img src="/img/buscar.png" width="35" height="auto"> 
+                    </a>
+                    <a class="nav-link" href="{{ route('registros.index') }}">{{ __('Reportes') }}
+                        <img src="/img/122.png" width="35" height="auto"> 
+                    </a>
                     </ul>
                   @endif 
         </nav>
@@ -38,16 +41,6 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    {{-- @if (Auth::check()) 
-                    <ul class="navbar-nav mr-auto">
-                    <!-- <a class="nav-link" href="{{ route('cajas.index') }}">{{ __('Cajas') }}</a>
-                    
-                    <a class="nav-link" href="{{ route('contratos.index') }}">{{ __('Contratos') }}</a>
-                    
-                    <a class="nav-link" href="{{ route('registros.index') }}">{{ __('Registro') }}</a> -->
-                    </ul>
-                  @endif  --}}
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

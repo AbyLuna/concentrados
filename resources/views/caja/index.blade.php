@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('template_title')
 Cajas
 @endsection
@@ -11,10 +10,8 @@ Cajas
             <div class="card">
                 <div class="card-header">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <span id="card_title"><strong>
-                                {{ __('Cajas') }}
-                        </span>
                         </strong>
+                        <strong> <h4 class="card-title">Cajas</h4></strong>
                         <div class="float-right">
                             <a href="{{ route('cajas.create') }}" class="btn btn-primary btn-sm float-right"
                                 data-placement="right">
@@ -43,11 +40,11 @@ Cajas
                                     <th>Anaquel</th>
                                     <th>Acciones</th>
                                     <th>
-                                        <div class="card">  
+                                        {{-- <div class="card">  
                                             <a class="btn btn-outline-secondary"  href="/buscador" >
                                                 <img src="/img/carp.png" width="25" height="auto" />
                                             </a>
-                                        </div>
+                                        </div> --}}
                                     </th>
                     </div>
                     </tr>

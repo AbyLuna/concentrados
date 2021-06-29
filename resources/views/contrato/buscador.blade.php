@@ -28,7 +28,6 @@
                                             <a class="btn btn-sm btn-success"
                                                 href="{{ route('contratos.edit',$contrato->id) }}"><i
                                                     class="fa fa-fw fa-edit"></i> Editar</a>
-
                                                     <a href="{{ route('expedientes.index',$contrato->id) }}" class="btn btn-sm btn-info">Ver Expediente</a>
                                             @csrf
                                             @method('DELETE')
