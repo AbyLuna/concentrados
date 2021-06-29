@@ -11,12 +11,7 @@ Contrato
             <div class="card">
                 <div class="card-header">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-
-                        <span id="card_title">
-                            <strong><h5>
-                            {{ __('Contratos') }}
-                            </strong></h5>
-                        </span>
+                        <strong> <h5 class="card-title">Contratos</h5></strong>
                         <div class="float-right">
                             <a href="{{ route('contratos.create', $caja ) }}" class="btn btn-primary btn-sm float-right"
                                 data-placement="left">
@@ -37,7 +32,6 @@ Contrato
                             <thead class="thead">
                                 <tr>
                                     <th>No</th>
-
                                     <th>No. de contrato</th>
                                     <th>Área</th>
                                     <th>Descripción</th>
@@ -46,11 +40,6 @@ Contrato
                                     <th>No. de caja</th>
                                     <th>Acciones</th>
                                     <th>
-                                    <div class="card">  
-                                        <a class="btn btn-outline-secondary" href="{{ route('cajas.index') }}" >
-                                            <img src="/img/caja.png" width="25" height="auto" />
-                                        </a>
-                                    </div>
                                 </th>
                                 </tr>
                             </thead>

@@ -13,8 +13,8 @@ Registros
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <center>
                             <span id="card_title">
-                                <h4> <strong> Registro Nacional de Archivos </strong> </h4>
-                                <h6> Listado de Archivos de tramite</h6>
+                                <strong>  <h4 style="color:#460308";> Registro Nacional de Archivos </strong> </h4>
+                                <h6 style="color:#49282a";> Listado de Archivos de tramite</h6>
                             </span>
                         </center>
                         <div class="float-right">
