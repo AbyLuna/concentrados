@@ -38,7 +38,7 @@ Registros
                                 <tr>
                                     <th>No</th>
 
-                                    <th>Nombre del archivo</th>
+                                    <th> del archivoNombre</th>
                                     <th>Dirección del archivo</th>
                                     <th>Telefono del contacto de archivo</th>
                                     <th>Correo del contacto de archivo</th>

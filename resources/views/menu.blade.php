@@ -44,7 +44,7 @@
         <div class="card-group">
         <div class="card">
                 <a class="btn btn-outline-secondary" href="{{ route('cajas.index') }}">
-                    <img src="/img/caja.png" width="220" height="auto" />
+                    <img src="/img/caja.png" width="270" height="auto" />
                 </a>
                 <div class="card-body">
                     <center>
@@ -54,19 +54,8 @@
                 </div>
             </div>
             <div class="card">
-                <a class="btn btn-outline-secondary" href="/portada">
-                    <img src="/img/rep.png" width="220" height="auto" />
-                </a>
-                <div class="card-body">
-                    <center>
-                        <h4> <strong>Portada de la caja</strong></h4>
-                        <p class="card-text"> Módulo de impresion de portada para la caja</p>
-                    </center>
-                </div>
-            </div>
-            <div class="card">
                 <a class="btn btn-outline-secondary" href="{{ route('registros.index') }}">
-                    <img src="/img/122.png" width="220" height="auto" />
+                    <img src="/img/122.png" width="270" height="auto" />
                 </a>
                 <div class="card-body">
                     <center>

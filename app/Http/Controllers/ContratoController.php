@@ -146,7 +146,7 @@ class ContratoController extends Controller
     }
 
     public function cajacontrato($caja){
-
+        
         //$contratos = Contrato::where('caja_id','=','caja');
         $contratos = \DB::table('contratos')->where('caja_id','=',$caja)->get(); 
         return view('contrato.index', compact(['contratos','caja']));

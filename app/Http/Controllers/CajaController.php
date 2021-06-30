@@ -106,5 +106,16 @@ class CajaController extends Controller
         return redirect()->route('cajas.index')
             ->with('success', 'Caja deleted successfully');
     }
+
+
+    public function portadaCaja($caja){
+        //$caja = Caja::find($id);
+       // return $caja;
+        $contratos = \DB::table('contratos')->where('caja_id','=',$caja)->get();
+       return view('portada', compact('contratos'));
+
+    } 
+
+
 }
 
