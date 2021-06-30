@@ -69,12 +69,18 @@ Cajas
                                                     class="fa fa-fw fa-eye"></i> </a> -->
                                     <a href="{{ route('cajacontrato', $caja->id) }}" class="btn btn-sm btn-info">Ver
                                         contratos</a>
+                                        <a class="btn btn-sm btn-warning" href=" {{route('portada',$caja->id)  }} "><i
+                                            class="fa fa-fw fa-edit"></i>Imprimir Portada </a>
+                                        
                                     <a class="btn btn-sm btn-success" href="{{ route('cajas.edit',$caja->id) }}"><i
                                             class="fa fa-fw fa-edit"></i> Editar</a>
+
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm"><i
-                                            class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Estás seguro que deseas eliminar el registro?');"  ><i
+                                        class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                    {{-- <button type="submit" class="btn btn-danger btn-sm"><i
+                                            class="fa fa-fw fa-trash"></i> Eliminar</button> --}}
                                 </form>
                             </td>
                         </tr>

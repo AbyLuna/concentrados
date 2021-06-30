@@ -34,6 +34,7 @@ Route::get('/contrato/create/{caja}',[App\Http\Controllers\ContratoController::c
 
 Route::get('/contratos/caja/{caja}',[App\Http\Controllers\ContratoController::class, 'cajacontrato'])->name('cajacontrato');
 
+Route::get('/caja/portada/{caja}',[App\Http\Controllers\CajaController::class, 'portadaCaja'])->name('portada');
 
 
 
@@ -65,10 +66,9 @@ Route::get('/reporte', function(){
     return view('reporte');
 })->name('reporte');
 
-
-Route::get('/portada', function(){
-    return view('portada');
-})->name('portada');
+// Route::get('/portada/uno', function(){
+//     return view('portada');
+// })->name('portada');
 
 Route::get('/buscador', function(){
     return view('buscador');

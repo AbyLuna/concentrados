@@ -34,111 +34,22 @@
             <thead>
                 <tr>
                     <th>EXP CTO</th>
+                    <th>Descripción</th>
                     <th>Bitacora</th>
                     <th>Tomos</th>
                 </tr>
             </thead>
+           
             <tbody>
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <input class="form-control input-sm" id="inputsm" type="text">
-                        </div>
-                    </td>
-                </tr>
-
+                 @foreach ($contratos as $contratos)
+                     <tr>
+                       
+                       <td>{{ $contratos->numContrato }}</td>
+                       <td>{{ $contratos->descripcion }}</td>
+                       <td>{{ $contratos->numTomosExp }}</td>
+                       <td>{{ $contratos->bitacora }}</td>
+                  </tr>
+                @endforeach
             </tbody>
         </table>
 

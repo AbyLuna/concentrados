@@ -67,7 +67,9 @@
                                                     <a class="btn btn-sm btn-success" href="{{ route('expedientes.edit',$expediente->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Estás seguro que deseas eliminar el registro?');"  ><i
+                                                        class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                                    {{-- <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button> --}}
                                                 </form>
                                             </td>
                                         </tr>

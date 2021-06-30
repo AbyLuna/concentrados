@@ -65,8 +65,9 @@ Contrato
                                                     <a href="{{ route('expedientes.index',$contrato->id) }}" class="btn btn-sm btn-info">Ver Expediente</a>
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm"><i
+                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Estás seguro que deseas eliminar el registro?');"  ><i
                                                     class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                                    
                                         </form>
                                     </td>
                                 </tr>
