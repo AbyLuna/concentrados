@@ -12,25 +12,51 @@
         <img src="/img/cabecera.png" width="777" height="auto">
         </div>
    <div class=" text-center">
-        <h2><b> Secretaria de Infraestructura y Obras Publicas </b> </h2>
-        <h3>RECIDENCIA GENERAL ZONA SUR</h3>
-            <h4> (DGCCYCE) </h4>
-            <P> DOCUMENTACION DEL EJERCICIO:
-            <h3><b>2015</b></h3>
-            </P>
-    </div>
+        <h3><b> Secretaria de Infraestructura y Obras Publicas </b> </h3>
+        <select class="btn-lg btn btn-outline-light" >
+           <strong>
+            <option>RECIDENCIA GENERAL ZONA SUR</option>
+            <option>RECIDENCIA GENERAL ZONA NORTE</option>
+            <option>RECIDENCIA GENERAL ZONA ESTE</option>
+            <option>RECIDENCIA GENERAL ZONA OESTE</option>
+           </strong>
+        </select>
+        <br>
+        <select class="btn-lg btn btn-outline-light" >
+            <strong>
+             <option>(DGCCYCE)</option>
+             <option>(DGCCYCE)</option>
+             <option>(DGCCYCE)</option>
+             <option>(DGCCYCE)</option>
+            </strong>
+         </select>
+            <h5> DOCUMENTACION DEL EJERCICIO: <br>
+            <input class="btn-lg btn btn-outline-ligth" type="text"  placeholder="2015">
+            </h5>
+        </div>
     <div class="container">
         <div>
-            <h3>Número de caja:<span> <b>309/78</b> </span></h3>
+            <h4>Número de caja:<span> <b>309/78</b> </span></h4>
+            {{-- <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Número de caja</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     @foreach ($cajas as $cajas)
+                         <tr>
+                           <td>{{ $cajas->numCaja }}</td>
+                    @endforeach
+                </tbody>
+            </table>  --}}
         </div>
-        <div class="text-center">
-            <img src="/img/infra.png" width="670" height="auto" />
-        </div>
+       
         <br><br>
         <div class=" text-center ">
-            <h2> <b> Descripción General del contenido </b></h2>
+            <h4> <b> Descripción General del contenido </b></h4>
         </div>
-        <table class="table table-striped">
+        <table class="table table-condensed">
             <thead>
                 <tr>
                     <th>EXP CTO</th>
@@ -43,7 +69,6 @@
             <tbody>
                  @foreach ($contratos as $contratos)
                      <tr>
-                       
                        <td>{{ $contratos->numContrato }}</td>
                        <td>{{ $contratos->descripcion }}</td>
                        <td>{{ $contratos->numTomosExp }}</td>
@@ -54,19 +79,64 @@
         </table>
 
         <div class="text-center">
-
             <hr style="border-color:grey;">
-            <h3><font color=808080><b> VIGENCIA DOCUMENTAL </b></h3></font>
-            <h5><b> BAJA SEPTIEMBRE 2021 </b></h5>
-            <h6> (PARA RESGUARDO) </h6>
+            <h5><font color=808080><b> VIGENCIA DOCUMENTAL </b></h5></font>
+                <input class="btn-md btn btn-outline-ligth" type="text"  placeholder="Baja septiembre 2021">
+                <br>
+                <select class="btn-sm btn btn-outline-light" >
+                    <strong>
+                     <option>(PARA RESGUARDO) </option>
+                     <option>(PARA ELIMINACIÓN ) </option>
+                    </strong>
+                 </select>
             <hr style="border-color:grey;">
-            <h5><font color=808080><b> ARCHIVO DE CONCENTRACION </b></h5></font>
+            <h6><font color=808080><b> ARCHIVO DE CONCENTRACION </b></h6></font>
             <hr style="border-color:grey;">
             <div class="text-center">
         <h6> NOMBRE Y FIRMA DEL RESPONSABLE DEL ARCHIVO DE TRAMITE </h6>
-        <br><br><br>
-        <hr size=5 width="250" style="border-color:grey;">
-        <h6><b>ING. RODRIGO RAMOS DELGADO </b></h6>
+        <br><br>
+             <hr size=5 width="330" style="border-color:grey;">
+             <strong>
+             <select class="btn-md btn btn-outline-light" >
+                 <option>Clementina Gadir Bautista González</option>
+                 <option>Adolfo Jesús Carlos Medrano Alcazar </option>
+                 <option>Alma Mariana García López </option>
+                 <option>Angelina Vázquez Ramírez</option>
+                 <option>Marina Marcial Hernández</option>
+                 <option>Martín Rochin Márquez </option>
+                 <option> Alfredo Lozano Viveros</option>
+                 <option> Isabel del Carmen Morales Cabañas </option>
+                 <option>Gabriela Fortuny Bojórquez</option>
+                 <option> Verónica García Zarate</option>
+                 <option>Edgar Noé Medina Tejeda</option>
+                 <option>Aidee Adiyaret Pulgaron Áviles</option>
+                 <option>Mireya Guerra Cuevas </option>
+                 <option>Claudia Alarcón Libreros</option>
+                 <option>Juan Alberto Tejeda Almanza</option>
+                 <option>Diana Lizeth Peyrani Vázquez</option>
+                 <option>Claudia Elith Aguirre Burgos </option>
+                 <option>Gaudencio Portillo López</option>
+                 <option>José Manuel Tirado Martínez</option>
+                 <option>Rocío Rodríguez Peredo</option>
+                 <option>María Isabel Martínez González</option>
+                 <option>José Antonio Benítez Zaleta</option>
+                 <option>Alicia Bautista Pedraza</option>
+                 <option>Juan Manuel Vásquez Sánchez</option>
+                 <option>Miguel Ángel Hernández Ávila</option>
+                 <option>Noely Villa Villarauz</option>
+                 <option>Saúl Durán Alarcón</option>
+                 <option>Julio César Gómez Cortez</option>
+                 <option>Ivonne Elizabeth Hernández Díaz</option>
+                 <option>Lorena Yanet Benavides Villa</option>
+                 <option>Marisol Vite Gómez</option>
+                 <option>Mariana León Castillo</option>
+                 <option>Itzel Zapata Hernández</option>
+                 <option>Iván Gerardo Romandía</option>
+                 <option>Guillermo Adauta Landa</option>
+                 <option>Irma Ortega Pérez</option>
+                </strong>
+             </select>
+             <br>
         </div>
     </div>
         </div>
