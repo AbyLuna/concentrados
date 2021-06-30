@@ -22,40 +22,28 @@ class ExpedienteController extends Controller
     {
 
 
-        //$expediente = Expediente::where('contrato_id', $contrato)->first(); 
+        $expediente = Expediente::where('contrato_id', $contrato)->first();
+        //return $expediente; 
         
-        $expediente = DB::table('expedientes')->where('contrato_id',$contrato)
-        ->join('valordocumental','valordocumental.id','=','expedientes.valorDocumental_id')
-        
-        ->first(); 
-       return $expediente; 
-
-        // $expediente->valorDocumental_id = DB::table('expedientes')->join('valordocumental','valordocumental.id','=','expedientes.valorDocumental_id')->select('valordocumental.descripcion as descripcion')->get();
-        // return $expediente;
+      
         //dd($expediente);
         //$expedientes = Expediente::findorfail;
         
 
         if($expediente){
-            //return $expediente;
-        $valorDocumental_id = DB::table('ValorDocumental')->where('id',$expediente->valorDocumental_id)->get();
-
-
-         //return $valorDocumental_id->descripci;
-        //$expediente->valorDocumental_id= get('descripcion');
-        //return $valorDocumental_id;
-
-
-        //return $expediente->valorDocumental_id;
+        $expediente = DB::table('expedientes')->where('contrato_id',$contrato)
         
+        
+        ->join('ValorDocumental','ValorDocumental.id','=','expedientes.valorDocumental_id')
 
-        $valorinformacion = DB::table('ValorInformacion')->get(['id','descripcion']);  
-       $valorDocumental = DB::table('ValorDocumental')->get(['id','descripcion']);
-       $vigTramites = DB::table('VigTramites')->get(['id','descripcion']);
-       $vigconcentracion = DB::table('VigConcentracion')->get(['id','descripcion']);
-       $destinoFinal = DB::table('destinoFinal')->get(['id','descripcion']);
-
-             return view('expediente.index',compact(['expediente','valorDocumental_id']));
+        ->join('ValorInformacion','ValorInformacion.id','=','expedientes.valorInformacion_id')
+        ->join('VigConcentracion','VigConcentracion.id','=','expedientes.vigConcentracion_id')
+        ->join('VigTramites','VigTramites.id','=','expedientes.vigTramite_id')
+        ->join('destinoFinal','destinoFinal.id','=','expedientes.destinoFinal_id')
+        ->select('expedientes.id','expedientes.numSerie','expedientes.descripcion','expedientes.fechaApertura','expedientes.fechaCierre','ValorDocumental.descripcion as valorDocumental_id','ValorInformacion.descripcion as valorInformacion_id','VigConcentracion.descripcion as vigConcentracion_id','VigTramites.descripcion as vigTramite_id','expedientes.totalVigencia','destinoFinal.descripcion as destinoFinal_id','expedientes.signatura','expedientes.observaciones','expedientes.contrato_id','expedientes.created_at','expedientes.updated_at')  
+        ->get(); 
+     
+        return view('expediente.index',compact('expediente'));
 
         }else {
             //return $contrato;
