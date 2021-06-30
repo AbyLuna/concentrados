@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Expediente;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use DB;
 
 
 /**
@@ -21,15 +21,26 @@ class ExpedienteController extends Controller
     public function index( $contrato)
     {
 
-         $expediente = Expediente::where('contrato_id', $contrato)->first();
 
+        //$expediente = Expediente::where('contrato_id', $contrato)->first(); 
+        
+        $expediente = DB::table('expedientes')->where('contrato_id',$contrato)
+        ->join('valordocumental','valordocumental.id','=','expedientes.valorDocumental_id')
+        
+        ->first(); 
+       return $expediente; 
 
+        // $expediente->valorDocumental_id = DB::table('expedientes')->join('valordocumental','valordocumental.id','=','expedientes.valorDocumental_id')->select('valordocumental.descripcion as descripcion')->get();
+        // return $expediente;
+        //dd($expediente);
         //$expedientes = Expediente::findorfail;
         
 
         if($expediente){
-            return $expediente;
+            //return $expediente;
         $valorDocumental_id = DB::table('ValorDocumental')->where('id',$expediente->valorDocumental_id)->get();
+
+
          //return $valorDocumental_id->descripci;
         //$expediente->valorDocumental_id= get('descripcion');
         //return $valorDocumental_id;
