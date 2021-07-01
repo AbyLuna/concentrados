@@ -46,6 +46,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($expediente as $expediente)
                                         <tr>
                                             
 											<td>{{ $expediente->numSerie }}</td>
@@ -75,6 +76,7 @@
                                         </tr>
                                 </tbody>
                             </table>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -82,7 +84,5 @@
             </div>
         </div>
     </div>
-@foreach ($valorDocumental_id as $valor)
-    {{ $valor->descripcion }}
-    @endforeach
+
 @endsection

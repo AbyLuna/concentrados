@@ -14,7 +14,7 @@
                             <span class="card-title">Show Expediente</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('expedientes.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('expedientes.index',$expediente->contrato_id ) }}"> Back</a>
                         </div>
                     </div>
 
