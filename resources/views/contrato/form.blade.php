@@ -14,8 +14,8 @@
             {!! $errors->first('area', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('descripcion') }}
-            {{ Form::text('descripcion', $contrato->descripcion, ['class' => 'form-control' . ($errors->has('descripcion') ? ' is-invalid' : ''), 'placeholder' => 'Descripción del contrato']) }}
+            {{ Form::label(Descripcion') }}
+            {{ Form::textarea('descripcion', $contrato->descripcion, ['class' => 'form-control' . ($errors->has('descripcion') ? ' is-invalid' : ''), 'placeholder' => 'Descripción del contrato']) }}
             {!! $errors->first('descripcion', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">

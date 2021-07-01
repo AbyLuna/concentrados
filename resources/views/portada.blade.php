@@ -13,7 +13,7 @@
         <h2><b> Secretaria de Infraestructura y Obras Publicas </b> </h2>
         <div class="container text-center">
                <h1>  <b>309/78</b> </h1>
-                {{-- <table class="table table-striped">
+                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>Número de caja</th>
@@ -25,7 +25,7 @@
                                <td>{{ $cajas->numCaja }}</td>
                         @endforeach
                     </tbody>
-                </table>  --}}
+                </table>  
                         
          </div>
          <select  class="btn-lg btn btn-outline-light" >

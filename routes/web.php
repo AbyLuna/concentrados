@@ -36,7 +36,7 @@ Route::get('/contratos/caja/{caja}',[App\Http\Controllers\ContratoController::cl
 
 Route::get('/caja/portada/{caja}',[App\Http\Controllers\CajaController::class, 'portadaCaja'])->name('portada');
 
-
+Route::get('/caja/portada/{caja}',[App\Http\Controllers\CajaController::class, 'numCaja'])->name('portada');
 
 
 /// Rutas de expediente 

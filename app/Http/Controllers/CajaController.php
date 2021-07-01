@@ -116,13 +116,12 @@ class CajaController extends Controller
 
     } 
 
-    // public function numCaja($caja){
-    //     //$caja = Caja::find($id);
-    //    // return $caja;
-    //     $cajas = \DB::table('cajas')->where('caja_id','=',$caja)->get();
-    //    return view('portada', compact('cajas'));
+    public function numCaja($caja){
+    
+         $cajas = \DB::table('cajas')->where('caja_id','=',$caja)->get();
+         return view('portada', compact('cajas'));
 
-    // } 
+     } 
 
 
 }
