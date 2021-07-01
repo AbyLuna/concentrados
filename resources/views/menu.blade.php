@@ -67,6 +67,7 @@
         </div>
     </div>
     <div class="footer-copyright text-center py-3">© 2021 Derechos reservados Departamento de Tecnologías de la Información
+    </div>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 

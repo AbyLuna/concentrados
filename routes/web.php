@@ -73,3 +73,7 @@ Route::get('/reporte', function(){
 Route::get('/buscador', function(){
     return view('buscador');
 })->name('buscador');
+
+Route::get('/expediente', function(){
+    return view('expediente');
+})->name('expediente');

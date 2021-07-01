@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-Create Expediente
+Crear un expediente
 @endsection
 
 @section('content')
