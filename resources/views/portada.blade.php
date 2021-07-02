@@ -12,10 +12,10 @@
         <img src="/img/cabecera.png" width="777" height="auto">
         <h2><b> Secretaria de Infraestructura y Obras Publicas </b> </h2>
         <div class="container text-center">
-            @foreach ($contratos as $contratos)
+            @foreach ($contratos as $contrato)
                 @if ($loop->first)
                     <h1>
-                        <b>{{ $contratos->numCaja  }}</b>
+                        <b>{{ $contrato->numActa  }}</b>
                     </h1>
                 @endif
 
@@ -140,7 +140,7 @@
                 </tr>
             </thead>
             <tbody>
-                 @foreach ($contratosList as $contratosList)
+                 @foreach ($contratos as $contratosList)
                      <tr>
                        <td>{{ $contratosList->numContrato }}</td>
                        <td>{{ $contratosList->descripcion }}</td>
