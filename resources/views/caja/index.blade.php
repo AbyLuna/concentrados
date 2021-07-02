@@ -70,7 +70,7 @@ Cajas
                                     <a href="{{ route('cajacontrato', $caja->id) }}" class="btn btn-sm btn-info">Ver
                                         contratos</a>
 
-                                    <a class="btn btn-sm btn-warning" href=" {{route('portada',$caja->numCaja)  }} "><i class="fa fa-fw fa-edit"></i>Imprimir Portada </a>
+                                    <a class="btn btn-sm btn-warning" href=" {{route('portada',$caja->id)  }} "><i class="fa fa-fw fa-edit"></i>Imprimir Portada </a>
 
                                     <a class="btn btn-sm btn-success" href="{{ route('cajas.edit',$caja->id) }}"><i
                                             class="fa fa-fw fa-edit"></i> Editar</a>
