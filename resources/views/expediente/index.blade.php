@@ -61,7 +61,7 @@
 											<td>{{ $expediente->destinoFinal_id }}</td>
 											<td>{{ $expediente->signatura }}</td>
 											<td>{{ $expediente->observaciones }}</td>
-											<td>{{ $expediente->contrato_id }}</td>
+											
                                             <td>
                                                 <form action="{{ route('expedientes.destroy',$expediente->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('expedientes.show',$expediente->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>

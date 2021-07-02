@@ -5,129 +5,127 @@ Crear un expediente
 @endsection
 
 @section('content')
-
 <div class="row justify-content-center p-2">
-
     <div class="col-md-12">
         @includeif('partials.errors')
         <div class="card card-default">
             <div class="card-header">
                 <span class="card-title">
-                    <h2>Información del expediente
-                    </h2>
+                    <h5>Información del expediente
+                    </h5>
                 </span>
             </div>
-            <div class="card-body">
-                <form method="POST" action="{{ route('expedientes.store') }}" role="form" enctype="multipart/form-data">
-                    @csrf
-                    <form action="{{ route('expedientes.store') }}" method="post">
-                        @csrf
-                        <div class="md-auto p-4">
-                            <label class="col-md-auto" for="signatura">Nombre de la serie:</label>
-                            <input type="text" class="form-control" id="numSerie" name="numSerie"
-                                placeholder="Nombre de la serie"> <br>
-                            <label class="col-md-auto" for="signatura">Breve descripción:</label>
-                            <input type="text" class="form-control" id="descripcion" name="descripcion"
-                                placeholder="Nombre de la serie">
-                            <div class="form-inline md-auto p-2"> <br> <br> <br>
-                                <label class="col-md-auto ml-1">Fecha de apertura:</label>
-                                <input type="date" name="fechaApertura">
-                                <label class="col-md-auto ml-auto">Fecha de cierre:</label>
-                                <input type="date" name="fechaCierre">
-                            </div>
+            <div class="container">
+                 <br>
+                <form action="{{ route('expedientes.store') }}" method="post">
+                    @csrf 
+                <div class="form-group row">
+                    <label  class="col-sm-2 col-form-label">Nombre de la serie</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="numSerie" name="numSerie"
+                    placeholder="Nombre de la serie"> 
+                </div>
+                </div>
+                 <div class="form-group">
+                   <label>Breve descripción </label>
+                   <textarea class="form-control" id="descripcion" rows="2" name="descripcion"  placeholder="Breve decripción">></textarea>
+                 </div>
+               <div class="jumbotron jumbotron-fluid  form-inline">
+                 <div class="col-md-4">
+                       <label>Fecha de apertura </label>
+                       <input type="date" name="fechaApertura" min="2018-03-25" max="2018-05-25"  />
+                   </div>
+                   <div class="col-md-4 ml-9">
+                       <label>Fecha de cierre </label>
+                       <input type="date" name="fechaCierre" min="2018-03-25" max="2018-05-25" />
+                   </div>
+             </div>
+             <div class="form-group row">
+                <p>Seleciona el Valor Documental:</p>
+               <label class="col-sm-2 col-form-label"></label> 
+             <select class="form-control" name='valorDocumental_id' id="valorDocumental_id">
+                    @foreach ($valorDocumental as $valor )
+                    <option value=" {{$valor->id}} ">{{$valor->descripcion}}</option>
+                    @endforeach
+                </select>
+             </div>
+          
+             <div class="form-group row">
+                <p>Seleciona el Valor de la Información:</p>
+               <label class="col-sm-2 col-form-label"></label> 
+             <select class="form-control" name='valorInformacion_id' id="valorInformacion_id">
+                    @foreach ($valorinformacion as $valor )
+                    <option value=" {{$valor->id}} ">{{$valor->descripcion}}</option>
+                    @endforeach
+                </select>
+             </div>
 
-                            <div class="form-group">
-                                <p>Seleciona el Valor Documental:</p>
-                                <select name='valorDocumental_id' id="valorDocumental_id" class="from-control">
+    
+             <div class="form-group row">
+              <p>Seleciona la Vigencia del tramite:</p>
+             <label class="col-sm-2 col-form-label"></label> 
+             <select class="form-control" name='vigTramite_id' id="vigTramites_id">
+                  @foreach ( $vigTramites as $valor )
+                  <option value=" {{$valor->id}} ">{{$valor->descripcion}}</option>
+                  @endforeach
+              </select>
+           </div>
 
-                                    @foreach ($valorDocumental as $valor )
-                                    <option value=" {{$valor->id}} ">{{$valor->descripcion}}</option>
+           <div class="form-group row">
+            <p>Seleciona la Vigencia del contrato:</p>
+           <label class="col-sm-2 col-form-label"></label> 
+           <select class="form-control" name='vigConcentracion_id' id="vigTConcentracion_id">
+                @foreach ( $vigconcentracion as $valor )
+                <option value=" {{$valor->id}} ">{{$valor->descripcion}}</option>
+                @endforeach
+            </select>
+         </div>
+           <div class="jumbotron form-group row">
+              <label  class="col-sm-2 col-form-label">Suma total de los años de vigencias</label>
+               <div class="col-sm-10">
+                  <input type="text" class="form-control" id="totalVigencia" placeholder=" Suma total de los años de vigencias" name='totalVigencia'>
+             </div>
+                 </div>
 
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group">
-
-
-                                <p>Seleciona el Valor Información:</p>
-                                <select name='valorInformacion_id' id="valorInformacion_id" class="from-control">
-
-                                    @foreach ($valorinformacion as $valor )
-                                    <option value=" {{$valor->id}} ">{{$valor->descripcion}}</option>
-
-                                    @endforeach
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-
-                                <p> Vigencia del tramite</p>
-                                <select name='vigTramite_id' id="vigTramite_id" class="from-control">
-
-                                    @foreach ($vigTramites as $valor )
-                                    <option value=" {{$valor->id}} ">{{$valor->descripcion}}</option>
-
-                                    @endforeach
-                                </select>
-                            </div>
-                            <label class="col-md-auto" for="signatura">Vigencia total:</label>
-                            <input type="numero" class="form-control" id="signatura" name="totalVigencia"
-                                placeholder="totalVigencia">
-
-
-                            <div class="form-group">
-
-                                <p> Total de años de vigencia del expediente:</p>
-                                <select name='vigConcentracion_id' id="vigConcentracion_id" class="from-control">
-
-                                    @foreach ($vigconcentracion as $valor )
-                                    <option value=" {{$valor->id}} ">{{$valor->descripcion}}</option>
-
-                                    @endforeach
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-
-                                <p> Destino Final</p>
-                                <select name='destinoFinal_id' id="destinoFinal_id" class="from-control">
-
-                                    @foreach ($destinoFinal as $valor )
-                                    <option value=" {{$valor->id}} ">{{$valor->descripcion}}</option>
-
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="md-auto p-4">
-
-
-
-                                <label class="col-md-auto" for="signatura">signatura:</label>
-                                <input type="text" class="form-control" id="signatura" name="signatura"
-                                    placeholder="signatura">
-
-                                <label class="col-md-auto" for="signatura">observaciones:</label>
-                                <input type="text" class="form-control" id="observaciones" name="observaciones"
-                                    placeholder="observaciones">
-
-
-                                <div class="form-group">
-
-                                   
-                                    <input type="hidden" value="{{ $contrato }}"  name="contrato_id">
-
-                                    
-                                </div>
-
-                            </div>
-
-                            <button type="submit" class="btn btn-success">Crear Expediente</button>
-
-
-                    </form>
+                 <div class="form-group row">
+                  <p>Selecciona el destino final:</p>
+                 <label class="col-sm-2 col-form-label"></label> 
+                 <select class="form-control" name='destinoFinal_id' id="destinoFinal_id">
+                      @foreach ( $destinoFinal as $valor )
+                      <option value=" {{$valor->id}} ">{{$valor->descripcion}}</option>
+                      @endforeach
+                  </select>
+               </div>
+                 <div class="form-group row">
+                   <label  class="col-sm-2 col-form-label">Signatura del archivo</label>
+                   <div class="col-sm-10">
+                     <input type="text" class="form-control" id="signatura" placeholder="Signatura del archivo" name="signatura">
+                   </div>
+                 </div>
+                 <div class="form-group row">
+                   <label>Observaciones </label>
+                   <textarea class="form-control" name="observaciones" id="observaciones" rows="3"></textarea>
+                  </div> <br> 
+                  <div class="form-group row">
+                    <label  class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10">
+                      <input type="hidden" value="{{ $contrato }}"  name="contrato_id">
+                    </div>
+                  </div>
+                 
+                  <button type="submit" class="btn btn-success">Crear Expediente</button>
+                  
             </div>
-        </div>
+        </form> 
+        <br><br>
+        <div class='container'>
+        <div class="jumbotron form-group row footer-copyright text-center p-2">
+         <center>
+          © 2021 Derechos reservados Departamento de Tecnologías de la Información
+        </center>
     </div>
+  </div>
+       </div>
+     </div>
+   @endsection
 </div>
-</div>
-@endsection

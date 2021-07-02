@@ -1,14 +1,11 @@
 @extends('layouts.app')
+
 @section('template_title')
     Vista Expediente
 @endsection
-
 @section('content')
 <div class="container">
-     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-        <img src="/img/cabecera.png" width="766" height="auto">
-    </nav>
-   <form>
+     <form>
      <div class="form-group row">
           <label  class="col-sm-2 col-form-label">Nombre de la serie</label>
      <div class="col-sm-10">
@@ -21,7 +18,8 @@
       </div>
     <div class="jumbotron jumbotron-fluid  form-inline">
       <div class="col-md-4">
-            <label>Fecha de apertura </label>
+            <label>Fecha de apertura </label> 
+            
             <input type="date" name="fechaApertura" min="2018-03-25" max="2018-05-25"  />
         </div>
         <div class="col-md-4 ml-9">

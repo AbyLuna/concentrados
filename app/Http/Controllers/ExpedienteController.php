@@ -42,7 +42,7 @@ class ExpedienteController extends Controller
         ->join('destinoFinal','destinoFinal.id','=','expedientes.destinoFinal_id')
         ->select('expedientes.id','expedientes.numSerie','expedientes.descripcion','expedientes.fechaApertura','expedientes.fechaCierre','ValorDocumental.descripcion as valorDocumental_id','ValorInformacion.descripcion as valorInformacion_id','VigConcentracion.descripcion as vigConcentracion_id','VigTramites.descripcion as vigTramite_id','expedientes.totalVigencia','destinoFinal.descripcion as destinoFinal_id','expedientes.signatura','expedientes.observaciones','expedientes.contrato_id','expedientes.created_at','expedientes.updated_at')  
         ->get(); 
-     
+            
         return view('expediente.index',compact('expediente'));
 
         }else {
@@ -108,6 +108,7 @@ class ExpedienteController extends Controller
     public function show($id)
     {
         $expediente = Expediente::find($id);
+       
 
         return view('expediente.show', compact('expediente'));
     }
@@ -121,6 +122,7 @@ class ExpedienteController extends Controller
     public function edit($id)
     {
         $expediente = Expediente::find($id);
+        
 
         return view('expediente.edit', compact('expediente'));
     }
@@ -137,8 +139,11 @@ class ExpedienteController extends Controller
         request()->validate(Expediente::$rules);
 
         $expediente->update($request->all());
+        
+        $contrato = $expediente->contrato_id;
+        
 
-        return redirect()->route('expedientes.index')
+        return redirect()->route('expedientes.index',$contrato)
             ->with('success', 'Expediente updated successfully');
     }
 
