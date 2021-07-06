@@ -63,7 +63,7 @@ class ContratoController extends Controller
      */
     public function create($caja)
     {
-
+        
 
         $contrato = new Contrato();
         return view('contrato.create', compact(['contrato','caja']));
@@ -77,7 +77,9 @@ class ContratoController extends Controller
      */
     public function store(Request $request )
     {
+        
        $id = $request->caja_id;
+          
 
 
        request()->validate(Contrato::$rules);
@@ -111,8 +113,9 @@ class ContratoController extends Controller
     public function edit($id)
     {
         $contrato = Contrato::find($id);
+       $caja = $contrato->caja_id;
 
-        return view('contrato.edit', compact('contrato'));
+        return view('contrato.edit', compact('contrato','caja'));
     }
 
     /**
@@ -127,9 +130,10 @@ class ContratoController extends Controller
         request()->validate(Contrato::$rules);
 
         $contrato->update($request->all());
-
-        return redirect()->route('contratos.index')
-            ->with('success', 'Contrato updated successfully');
+        $id = $contrato->caja_id;
+        return redirect()->route('cajacontrato',$id) ->with('success', 'Contrato updated successfully');
+        //return redirect()->route('contratos.index')
+          //  ->with('success', 'Contrato updated successfully');
     }
 
     /**

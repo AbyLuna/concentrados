@@ -28,12 +28,13 @@
             {{ Form::text('bitacora', $contrato->bitacora, ['class' => 'form-control' . ($errors->has('bitacora') ? ' is-invalid' : ''), 'placeholder' => '00']) }}
             {!! $errors->first('bitacora', '<div class="invalid-feedback">:message</p>') !!}
         </div>
-        <div class="form-group">
-            {{ Form::hidden('caja_id', $contrato->caja_id, ['class' => 'form-control' . ($errors->has('caja_id') ? ' is-invalid' : ''), 'placeholder' => '0']) }}
-            {!! $errors->first('caja_id', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
+        
     <div>
 </div>
+<div>
+    
+   <input type="hidden" name="caja_id" class="text-center form-control" value="{{ $caja }}">
+  </div>
      <br>
     </div>
     <div class="box-footer mt20">

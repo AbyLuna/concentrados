@@ -1,17 +1,11 @@
 @extends('layouts.app')
 @section('content')
-
-
-
-
 <body>
     
     
        <form class="container" action="{{ route('imprimirReporte') }}" method="post">
             @csrf
          
-        
-
          <h2 class="text-center"> Vale de Prestamo de documentación en archivo de Concentración</h2>
          <div class="text-right">
          <label>NUMERO DE SOLICITUD: 

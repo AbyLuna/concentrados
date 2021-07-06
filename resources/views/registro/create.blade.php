@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Create Registro
+    Crea un Registro
 @endsection
 
 @section('content')
