@@ -18,7 +18,7 @@
             <input readonly="" name="numero" class="form-control text-center" value="1234"></label>
       </div>
         <br>
-        <fieldset class="row justify-content-end">
+        <!-- <fieldset class="row justify-content-end">
 
             <div class="col-3">
                 <h5 class="text-left my-3"><strong>Datos del solicitante:</strong></h5>
@@ -29,83 +29,116 @@
                 
                 
                 <label class ="col-5 form-control" >No. Oficio de Solicitud: 2</label>
-                <label  class="col-5 form-control">Fecha de elaboración: {{ date('Y-m-d') }}</label>
+                <label  class="col-5 form-control">Fecha de elaboración: </label>
                 <br>
                 <label  class="col-3">Nombre del RAT:</label>
                 <input type="text" class ="col-6 form-control" name="rat">
             </div>
 
-        </fieldset>
-        <br>
-
+        </fieldset> -->
+     
 
 
         <h5><strong>Datos del Jefe del área quien solicita el Expediente</strong></h5>
-        
-        <input readonly="" name="name" class="text-center form-control" value="{{ $registro->respNombre }}">
+        <div class="row">   
+            <h6 class="col-3 my-3">Nombre del Jefe de Area que Solicita:</h6>
+        <input disabled="" name="name" class="col-9 form-control" value="{{ $registro->respNombre }}">
+
+        </div>
         <div class="container-fluid">
         
           <br>
 
 
-          <div class="card" >
+          <div class="row" >
 
-            <div  class="row">
-                <p class="col-3 text-right" >PUESTO:</p> 
-                <input type="text" class="col-8 form-control" name="puesto">
+            <div  class="col-3">
+                <p class="" >PUESTO:</p> 
+                <input type="text" class="form-control" name="puesto">
 
 
             </div>
 
-            <div class="row">
+            <div class="col-3">
 
-             <p class="col-3 float-left text-right" >AREA DE ADCRIPTION:</p>
-             <input type="text" class="col-8 form-control" name="adcription">
-
-         </div>
-         <div class="row">
-
-             <p class="col-3 text-right"> TELEFONO /EXTENCION:</p>
-             <input type="text" class="col-8 form-control" name="ext">
+             <p class="" >AREA DE ADSCRIPTION:</p>
+             <input type="text" class="form-control" name="adcription">
 
          </div>
+         <div class="col-3">
 
+             <p class=""> TELEFONOS/EXTENCION:</p>
+             <input type="text" class="  form-control" name="ext">
 
-
-
+         </div>
+        
      </div>
+     <div>
+        <p class="">Nombre del RAT:</p>
+             <input type="text" class=" form-control" name="rat">
+             
+
+         </div>
 
 
 
  </div>
- <br><br>
+  <h5 class="text-center "><strong>Datos de origen de Expediente</strong></h5>
+      
+
+  <br><br>        
+
+
+
+
 
 
  <table class="table table-bordered">
     <thead>
-        <h5 class="text-center ">Datos del Expediente</h5>
-
+       
+        
         <tr>
-            <th></th>
-            <th>CLAVE</th>
-            <th>NOMBRE</th>
+            <th>Acta</th>
+            <th>Caja</th>
+            <th>Serie</th>
+            <th>Tomo</th>
+
         </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Seccion:</td>
+        <td><input class="form-control col-sm-5" name="clave" ></td>
+
+
+
+        <td> <input class="form-control col-sm-5" name="clave" > </td>
+        <td> <input class="form-control col-sm-5" name="clave" > </td>
+        
+        <td> <input class="form-control"  class="col-12" name="claveNombre"></td>
+    </tr>
+<tr>
+        <td><input class="form-control col-sm-5" name="clave" ></td>
+        <td> <input class="form-control col-sm-5" name="clave" > </td>
         <td> <input class="form-control col-sm-5" name="clave" > </td>
         
         <td> <input class="form-control"  class="col-12" name="claveNombre"></td>
     </tr>
     <tr>
-        <td>Serie:</td>
-        <td> <input class="form-control col-sm-5" name="serie"> </td>
-        <td><input type="text" class="col-12 form-control" name="serieNombre" ></td>
+        <td><input class="form-control col-sm-5" name="clave" ></td>
+        <td> <input class="form-control col-sm-5" name="clave" > </td>
+        <td> <input class="form-control col-sm-5" name="clave" > </td>
+        
+        <td> <input class="form-control"  class="col-12" name="claveNombre"></td>
     </tr>
-
+    <tr>
+        <td><input class="form-control col-sm-5" name="clave" ></td>
+        <td> <input class="form-control col-sm-5" name="clave" > </td>
+        <td> <input class="form-control col-sm-5" name="clave" > </td>
+        
+        <td> <input class="form-control"  class="col-12" name="claveNombre"></td>
+    </tr>
 </tbody>
-</table>
+</table> 
 
 
 <fieldset class="card bg-light">
