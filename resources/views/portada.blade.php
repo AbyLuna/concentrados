@@ -1,42 +1,17 @@
 <!-- Styles -->
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portada de caja</title>
 </head>
 <body>
 <div class="text-center container ">
-        <img src="/img/cabecera.png" width="777" height="auto">
+        <img src="/img/cabecera.png" width="677" height="auto">
         <h2><b> Secretaria de Infraestructura y Obras Publicas </b> </h2>
-        <div class="container text-center">
-            @foreach ($contratos as $contrato)
-                @if ($loop->first)
-                    <h1>
-                        <b>{{ $contrato->numActa  }}</b>
-                    </h1>
-                @endif
-
-            @endforeach
-
-         </div>
-         <select  class="btn-lg btn btn-outline-light" >
-              <strong>
-                 <option>(DGCCYCE)</option>
-                 <option>(DGCCYCE)</option>
-                  <option>(DGCCYCE)</option>
-                  <option>(DGCCYCE)</option>
-              </strong><br>
-         </select>
-            <h4> DOCUMENTACION DEL EJERCICIO: <br>
-            <input class="btn-lg btn btn-outline-ligth" type="text"  placeholder="2015">
-            </h4>
-         <div class=" text-center "><br><br>
-            <h3> <b> Descripción General del contenido </b></h3>
+        <div class=" text-center ">
                <hr style="border-color:grey;">
-                    <select class="btn-lg btn btn-outline-light" style="color:rgb(0, 0, 0)">
+                 <b>   <select class="btn-lg btn btn-outline-light" style="color:rgb(0, 0, 0)">
                         {{-- name="seleccion" size="1" style="width:700px" --}}
                                <option >SECRETARIO PARTICULAR</option>
                                <option> DIRECCIÓN GENERAL JURÍDICA</option>
@@ -127,10 +102,20 @@
                               <option>OFICINA DE SEGUIMIENTO DE PROGRAMAS ESTATALES Y FEDERALES</option>
                               <option> COORDINACIÓN SECTORIAL FONDEN</option>
                           <hr style="border-color:grey;">
-                      </select>
+                      </select> </b>
            </div>
+         <div class="container text-center">
+            @foreach ($contratos as $contrato)
+                @if ($loop->first)
+                <h1 class="display-1">{{ $contrato->numActa  }}</h1>
+                @endif
+            @endforeach
 
+         </div>
+            <h5> DOCUMENTACION DEL EJERCICIO: <br></h5>
+           <input class=" btn-lg btn btn-outline-ligth" type="text"  placeholder=" Coloca el año">       
           <table class="table table-condensed">
+            <h4> <b> Descripción General del contenido </b></h4>
             <thead>
                 <tr>
                     <th>EXP CTO</th>
@@ -150,10 +135,10 @@
                 @endforeach
             </tbody>
             <hr style="border-color:grey;">
-
+<br><br>
            </table>
           <div class="text-center">
-            <hr style="border-color:grey;">
+            <hr style="border-color:grey;"> 
             <h4><font color=black><b> VIGENCIA DOCUMENTAL </b></h4></font>
                 <input class="btn-md btn btn-outline-ligth" type="text"  placeholder="Baja septiembre 2021">
                 <br>
@@ -166,12 +151,13 @@
                  <hr style="border-color:grey;">
                  <h6 style=" color:black;"s><b> ARCHIVO DE CONCENTRACION </b></h6></>
                  <hr style="border-color:grey;">
+                 <br><br>
             <div class="text-center">
            <h5> NOMBRE Y FIRMA DEL RESPONSABLE DEL ARCHIVO DE TRAMITE </h5>
            <br><br>
-             <hr size=5 width="333" style="border-color:grey;">
+             <hr size=4 width="444" style="border-color:grey;">
              <strong>
-             <select class="btn-md btn btn-outline-light" >
+                 <select class="btn-lg btn btn-outline-link">
                  <option>Clementina Gadir Bautista González</option>
                  <option>Adolfo Jesús Carlos Medrano Alcazar </option>
                  <option>Alma Mariana García López </option>
@@ -217,8 +203,7 @@
 </div>
 </body>
 <script src="{{ asset('js/app.js') }}" defer></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-</script>
+
 
 </html>
+

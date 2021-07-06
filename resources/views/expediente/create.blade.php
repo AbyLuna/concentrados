@@ -28,17 +28,18 @@ Crear un expediente
                 </div>
                  <div class="form-group">
                    <label>Breve descripción </label>
-                   <textarea class="form-control" id="descripcion" rows="2" name="descripcion"  placeholder="Breve decripción">></textarea>
+                   <textarea class="form-control" id="descripcion" rows="2" name="descripcion"  placeholder="Breve decripción"></textarea>
                  </div>
-               <div class="jumbotron jumbotron-fluid  form-inline">
+               <div class="jumbotron jumbotron-fluid form-inline">
                  <div class="col-md-4">
-                       <label>Fecha de apertura </label>
-                       <input type="date" name="fechaApertura" min="2018-03-25" max="2018-05-25"  />
+                  <p>Fecha de apertura:</p>
+                       <input type="date" name="fechaApertura"  />
                    </div>
-                   <div class="col-md-4 ml-9">
-                       <label>Fecha de cierre </label>
-                       <input type="date" name="fechaCierre" min="2018-03-25" max="2018-05-25" />
+                   <div class="col-md-4 ml-12">
+                    <p>Fecha de ciere:</p>   
+                       <input type="date" name="fechaCierre"  />
                    </div>
+                   
              </div>
              <div class="form-group row">
                 <p>Seleciona el Valor Documental:</p>
@@ -49,7 +50,6 @@ Crear un expediente
                     @endforeach
                 </select>
              </div>
-          
              <div class="form-group row">
                 <p>Seleciona el Valor de la Información:</p>
                <label class="col-sm-2 col-form-label"></label> 
@@ -80,11 +80,15 @@ Crear un expediente
                 @endforeach
             </select>
          </div>
-           <div class="jumbotron form-group row">
-              <label  class="col-sm-2 col-form-label">Suma total de los años de vigencias</label>
-               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="totalVigencia" placeholder=" Suma total de los años de vigencias" name='totalVigencia'>
-             </div>
+           <div class="jumbotron form-inline">
+            <p>Suma total de los años de vigencias:</p> 
+            <div class="col-md-3">
+              <input type="text" class="form-control"onclick="return confirm('Suma los años de viegencia de contrato + vigencia en tramite, solo acepta numeros enteros.');"  id="totalVigencia" placeholder="Digita el total 00 " name='totalVigencia'>
+           </div>
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="validationTooltipUsernamePrepend">Años
+              </span>
+            </div>
                  </div>
 
                  <div class="form-group row">

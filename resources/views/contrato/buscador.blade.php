@@ -9,6 +9,7 @@
                                     <th>No. de tomos del expediente</th>
                                     <th>Bitácora</th>
                                     <th>No. de caja</th>
+                                    <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -25,14 +26,13 @@
                                             {{-- <a class="btn btn-sm btn-primary "
                                                 href="{{ route('contratos.show',$contrato->id) }}"><i
                                                     class="fa fa-fw fa-eye"></i> Show</a> --}}
-                                            <a class="btn btn-sm btn-success"
-                                                href="{{ route('contratos.edit',$contrato->id) }}"><i
-                                                    class="fa fa-fw fa-edit"></i> Editar</a>
+                                                   {{-- <a class="btn btn-sm btn-success"  href="{{ route('contratos.edit',$contrato->id) }}"><i
+                                                    class="fa fa-fw fa-edit"></i> Editar</a> --}}
                                                     <a href="{{ route('expedientes.index',$contrato->id) }}" class="btn btn-sm btn-info">Ver Expediente</a>
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm"><i
-                                                    class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                            {{-- <button type="submit" class="btn btn-danger btn-sm"><i
+                                                    class="fa fa-fw fa-trash"></i> Eliminar</button> --}}
                                         </form>
                                     </td>
                                 </tr>
