@@ -31,13 +31,12 @@ Contrato
                         <table class="table table-striped table-hover">
                             <thead class="thead">
                                 <tr>
-                                    <th>No</th>
+                                  
                                     <th>No. de contrato</th>
                                     <th>Área</th>
                                     <th>Descripción</th>
                                     <th>No. de tomos del expediente</th>
                                     <th>Bitácora</th>
-                                    <th>No. de caja</th>
                                     <th>Acciones</th>
                                     <th>
                                 </th>
@@ -47,13 +46,13 @@ Contrato
                                 @if (!empty($contratos))
                                 @foreach ($contratos as $contrato)
                                 <tr>
-                                    <td></td>
+                                   
                                     <td>{{ $contrato->numContrato }}</td>
                                     <td>{{ $contrato->area }}</td>
                                     <td>{{ $contrato->descripcion }}</td>
                                     <td>{{ $contrato->numTomosExp }}</td>
                                     <td>{{ $contrato->bitacora }}</td>
-                                    <td>{{ $contrato->caja_id }}</td>
+                                   
                                     <td>
                                         <form action="{{ route('contratos.destroy',$contrato->id) }}" method="POST">
                                             {{-- <a class="btn btn-sm btn-primary "
@@ -71,6 +70,7 @@ Contrato
 
                                         </form>
                                     </td>
+                                    
                                 </tr>
                                 @endforeach
                                 @else

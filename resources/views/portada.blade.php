@@ -107,7 +107,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
          <div class="container text-center">
             @foreach ($contratos as $contrato)
                 @if ($loop->first)
-                <h1 class="display-1">{{ $contrato->numActa  }}</h1>
+                <h1 class="display-2">{{ $contrato->numActa }}</h1>
                 @endif
             @endforeach
 
