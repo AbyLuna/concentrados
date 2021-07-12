@@ -12,7 +12,9 @@
     <!-- Scripts -->
     
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+     <link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="container-fluid" id="app">
@@ -86,5 +88,6 @@
         </main>
     </div>
 </body>
-<script src="{{ asset('js/app.js') }}" defer></script>
+
+ <script src="{{ asset('js/app.js') }}"></script>
 </html>

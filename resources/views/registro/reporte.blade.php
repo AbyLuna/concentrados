@@ -89,11 +89,40 @@
   <br><br>        
 
 
+        <form method="post">
+                <h6 class="text-center pad-basic no-btm">Agregar archivo para prestamo</h6>
+                <table class="table "  id="tabla">
+                        <thead>
+       
+        
+        <tr>
+            <th>Acta</th>
+            <th>Caja</th>
+            <th>Serie</th>
+            <th>Tomo</th>
+
+        </tr>
+    </thead>
+                    <tr class="fila-fija">
+                        <td><input required name="idalumno[]" placeholder="Acta"/></td>
+                        <td><input required name="nombre[]" placeholder="Caja"/></td>
+                        <td><input required name="carrera[]" placeholder="Serie"/></td>
+                        <td><input required name="grupo[]" placeholder="Tomo"/></td>
+                        <td class="eliminar"><input type="button"   value="Menos -"/></td>
+                    </tr>
+                </table>
+
+                <div class="btn-der">
+                    <input type="submit" name="insertar" value="Insertar Alumno" class="btn btn-info"/>
+                    <button id="adicional" name="adicional" type="button" class="btn btn-warning"> Más + </button>
+
+                </div>
+            </form>
+
+   
 
 
-
-
- <table class="table table-bordered">
+<!-- <table class="table table-bordered">
     <thead>
        
         
@@ -138,9 +167,9 @@
         <td> <input class="form-control"  class="col-12" name="claveNombre"></td>
     </tr>
 </tbody>
-</table> 
+</table> -->
 
-
+<div class="container">
 <fieldset class="card bg-light">
     <h5 class="content mt-4"><strong> Estado fisico del Expediente</strong></h5>
     <h6 class="content p-1 alert-info text-center">(Estos datos son llenados exclusivamente por el encargado del archivo de
@@ -209,6 +238,7 @@
 
 
 </form>
+</div>
 
 </body>
 @endsection
