@@ -7,13 +7,15 @@ Vista Expediente
 <div class="container ">
     <form>
         @foreach ($expediente as $contrato)
-        <section>
-
+        <section> 
+            <center>
+                <h2 class="text-muted">Información del expediente</h2>
+            </center> 
+            <a class="nav-link text-right" esto esta mal esa sintaxys  href="#">
+                <img src="/img/back2.png" width="45" height="auto"> 
+            </a>
+           
             <div class="card">
-                <br>
-                <center>
-                    <h2 class="text-muted">Información del expediente</h2>
-                </center> <br>
                 <div class="card-header">
                     <div class="row mb-4">
                         <div class="col-3">
@@ -28,6 +30,7 @@ Vista Expediente
                         </div>
                     </div>
                 </div>
+                 
                 <div class="card-body"><br>
                     <div class="form-group row">
                         <h5><b> <label class="col-sm-auto col-form-label">Breve descripción:</label> </b></h5>
@@ -76,14 +79,14 @@ Vista Expediente
                         <div class="row">
                             <div class="col order-1">
                                 <center>
-                                    <h5 class="mr-sm-2"><b> Valor de la documental: </b></h5>
+                                    <h5 class="mr-sm-2"> <b>Vigencia en archivo de concentración:</b></h5>
                                     <h5 class="row mb-2 mr-sm-2 col-md-2" readonly rows="1">
                                         {{ $contrato->vigConcentracion_id }} </h5>
                                 </center>
                             </div>
                             <div class="col order-2">
                                 <center>
-                                    <h5 class="mr-sm-2"> <b>Valor de la información:</b></h5>
+                                    <h5 class="mr-sm-2"><b>Vigencia en archivo de tramite:</b></h5>
                                     <h5 class="row mb-2 mr-sm-2 col-md-2" readonly rows="1">
                                         {{ $contrato->vigTramite_id }} </h5>
                                 </center>

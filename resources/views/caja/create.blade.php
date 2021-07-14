@@ -10,7 +10,9 @@
             <div class="col-md-12">
 
                 @includeif('partials.errors')
-
+                <a class="nav-link text-right " href="{{ route('cajas.index') }}">
+                    <img src="/img/back2.png" width="35" height="auto"> 
+                </a>
                 <div class="card card-default">
                     <div class="card-header">
                        <strong> <h4 class="card-title">Crear caja</h5></strong>

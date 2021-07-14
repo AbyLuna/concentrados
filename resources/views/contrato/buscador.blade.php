@@ -8,7 +8,6 @@
                                     <th>Descripción</th>
                                     <th>No. de tomos del expediente</th>
                                     <th>Bitácora</th>
-                                    <th>No. de caja</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -20,7 +19,6 @@
                                     <td>{{ $contrato->descripcion }}</td>
                                     <td>{{ $contrato->numTomosExp }}</td>
                                     <td>{{ $contrato->bitacora }}</td>
-                                    <td>{{ $contrato->caja_id }}</td>
                                     <td>
                                         <form action="{{ route('contratos.destroy',$contrato->id) }}" method="POST">
                                             {{-- <a class="btn btn-sm btn-primary "

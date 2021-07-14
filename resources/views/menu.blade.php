@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu de inicio</title>
 </head>
-
 <body>
     <div class="container pt-3">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">

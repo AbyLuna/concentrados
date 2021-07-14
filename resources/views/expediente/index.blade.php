@@ -27,7 +27,6 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        
 										<th>Nombre de la serie</th>
 										<th>Breve descripción de la serie</th>
 										<th>Fecha de apertura del expediente</th>
@@ -40,8 +39,6 @@
 										<th>Destino final Id</th>
 										<th>Signatura del archivo</th>
 										<th>Observaciones</th>
-										
-
                                         <th></th>
                                     </tr>
                                 </thead>

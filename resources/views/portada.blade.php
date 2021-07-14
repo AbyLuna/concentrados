@@ -8,6 +8,10 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
 <body>
 <div class="text-center container ">
         <img src="/img/cabecera.png" width="677" height="auto">
+        <a class="nav-link text-right " href="{{ route('cajas.index') }}">
+            <img src="/img/back1.jpg" width="15" height="auto"> 
+          </a>
+           
         <h2><b> Secretaria de Infraestructura y Obras Publicas </b> </h2>
         <div class=" text-center ">
                <hr style="border-color:grey;">
@@ -107,7 +111,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
          <div class="container text-center">
             @foreach ($contratos as $contrato)
                 @if ($loop->first)
-                <h1 class="display-2">{{ $contrato->numActa }}</h1>
+                <h1 class="display-2">{{ $contrato->numCaja }}</h1>
                 @endif
             @endforeach
 
@@ -120,8 +124,8 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
                 <tr>
                     <th>EXP CTO</th>
                     <th>Descripción</th>
-                    <th>Bitacora</th>
                     <th>Tomos</th>
+                    <th>Bitacoras</th>
                 </tr>
             </thead>
             <tbody>

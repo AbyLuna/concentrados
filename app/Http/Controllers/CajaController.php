@@ -113,7 +113,7 @@ class CajaController extends Controller
 
 
         $contratos = \DB::table('contratos')
-            ->select('contratos.*','cajas.numActa')
+            ->select('contratos.*','cajas.numCaja')
             ->join('cajas', 'cajas.id', '=', 'contratos.caja_id')
             ->where('caja_id','=',$caja)
             ->get();
