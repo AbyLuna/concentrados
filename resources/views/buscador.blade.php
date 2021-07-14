@@ -4,9 +4,7 @@
             <img src="/img/menu7.png" width="25" height="auto" />
         </a>
 </div> 
-
-
-        
+      
 <center>
     <div class="jumbotron">
         <div class="text-center ">

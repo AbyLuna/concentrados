@@ -56,7 +56,7 @@ Contrato
                                         <input type="checkbox">
                                         <label class="form-check-label"></label>
                                       </div></td>
-                                     <td><a class="btn btn-sm btn-primary"  href="{{ route('expedientes.index',$contrato->id) }}">Expediente</a>
+                                     <td><a class="btn btn-sm btn-primary" href="{{ route('expedientes.index',$contrato->id) }}">Expediente</a>
                                         
                                     </td>
                                     <td>

@@ -102,7 +102,7 @@ Crear un expediente
                                 id="totalVigencia" placeholder="Digita el total 00 " name='totalVigencia'>
                         </div>
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="validationTooltipUsernamePrepend">Años
+                            <span class="input-group-text" >Años
                             </span>
                         </div>
                     </div>

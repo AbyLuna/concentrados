@@ -7,15 +7,15 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
 </head>
 <body>
 <div class="text-center container ">
-        <img src="/img/cabecera.png" width="677" height="auto">
+        <img src="/img/cabecera.png" width="377" height="auto">
         <a class="nav-link text-right " href="{{ route('cajas.index') }}">
             <img src="/img/back1.jpg" width="15" height="auto"> 
           </a>
            
-        <h2><b> Secretaria de Infraestructura y Obras Publicas </b> </h2>
+        <h3><b> Secretaria de Infraestructura y Obras Publicas </b> </h3>
         <div class=" text-center ">
                <hr style="border-color:grey;">
-                 <b>   <select class="btn-lg btn btn-outline-light" style="color:rgb(0, 0, 0)">
+                 <b> <select class="btn-lg btn btn-outline-light" style="color:rgb(0, 0, 0)">
                         {{-- name="seleccion" size="1" style="width:700px" --}}
                                <option >SECRETARIO PARTICULAR</option>
                                <option> DIRECCIÓN GENERAL JURÍDICA</option>
@@ -111,7 +111,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
          <div class="container text-center">
             @foreach ($contratos as $contrato)
                 @if ($loop->first)
-                <h1 class="display-2">{{ $contrato->numCaja }}</h1>
+                <h1 class="display-3">{{ $contrato->numCaja }}</h1>
                 @endif
             @endforeach
 
@@ -157,7 +157,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
                  <hr style="border-color:grey;">
                  <br><br>
             <div class="text-center">
-           <h5> NOMBRE Y FIRMA DEL RESPONSABLE DEL ARCHIVO DE TRAMITE </h5>
+           <h6> NOMBRE Y FIRMA DEL RESPONSABLE DEL ARCHIVO DE TRAMITE </h6>
            <br><br>
              <hr size=4 width="444" style="border-color:grey;">
              <strong>
