@@ -7,11 +7,10 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
 </head>
 <body>
 <div class="text-center container ">
-        <img src="/img/cabecera.png" width="377" height="auto">
+        <img src="/img/cabecera.png" width="477" height="auto">
         <a class="nav-link text-right " href="{{ route('cajas.index') }}">
             <img src="/img/back1.jpg" width="15" height="auto"> 
-          </a>
-           
+          </a>  
         <h3><b> Secretaria de Infraestructura y Obras Publicas </b> </h3>
         <div class=" text-center ">
                <hr style="border-color:grey;">
@@ -119,7 +118,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
             <h5> DOCUMENTACION DEL EJERCICIO: <br></h5>
            <input class=" btn-lg btn btn-outline-ligth" type="text"  placeholder=" Coloca el año">       
           <table class="table table-condensed">
-            <h4> <b> Descripción General del contenido </b></h4>
+            <h5> <b> Descripción General del contenido </b></h5>
             <thead>
                 <tr>
                     <th>EXP CTO</th>
@@ -139,14 +138,14 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
                 @endforeach
             </tbody>
             <hr style="border-color:grey;">
-<br><br>
+<br>
            </table>
           <div class="text-center">
             <hr style="border-color:grey;"> 
-            <h4><font color=black><b> VIGENCIA DOCUMENTAL </b></h4></font>
+            <h5><font color=black><b> VIGENCIA DOCUMENTAL </b></h5></font>
                 <input class="btn-md btn btn-outline-ligth" type="text"  placeholder="Baja septiembre 2021">
                 <br>
-                <select class="btn-sm btn btn-outline-light" >
+                <select class="btn-sm btn btn-light" >
                     <strong>
                      <option>(PARA RESGUARDO) </option>
                      <option>(PARA ELIMINACIÓN ) </option>
@@ -155,7 +154,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
                  <hr style="border-color:grey;">
                  <h6 style=" color:black;"s><b> ARCHIVO DE CONCENTRACION </b></h6></>
                  <hr style="border-color:grey;">
-                 <br><br>
+                 <br>
             <div class="text-center">
            <h6> NOMBRE Y FIRMA DEL RESPONSABLE DEL ARCHIVO DE TRAMITE </h6>
            <br><br>
