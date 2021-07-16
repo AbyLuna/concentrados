@@ -7,15 +7,13 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
 </head>
 <body>
 <div class="text-center container ">
-        <img src="/img/cabecera.png" width="477" height="auto">
+        <img src="/img/cabecera.png" width="677" height="auto">
         <a class="nav-link text-right " href="{{ route('cajas.index') }}">
             <img src="/img/back1.jpg" width="15" height="auto"> 
           </a>  
-        <h3><b> Secretaria de Infraestructura y Obras Publicas </b> </h3>
+        <h5><b> Secretaria de Infraestructura y Obras Publicas </b></h5>
         <div class=" text-center ">
-               <hr style="border-color:grey;">
-                 <b> <select class="btn-lg btn btn-outline-light" style="color:rgb(0, 0, 0)">
-                        {{-- name="seleccion" size="1" style="width:700px" --}}
+                 <select class="btn-sm btn btn-outline-light" style="color:rgb(0, 0, 0)">
                                <option >SECRETARIO PARTICULAR</option>
                                <option> DIRECCIÓN GENERAL JURÍDICA</option>
                                <option>SUBDIRECCIÓN JURÍDICA DE LO CONTENCIOSO</option>
@@ -50,7 +48,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
                               <option>  UNIDAD DE TRANSPARENCIA</option>
                               <option>  UNIDAD DE GÉNERO</option>
                               <option>  SUBSECRETARÍA DE INFRAESTRUCTURA</option>
-                              <option>DIRECCIÓN GENERAL DE PROYECTOS, PROGRAMACIÓN Y PRESUPUESTO DE CAMINOS Y CARRETERAS ESTATALES</option>
+                              <option>  DIRECCIÓN GENERAL DE PROYECTOS, PROGRAMACIÓN Y PRESUPUESTO DE CAMINOS Y CARRETERAS ESTATALES</option>
                               <option> SUBDIRECCIÓN DE PLANEACIÓN, PROGRAMACIÓN Y PRESUPUESTACIÓN DE OBRA </option>
                               <option>   DEPARTAMENTO DE PLANEACIÓN DE OBRA</option>
                               <option>   DEPARTAMENTO DE PROGRAMACIÓN Y PRESUPUESTACIÓN DE OBRA</option>
@@ -104,27 +102,28 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
                               <option> OFICINA DE ANÁLISIS E INTEGRACIÓN DE INFORMACIÓN</option>
                               <option>OFICINA DE SEGUIMIENTO DE PROGRAMAS ESTATALES Y FEDERALES</option>
                               <option> COORDINACIÓN SECTORIAL FONDEN</option>
-                          <hr style="border-color:grey;">
-                      </select> </b>
+                      </select> 
            </div>
          <div class="container text-center">
             @foreach ($contratos as $contrato)
                 @if ($loop->first)
-                <h1 class="display-3">{{ $contrato->numCaja }}</h1>
+                <h6>{{ $contrato->numCaja }}</h6>
                 @endif
             @endforeach
-
          </div>
-            <h5> DOCUMENTACION DEL EJERCICIO: <br></h5>
-           <input class=" btn-lg btn btn-outline-ligth" type="text"  placeholder=" Coloca el año">       
+            <h6> DOCUMENTACION DEL EJERCICIO: <br></h6>
+           <input class=" btn-sm btn btn-outline-ligth" type="text"  placeholder=" Coloca el año">       
           <table class="table table-condensed">
-            <h5> <b> Descripción General del contenido </b></h5>
+            <h6> <b> Descripción General del contenido </b></h6>
             <thead>
                 <tr>
                     <th>EXP CTO</th>
                     <th>Descripción</th>
                     <th>Tomos</th>
                     <th>Bitacoras</th>
+                    <th><a class="btn btn-sm" onclick="javascript:window.print()"><i
+                      class="fa fa-fw fa-edit"></i> <img src="/img/imp1.png" width="20" height="auto"></a>
+                    </div></th>
                 </tr>
             </thead>
             <tbody>
@@ -138,12 +137,11 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
                 @endforeach
             </tbody>
             <hr style="border-color:grey;">
-<br>
            </table>
           <div class="text-center">
             <hr style="border-color:grey;"> 
             <h5><font color=black><b> VIGENCIA DOCUMENTAL </b></h5></font>
-                <input class="btn-md btn btn-outline-ligth" type="text"  placeholder="Baja septiembre 2021">
+                <input class="btn-sm btn btn-outline-ligth" type="text"  placeholder="Baja septiembre 2021">
                 <br>
                 <select class="btn-sm btn btn-light" >
                     <strong>
@@ -154,10 +152,9 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
                  <hr style="border-color:grey;">
                  <h6 style=" color:black;"s><b> ARCHIVO DE CONCENTRACION </b></h6></>
                  <hr style="border-color:grey;">
-                 <br>
             <div class="text-center">
            <h6> NOMBRE Y FIRMA DEL RESPONSABLE DEL ARCHIVO DE TRAMITE </h6>
-           <br><br>
+           <br>
              <hr size=4 width="444" style="border-color:grey;">
              <strong>
                  <select class="btn-lg btn btn-outline-link">
@@ -200,7 +197,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
                 </strong>
              </select>
              <br>
-        </div>
+        </div> 
     </div>
 
 </div>

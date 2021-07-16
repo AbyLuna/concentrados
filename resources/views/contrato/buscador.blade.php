@@ -6,8 +6,9 @@
                                     <th> No. de contrato</th>
                                     <th>Área</th>
                                     <th>Descripción</th>
-                                    <th>No. de tomos del expediente</th>
-                                    <th>Bitácora</th>
+                                    <th>No. de caja</th>
+                                    <th>Pasillo</th>
+                                    <th>Anaquel</th>
                                     <th>Ver información</th>
                                 </tr>
                             </thead>
@@ -17,8 +18,9 @@
                                     <td>{{ $contrato->numContrato }}</td>
                                     <td>{{ $contrato->area }}</td>
                                     <td>{{ $contrato->descripcion }}</td>
-                                    <td>{{ $contrato->numTomosExp }}</td>
-                                    <td>{{ $contrato->bitacora }}</td>
+                                    <td>{{ $contrato->numCaja}} </td> 
+                                    <td>{{ $contrato->pasillo}} </td> 
+                                    <td>{{ $contrato->anaquel}} </td> 
                                     <td>
                                         <form action="{{ route('contratos.destroy',$contrato->id) }}" method="POST">
                                             {{-- <a class="btn btn-sm btn-primary "

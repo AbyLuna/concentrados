@@ -1,7 +1,7 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <div class="fixed-top">
-        <a class="nav-link" href="{{ url('/home') }}">
-            <img src="/img/menu7.png" width="25" height="auto" />
+        <a class="nav-link" href="{{ url('/cajas') }}">
+            <img src="/img/menu1.png" width="35" height="auto" />
         </a>
 </div> 
       

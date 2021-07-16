@@ -13,6 +13,8 @@ Cajas
                         </strong>
                         <strong>
                             <h4 class="card-title">Cajas</h4>
+                                <a class="btn btn-sm btn-warning" href=" {{route('portada2') }} ">{{ __('Portada Caja') }}<i
+                                    class="fa fa-fw fa-edit"></i> <img src="/img/imp.png" width="20" height="auto"></a>
                         </strong>
                         <div class="float-right">
                             <a href="{{ route('cajas.create') }}" class="btn btn-primary btn-sm float-right"
@@ -33,7 +35,6 @@ Cajas
                         <table class="table table-striped table-hover">
                             <thead class="thead">
                                 <tr>
-
                                     <th>No.Acta</th>
                                     <th>No. de caja</th>
                                     <th>No. de tomos en caja</th>
@@ -41,15 +42,8 @@ Cajas
                                     <th>Pasillo</th>
                                     <th>Anaquel</th>
                                     <th>Acciones</th>
-                                    <th>
-                                        {{-- <div class="card">
-                                            <a class="btn btn-outline-secondary"  href="/buscador" >
-                                                <img src="/img/carp.png" width="25" height="auto" />
-                                            </a>
-                                        </div> --}}
-                                    </th>
+                                </tr>         
                     </div>
-                    </tr>
                     </thead>
                     <tbody>
                         @foreach ($cajas as $caja)
@@ -68,12 +62,10 @@ Cajas
                                                     class="fa fa-fw fa-eye"></i> </a> -->
                                     <a href="{{ route('cajacontrato', $caja->id) }}" class="btn btn-sm btn-info">Ver
                                         contratos</a>
-
-                                    <a class="btn btn-sm btn-warning" href=" {{route('portada',$caja->id)  }} "><i
-                                            class="fa fa-fw fa-edit"></i>Imprimir Portada </a>
-
                                     <a class="btn btn-sm btn-success" href="{{ route('cajas.edit',$caja->id) }}"><i
                                             class="fa fa-fw fa-edit"></i> Editar</a>
+                                            <a class="btn btn-sm btn-warning" href=" {{route('portada',$caja->id) }} ">{{ __('Inf. Caja') }}<i
+                                                class="fa fa-fw fa-edit"></i> <img src="/img/imp.png" width="25" height="auto"></a>
 
                                     @csrf
                                     @method('DELETE')
