@@ -8,7 +8,9 @@
     <section class="content container-fluid">
         <div class="">
             <div class="col-md-12">
-
+                <a class="nav-link text-right " href="{{ route('registros.index') }}">
+                    <img src="/img/back2.png" width="35" height="auto"> 
+                </a>
                 @includeif('partials.errors')
 
                 <div class="card card-default">

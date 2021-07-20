@@ -1,31 +1,34 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Update Expediente
+Update Expediente
 @endsection
 
+    @foreach ($expediente as $contrato)
+</a>
 @section('content')
-    <section class="content container-fluid">
-        <div class="">
-            <div class="col-md-12">
+<section class="content container-fluid">
+    <div class="">
+        <div class="col-md-12">
 
-                @includeif('partials.errors')
+            @includeif('partials.errors')
 
-                <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">Actualizar Expediente</span>
-                    </div>
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('expedientes.update', $expediente->id) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
-                            @csrf
+            <div class="card card-default">
+                <div class="card-header">
+                    <span class="card-title">Actualizar Expediente</span>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="{{ route('expedientes.update', $expediente->id) }}" role="form"
+                        enctype="multipart/form-data">
+                        {{ method_field('PATCH') }}
+                        @csrf
 
-                            @include('expediente.form')
+                        @include('expediente.form')
 
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 @endsection

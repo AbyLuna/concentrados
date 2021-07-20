@@ -1,8 +1,9 @@
 @extends('layouts.app')
 @section('content')
 <body>
-    
-    
+    <a class="nav-link text-right " href="{{ route('registros.index') }}">
+        <img src="/img/back2.png" width="25" height="auto">
+    </a>
        <form class="container" action="{{ route('imprimirReporte') }}" method="post">
             @csrf
          
@@ -17,8 +18,6 @@
             <div class="col-3">
                 <h5 class="text-left my-3"><strong>Datos del solicitante:</strong></h5>
             </div>
-
-
             <div class="col-8 card-header">
                 
                 

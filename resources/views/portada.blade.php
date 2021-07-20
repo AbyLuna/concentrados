@@ -123,7 +123,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
                     <th>Bitacoras</th>
                     <th><a class="btn btn-sm" onclick="javascript:window.print()"><i
                       class="fa fa-fw fa-edit"></i> <img src="/img/imp1.png" width="20" height="auto"></a>
-                    </div></th>
+                    </th>
                 </tr>
             </thead>
             <tbody>

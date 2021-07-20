@@ -11,10 +11,7 @@ Crear un expediente
         @includeif('partials.errors')
         <div class="card card-default">
             <div class="card-header">
-                <span class="card-title">
-                  <a class="nav-link text-right " href="#">
-                    <img src="/img/back2.png" width="35" height="auto"> 
-                  </a>
+                <span class="card-title">   
                   <center>
                     <h3>Información del expediente
                     </h3></center>

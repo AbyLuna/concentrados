@@ -14,7 +14,7 @@
 
 <div class="card text-center container">
     <div class="card-header">
-        <select class="btn-lg btn btn-outline-light" style="color:rgb(0, 0, 0)">
+        <select class="btn-lg btn btn-outline-ligh " style="color:rgb(0, 0, 0)">
             <option>SECRETARIO PARTICULAR</option>
             <option> DIRECCIÓN GENERAL JURÍDICA</option>
             <option>SUBDIRECCIÓN JURÍDICA DE LO CONTENCIOSO</option>
@@ -108,10 +108,10 @@
     </div>
     <div class="row">
         <div class="col-sm-8">
-            <div class="card">
+            <div class="card ">
                 <div class="card-body">
-                    <h2 class="card-title">No. de caja</h2>
-                    <h1 class="display-1"> <input class="text-center" style="width:500px" type="text" placeholder=" 0000"> </h1>
+                    <h2 class="card-title ">No. de caja</h2>
+                    <h1 class= "display-1"> <input class="text-center" style="width:500px" type="text" placeholder=" 0000"> </h1>
                 </div>
             </div>
         </div>

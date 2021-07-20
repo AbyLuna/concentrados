@@ -6,12 +6,15 @@ Vista Expediente
 
 <div class="container ">
     <form>
+        @foreach($caja as $caja)
+        <a class="nav-link text-right" href={{ route('cajacontrato', $caja->caja_id) }}>
+            @endforeach
         @foreach ($expediente as $contrato)
         <section> 
             <center>
                 <h2 class="text-muted">Información del expediente</h2>
             </center> 
-            <a class="nav-link text-right" esto esta mal esa sintaxys  href="#">
+           
                 <img src="/img/back2.png" width="45" height="auto"> 
             </a>
            
@@ -22,6 +25,7 @@ Vista Expediente
                             <div class="form-outline">
                                 <h5> <b>Nombre de la serie:</b></h5>
                             </div>
+                            
                         </div>
                         <div class="col-auto">
                             <div class="form-outline">

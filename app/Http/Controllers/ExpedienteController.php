@@ -42,9 +42,14 @@ class ExpedienteController extends Controller
         ->join('destinoFinal','destinoFinal.id','=','expedientes.destinoFinal_id')
         ->select('expedientes.id','expedientes.numSerie','expedientes.descripcion','expedientes.fechaApertura','expedientes.fechaCierre','ValorDocumental.descripcion as valorDocumental_id','ValorInformacion.descripcion as valorInformacion_id','VigConcentracion.descripcion as vigConcentracion_id','VigTramites.descripcion as vigTramite_id','expedientes.totalVigencia','destinoFinal.descripcion as destinoFinal_id','expedientes.signatura','expedientes.observaciones','expedientes.contrato_id','expedientes.created_at','expedientes.updated_at')  
         ->get(); 
-      //return $expediente;
+
+            $caja =  DB::table('contratos')->where('id',$contrato)
+            ->get('caja_id');
+
+
+     //return $caja;
           
-        return view('expediente',compact('expediente'));
+     return view('expediente',compact('expediente','caja'));
 
         }else {
             //return $contrato;
