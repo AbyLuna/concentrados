@@ -119,22 +119,15 @@ class CajaController extends Controller
         return view('portada', compact('contratos'));
     }
 
-    // public function portadaDos($caja){
+    public function portadaDos($caja){
         
-    //     $cajas = \DB::table('cajas')
-    //         ->select('cajas.*','cajas.nomCaja')
-    //         ->join('cajas', 'cajas.id', '=', 'cajas.caja_id')
-    //         ->where('caja_id','=',$caja)
-    //         ->get();
-
-    //     return view('portada2', compact('cajas'));
+        $caja = \DB::table('cajas')
+            ->where('id','=',$caja)
+            ->get();
+//  return $caja;
+        return view('portada2', compact('caja'));
+    }
     
-
-    // public function portadaDos($caja){
-    //     //$caja = Caja::find($id);
-    //    // return $caja;
-    //     $cajas = \DB::table('cajas')->where('caja_id','=',$caja)->get();
-    //    return view('portada2', compact('cajas'));
 
 }
 

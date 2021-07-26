@@ -31,8 +31,7 @@ Vista Expediente
                             </div>
                         </div>
                     </div>
-                </div>
-                 
+                </div>  
                 <div class="card-body"><br>
                     <div class="form-group row">
                         <h5><b> <label class="col-sm-auto col-form-label">Breve descripción:</label> </b></h5>

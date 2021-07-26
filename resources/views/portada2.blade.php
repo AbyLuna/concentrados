@@ -111,7 +111,11 @@
             <div class="card ">
                 <div class="card-body">
                     <h2 class="card-title ">No. de caja</h2>
-                    <h1 class= "display-1"> <input class="text-center" style="width:500px" type="text" placeholder=" 0000"> </h1>
+                    @foreach ($caja as $caja)
+                    @if ($loop->first)
+                    <h1 class= "display-1"> {{ $caja->numCaja }} </h1>
+                    @endif
+                @endforeach
                 </div>
             </div>
         </div>

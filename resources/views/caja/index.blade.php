@@ -13,8 +13,7 @@ Cajas
                         </strong>
                         <strong>
                             <h4 class="card-title">Cajas</h4>
-                                <a class="btn btn-sm btn-warning" href=" {{route('portada2') }} ">{{ __('Portada Caja') }}<i
-                                    class="fa fa-fw fa-edit"></i> <img src="/img/imp.png" width="20" height="auto"></a>
+                               
                         </strong>
                         <div class="float-right">
                             <a href="{{ route('cajas.create') }}" class="btn btn-primary btn-sm float-right"
@@ -55,7 +54,6 @@ Cajas
                             <td>{{ $caja->pasillo }}</td>
                             <td>{{ $caja->anaquel }}</td>
                             <td>
-
                                 <form action="{{ route('cajas.destroy',$caja->id) }}" method="POST">
                                     <!-- <a class="btn btn-sm btn-primary "
                                                 href="{{ route('cajas.show',$caja->id) }}"><i
@@ -66,8 +64,9 @@ Cajas
                                             class="fa fa-fw fa-edit"></i> Editar</a>
                                             <a class="btn btn-sm btn-warning" href=" {{route('portada',$caja->id) }} ">{{ __('Inf. Caja') }}<i
                                                 class="fa fa-fw fa-edit"></i> <img src="/img/imp.png" width="25" height="auto"></a>
-
-                                    @csrf
+                                                <a class="btn btn-sm btn-warning" href=" {{route('portada2',$caja->id) }} ">{{ __('Portada Caja') }}<i
+                                                    class="fa fa-fw fa-edit"></i> <img src="/img/imp.png" width="20" height="auto"></a>
+                                                    @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger btn-sm"
                                         onclick="return confirm('Estás seguro que deseas eliminar el registro?');"><i

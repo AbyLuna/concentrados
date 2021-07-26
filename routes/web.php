@@ -36,7 +36,7 @@ Route::get('/contratos/caja/{caja}',[App\Http\Controllers\ContratoController::cl
 
 Route::get('/caja/portada/{caja}',[App\Http\Controllers\CajaController::class, 'portadaCaja'])->name('portada');
 
-// Route::get('/caja/portada2/{caja}',[App\Http\Controllers\CajaController::class, 'portadaDos'])-name('portadaDos');
+Route::get('/caja/portada2/{caja}',[App\Http\Controllers\CajaController::class, 'portadaDos'])->name('portada2');
 
 
 /// Rutas de expediente
@@ -77,6 +77,6 @@ Route::get('/expediente', function(){
     return view('expediente');
 })->name('expediente');
 
-Route::get('/portada2', function(){
-    return view('portada2');
-})->name('portada2');
+// Route::get('/portada2', function(){
+//     return view('portada2');
+// })->name('portada2');
