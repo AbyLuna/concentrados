@@ -17,15 +17,13 @@ Vista Expediente
            
                 <img src="/img/back2.png" width="45" height="auto"> 
             </a>
-           
             <div class="card">
                 <div class="card-header">
                     <div class="row mb-4">
                         <div class="col-3">
                             <div class="form-outline">
                                 <h5> <b>Nombre de la serie:</b></h5>
-                            </div>
-                            
+                            </div>  
                         </div>
                         <div class="col-auto">
                             <div class="form-outline">
