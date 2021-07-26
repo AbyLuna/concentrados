@@ -61,7 +61,6 @@ Route::resource('/registros',App\Http\Controllers\RegistroController::class);
 Route::get('/reporte/{registro}',[App\Http\Controllers\ExcelController::class, 'reporte'])->name('Reporte');
 Route::post('/reporte/imprimir/',[App\Http\Controllers\ExcelController::class, 'imprimirReporte'])->name('imprimirReporte');
 
-
 Route::get('/reporte', function(){
     return view('reporte');
 })->name('reporte');
