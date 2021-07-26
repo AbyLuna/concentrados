@@ -5,9 +5,8 @@
 
 
 <body>
-    <a class="nav-link text-right " href="{{ route('registros.index') }}">
-        <img src="/img/back2.png" width="25" height="auto">
-    </a>
+    
+    
        <form class="container" action="{{ route('imprimirReporte') }}" method="post">
             @csrf
          
@@ -16,27 +15,7 @@
  
          <div class="text-right">
          <label>NUMERO DE SOLICITUD: 
-<<<<<<< HEAD
-            <input readonly="" name="numero" class="form-control text-center" value="1234"></label>
-      </div>
-        <br>
-        <fieldset class="row justify-content-end">
-
-            <div class="col-3">
-                <h5 class="text-left my-3"><strong>Datos del solicitante:</strong></h5>
-            </div>
-            <div class="col-8 card-header">
-                
-                
-                <label class ="col-5 form-control" >No. Oficio de Solicitud: 2</label>
-                <label  class="col-5 form-control">Fecha de elaboración: {{ date('Y-m-d') }}</label>
-                <br>
-                <label  class="col-3">Nombre del RAT:</label>
-                <input type="text" class ="col-6 form-control" name="rat">
-            </div>
-=======
             <input name="numero" class="form-control text-center" required="" ></label>
->>>>>>> 005f3ad92e08bf0b64dec54e3f0c33617a149ad6
 
       </div>
         <br>
