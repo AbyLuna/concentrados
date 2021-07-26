@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Excel;
 use PDF;
 use App\Models\Registro;
 
@@ -26,43 +25,27 @@ class ExcelController extends Controller
     	 
        return view('registro.reporte',compact('registro'));
 
-      
-       
+    
+
+
    
     }
 
  
-
-
-
-
-
-
-
    public function imprimirReporte(Request $request){
 
-
-     
-     // return $request;
-    //return view('registro.reporteImprimir',compact('request'));
-
-    
+ //return $request;
 
 
-    
-    //$registro = Registro::find($id);
-
-        //$request = get();
        $pdf = PDF::loadView('registro.reporteImprimir', compact('request'));
-       return $pdf->stream('prestamo.pdf');
+       return $pdf->download('prestamo.pdf');
 
-
-      
-      //return $pdf->stream('prestamo.pdf'); 
-
+       
 
 
     }  
+    
+
 
     
 
@@ -70,3 +53,4 @@ class ExcelController extends Controller
 
     
 }
+
